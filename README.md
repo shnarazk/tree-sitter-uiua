@@ -21,7 +21,7 @@ Are you a [Helix](https://helix-editor.com/) user? Then try:
 [[grammar]]
 name = "uiua"
 source.git = "https://github.com/shnarazk/tree-sitter-uiua"
-source.rev = the latest commit id
+source.rev = commit-id-as-string
 ```
 
 3. Build up on shell:

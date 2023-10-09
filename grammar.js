@@ -14,20 +14,29 @@ module.exports = grammar({
     // 6. multiline_literal :== '(' end_of_line? term+ ')' end_of_line
     PROGRAM:    $ => repeat1(
       choice(
-        $.function,
-        $.modifier1,
-        $.modifier2,
-        $.value,
-        $.identifier,
+        $.atom,
         $.leftArrow,
-        $.system,
         $.comment,
         $._end_of_line,
       )
     ),
-    value:       $ => choice($.number, $.character, $.string),
+    atom:        $ => choice(
+      seq($.openParen, repeat1($.atom), $.closeParen),
+      $.primitive,
+      $.system,
+      $.array,
+      $.number,
+      $.character,
+      $.string,
+      $.identifier,
+    ),
+    array:       $ => choice(
+      prec(1, seq(repeat1(seq($.atom, $.underscore)),$.atom)),
+      seq($.openBracket, repeat(seq($.atom, $._whitespace)), $.closeBracket),
+      seq($.openCurly, repeat(seq($.atom, $._whitespace)), $.closeCurly),
+    ),
     number:      $ => token(choice(/¯?[∞]/, /¯[πητ]([eE]¯?\d+)?/, /¯?\d+(\.\d+)?([eE]¯?\d+)?/)),
-    character:   $ => token(seq('@', choice(/'[^/]'/, /\\./))),
+    character:   $ => token(seq('@', choice(/'[^\\]'/, /\\./))),
     string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
     identifier:  $ => token(/[A-Za-z]+/),
     system:  $ => token(/&[a-z]+/),
@@ -43,9 +52,13 @@ module.exports = grammar({
     closeBracket: $ => token(']'),
     underscore:   $ => token('_'),
     bar:          $ => token('|'),
-    colon:        $ => token(':'),
     leftArrow:    $ => token('←'),
-    function:     $ => choice(
+    primitive:    $ => choice(
+      $.function,
+      $.modifier1,
+      $.modifier2,
+    ),
+    function:    $ => choice(
       // (1(2), Dup, Stack, ("duplicate", '.')),
       token('.'),
       // (2(3), Over, Stack, ("over", ',')),
@@ -355,6 +368,7 @@ module.exports = grammar({
       token('try'),
       token('⍣'),
     ),
+    _whitespace: $ => /[ \t]+/,
     _end_of_line: $ => token(/\r?\n/),
   }
 });

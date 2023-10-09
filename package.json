@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-uiua",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "parser for Uiua",
   "main": "bindings/node",
   "scripts": {
