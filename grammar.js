@@ -5,6 +5,13 @@ module.exports = grammar({
   ],
   rules: {
     source_file: $ => $._PROGRAM,
+    // I guess syntactic components are:
+    // 1. _PROGRAM ::= (statement|module_definition)+
+    // 2. module_definition ::= ("---" statement+ "---" | "~~~" statement+ "~~~")
+    // 3. statement :== assignment|term
+    // 4. assignment ::= identifier leftArrow term?
+    // 5. term ::= (literal|multiline_literal)+end_of_line
+    // 6. multiline_literal :== '(' end_of_line? term+ ')' end_of_line
     _PROGRAM:    $ => repeat1(
       choice(
         $.function1,
