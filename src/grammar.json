@@ -25,6 +25,14 @@
           {
             "type": "SYMBOL",
             "name": "value"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "identifier"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "leftArrow"
           }
         ]
       }
@@ -57,7 +65,7 @@
           },
           {
             "type": "PATTERN",
-            "value": "¯π([eE]¯?\\d+)?"
+            "value": "¯[πητ]([eE]¯?\\d+)?"
           },
           {
             "type": "PATTERN",
@@ -121,6 +129,13 @@
             "value": "\""
           }
         ]
+      }
+    },
+    "identifier": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "[A-Za-z]+"
       }
     },
     "comment": {
@@ -215,6 +230,13 @@
       "content": {
         "type": "STRING",
         "value": ":"
+      }
+    },
+    "leftArrow": {
+      "type": "TOKEN",
+      "content": {
+        "type": "STRING",
+        "value": "←"
       }
     },
     "function1": {

@@ -5,11 +5,21 @@ module.exports = grammar({
   ],
   rules: {
     source_file: $ => $._PROGRAM,
-    _PROGRAM:    $ => repeat1(choice($.function1, $.modifier1, $.modifier2, $.value)), 
+    _PROGRAM:    $ => repeat1(
+      choice(
+        $.function1,
+        $.modifier1,
+        $.modifier2,
+        $.value,
+        $.identifier,
+        $.leftArrow,
+      )
+    ),
     value:       $ => choice($.number, $.character, $.string),
-    number:      $ => token(choice(/¯?[∞]/, /¯π([eE]¯?\d+)?/, /¯?\d+(\.\d+)?([eE]¯?\d+)?/)),
+    number:      $ => token(choice(/¯?[∞]/, /¯[πητ]([eE]¯?\d+)?/, /¯?\d+(\.\d+)?([eE]¯?\d+)?/)),
     character:   $ => token(seq('@', choice(/'[^/]'/, /\\./))),
     string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
+    identifier:  $ => token(/[A-Za-z]+/),
     comment:     $ => /#.*/,
     InitialScopeDelimiter:$ => choice($.tripleMinus, $.tripleTilde),
     tripleMinus:  $ => token("---"),
@@ -23,6 +33,7 @@ module.exports = grammar({
     underscore:   $ => token('_'),
     bar:          $ => token('|'),
     colon:        $ => token(':'),
+    leftArrow:    $ => token('←'),
     function1:    $ => choice(
       // (1(2), Dup, Stack, ("duplicate", '.')),
       token('.'),
@@ -349,26 +360,5 @@ module.exports = grammar({
   // '·' => self.end(Primitive::Identity, start),
   // '⍛' => self.end(Primitive::Fill, start),
   // '⌂' => self.end(Primitive::Rise, start),
-
-
-  : $ => token('`') => {
-      if self.number('-') {
-          self.end(Number, start)
-      } else {
-          self.end(Backtick, start)
-      }
-  }
-  '¯' if self.peek_char().filter(char::is_ascii_digit).is_some() => {
-      self.number('-');
-      self.end(Number, start)
-  }
-  '*' => self.end(Star, start),
-  '%' => self.end(Percent, start),
-  '^' => self.end(Caret, start),
-  '=' => self.end(Equal, start),
-  '<' if self.next_char_exact('=') => self.end(LessEqual, start),
-  '>' if self.next_char_exact('=') => self.end(GreaterEqual, start),
-  '!' if self.next_char_exact('=') => self.end(BangEqual, start),
-  '←' => self.end(LeftArrow, start),
 */
- 
+

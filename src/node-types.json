@@ -27,6 +27,14 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "leftArrow",
+          "named": true
+        },
+        {
           "type": "modifier1",
           "named": true
         },
@@ -293,6 +301,10 @@
     "named": false
   },
   {
+    "type": "identifier",
+    "named": true
+  },
+  {
     "type": "identity",
     "named": false
   },
@@ -315,6 +327,10 @@
   {
     "type": "keep",
     "named": false
+  },
+  {
+    "type": "leftArrow",
+    "named": true
   },
   {
     "type": "length",
