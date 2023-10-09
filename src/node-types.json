@@ -1,6 +1,6 @@
 [
   {
-    "type": "function1",
+    "type": "function",
     "named": true,
     "fields": {}
   },
@@ -20,10 +20,14 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "function1",
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "function",
           "named": true
         },
         {
@@ -146,10 +150,6 @@
   },
   {
     "type": "?",
-    "named": false
-  },
-  {
-    "type": "FIXME_function2",
     "named": false
   },
   {

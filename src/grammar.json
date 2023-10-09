@@ -12,7 +12,7 @@
         "members": [
           {
             "type": "SYMBOL",
-            "name": "function1"
+            "name": "function"
           },
           {
             "type": "SYMBOL",
@@ -37,6 +37,14 @@
           {
             "type": "SYMBOL",
             "name": "system"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "comment"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_end_of_line"
           }
         ]
       }
@@ -250,7 +258,7 @@
         "value": "←"
       }
     },
-    "function1": {
+    "function": {
       "type": "CHOICE",
       "members": [
         {
@@ -1560,18 +1568,6 @@
           "content": {
             "type": "STRING",
             "value": "dump"
-          }
-        }
-      ]
-    },
-    "function2": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "FIXME_function2"
           }
         }
       ]

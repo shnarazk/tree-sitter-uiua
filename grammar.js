@@ -14,13 +14,15 @@ module.exports = grammar({
     // 6. multiline_literal :== '(' end_of_line? term+ ')' end_of_line
     _PROGRAM:    $ => repeat1(
       choice(
-        $.function1,
+        $.function,
         $.modifier1,
         $.modifier2,
         $.value,
         $.identifier,
         $.leftArrow,
         $.system,
+        $.comment,
+        $._end_of_line,
       )
     ),
     value:       $ => choice($.number, $.character, $.string),
@@ -43,7 +45,7 @@ module.exports = grammar({
     bar:          $ => token('|'),
     colon:        $ => token(':'),
     leftArrow:    $ => token('←'),
-    function1:    $ => choice(
+    function:     $ => choice(
       // (1(2), Dup, Stack, ("duplicate", '.')),
       token('.'),
       // (2(3), Over, Stack, ("over", ',')),
@@ -348,9 +350,6 @@ module.exports = grammar({
       // (1, InvTrace, Stack),
       // (0(0)[1], Dump, Stack, "dump"),
       token('dump'),
-    ),
-    function2:     $ => choice(
-      token('FIXME_function2'),
     ),
     modifier1:     $ => choice(
       token('FIXME_modifier1'),
