@@ -1,25 +1,851 @@
 [
   {
+    "type": "function1",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "modifier1",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "modifier2",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
         {
-          "type": "number",
+          "type": "function1",
+          "named": true
+        },
+        {
+          "type": "modifier1",
+          "named": true
+        },
+        {
+          "type": "modifier2",
+          "named": true
+        },
+        {
+          "type": "value",
           "named": true
         }
       ]
     }
   },
   {
+    "type": "value",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "!=",
+    "named": false
+  },
+  {
+    "type": "%",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "<=",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": ">=",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "FIXME_function2",
+    "named": false
+  },
+  {
+    "type": "FIXME_modifier1",
+    "named": false
+  },
+  {
+    "type": "FIXME_modifier2",
+    "named": false
+  },
+  {
+    "type": "\\",
+    "named": false
+  },
+  {
+    "type": "`",
+    "named": false
+  },
+  {
+    "type": "absolute value",
+    "named": false
+  },
+  {
+    "type": "assert",
+    "named": false
+  },
+  {
+    "type": "atangent",
+    "named": false
+  },
+  {
+    "type": "bind",
+    "named": false
+  },
+  {
+    "type": "bits",
+    "named": false
+  },
+  {
+    "type": "both",
+    "named": false
+  },
+  {
+    "type": "box",
+    "named": false
+  },
+  {
+    "type": "bracket",
+    "named": false
+  },
+  {
+    "type": "break",
+    "named": false
+  },
+  {
+    "type": "ceiling",
+    "named": false
+  },
+  {
+    "type": "character",
+    "named": true
+  },
+  {
+    "type": "classify",
+    "named": false
+  },
+  {
     "type": "comment",
     "named": true
   },
   {
+    "type": "couple",
+    "named": false
+  },
+  {
+    "type": "cross",
+    "named": false
+  },
+  {
+    "type": "deal",
+    "named": false
+  },
+  {
+    "type": "deduplicate",
+    "named": false
+  },
+  {
+    "type": "deshape",
+    "named": false
+  },
+  {
+    "type": "dip",
+    "named": false
+  },
+  {
+    "type": "distribute",
+    "named": false
+  },
+  {
+    "type": "drop",
+    "named": false
+  },
+  {
+    "type": "dump",
+    "named": false
+  },
+  {
+    "type": "each",
+    "named": false
+  },
+  {
+    "type": "eta",
+    "named": false
+  },
+  {
+    "type": "fall",
+    "named": false
+  },
+  {
+    "type": "fill",
+    "named": false
+  },
+  {
+    "type": "find",
+    "named": false
+  },
+  {
+    "type": "first",
+    "named": false
+  },
+  {
+    "type": "floor",
+    "named": false
+  },
+  {
+    "type": "fold",
+    "named": false
+  },
+  {
+    "type": "fork",
+    "named": false
+  },
+  {
+    "type": "gap",
+    "named": false
+  },
+  {
+    "type": "gen",
+    "named": false
+  },
+  {
+    "type": "group",
+    "named": false
+  },
+  {
+    "type": "identity",
+    "named": false
+  },
+  {
+    "type": "indexof",
+    "named": false
+  },
+  {
+    "type": "infinity",
+    "named": false
+  },
+  {
+    "type": "invert",
+    "named": false
+  },
+  {
+    "type": "join",
+    "named": false
+  },
+  {
+    "type": "keep",
+    "named": false
+  },
+  {
+    "type": "length",
+    "named": false
+  },
+  {
+    "type": "level",
+    "named": false
+  },
+  {
+    "type": "logarithm",
+    "named": false
+  },
+  {
+    "type": "match",
+    "named": false
+  },
+  {
+    "type": "maximum",
+    "named": false
+  },
+  {
+    "type": "member",
+    "named": false
+  },
+  {
+    "type": "minimum",
+    "named": false
+  },
+  {
+    "type": "modulus",
+    "named": false
+  },
+  {
+    "type": "not",
+    "named": false
+  },
+  {
     "type": "number",
     "named": true
+  },
+  {
+    "type": "partition",
+    "named": false
+  },
+  {
+    "type": "pi",
+    "named": false
+  },
+  {
+    "type": "pick",
+    "named": false
+  },
+  {
+    "type": "power",
+    "named": false
+  },
+  {
+    "type": "random",
+    "named": false
+  },
+  {
+    "type": "range",
+    "named": false
+  },
+  {
+    "type": "recur",
+    "named": false
+  },
+  {
+    "type": "reduce",
+    "named": false
+  },
+  {
+    "type": "repeat",
+    "named": false
+  },
+  {
+    "type": "reshape",
+    "named": false
+  },
+  {
+    "type": "restack",
+    "named": false
+  },
+  {
+    "type": "reverse",
+    "named": false
+  },
+  {
+    "type": "rise",
+    "named": false
+  },
+  {
+    "type": "roll",
+    "named": false
+  },
+  {
+    "type": "rotate",
+    "named": false
+  },
+  {
+    "type": "round",
+    "named": false
+  },
+  {
+    "type": "rows",
+    "named": false
+  },
+  {
+    "type": "scan",
+    "named": false
+  },
+  {
+    "type": "select",
+    "named": false
+  },
+  {
+    "type": "shape",
+    "named": false
+  },
+  {
+    "type": "sig",
+    "named": false
+  },
+  {
+    "type": "sign",
+    "named": false
+  },
+  {
+    "type": "sine",
+    "named": false
+  },
+  {
+    "type": "spawn",
+    "named": false
+  },
+  {
+    "type": "sqrt",
+    "named": false
+  },
+  {
+    "type": "string",
+    "named": true
+  },
+  {
+    "type": "table",
+    "named": false
+  },
+  {
+    "type": "tag",
+    "named": false
+  },
+  {
+    "type": "take",
+    "named": false
+  },
+  {
+    "type": "tau",
+    "named": false
+  },
+  {
+    "type": "transpose",
+    "named": false
+  },
+  {
+    "type": "tripleMinus",
+    "named": true
+  },
+  {
+    "type": "tripleTilde",
+    "named": true
+  },
+  {
+    "type": "try",
+    "named": false
+  },
+  {
+    "type": "type",
+    "named": false
+  },
+  {
+    "type": "unbox",
+    "named": false
+  },
+  {
+    "type": "under",
+    "named": false
+  },
+  {
+    "type": "unroll",
+    "named": false
+  },
+  {
+    "type": "use",
+    "named": false
+  },
+  {
+    "type": "wait",
+    "named": false
+  },
+  {
+    "type": "windows",
+    "named": false
+  },
+  {
+    "type": "~",
+    "named": false
+  },
+  {
+    "type": "¬",
+    "named": false
+  },
+  {
+    "type": "¯",
+    "named": false
+  },
+  {
+    "type": "±",
+    "named": false
+  },
+  {
+    "type": "×",
+    "named": false
+  },
+  {
+    "type": "÷",
+    "named": false
+  },
+  {
+    "type": "η",
+    "named": false
+  },
+  {
+    "type": "π",
+    "named": false
+  },
+  {
+    "type": "τ",
+    "named": false
+  },
+  {
+    "type": "⁅",
+    "named": false
+  },
+  {
+    "type": "ⁿ",
+    "named": false
+  },
+  {
+    "type": "ₙ",
+    "named": false
+  },
+  {
+    "type": "↘",
+    "named": false
+  },
+  {
+    "type": "↙",
+    "named": false
+  },
+  {
+    "type": "↥",
+    "named": false
+  },
+  {
+    "type": "↧",
+    "named": false
+  },
+  {
+    "type": "↬",
+    "named": false
+  },
+  {
+    "type": "↯",
+    "named": false
+  },
+  {
+    "type": "↰",
+    "named": false
+  },
+  {
+    "type": "↲",
+    "named": false
+  },
+  {
+    "type": "↶",
+    "named": false
+  },
+  {
+    "type": "↷",
+    "named": false
+  },
+  {
+    "type": "↻",
+    "named": false
+  },
+  {
+    "type": "⇌",
+    "named": false
+  },
+  {
+    "type": "⇡",
+    "named": false
+  },
+  {
+    "type": "⇵",
+    "named": false
+  },
+  {
+    "type": "∊",
+    "named": false
+  },
+  {
+    "type": "∘",
+    "named": false
+  },
+  {
+    "type": "√",
+    "named": false
+  },
+  {
+    "type": "∞",
+    "named": false
+  },
+  {
+    "type": "∠",
+    "named": false
+  },
+  {
+    "type": "∧",
+    "named": false
+  },
+  {
+    "type": "∩",
+    "named": false
+  },
+  {
+    "type": "∵",
+    "named": false
+  },
+  {
+    "type": "∺",
+    "named": false
+  },
+  {
+    "type": "≅",
+    "named": false
+  },
+  {
+    "type": "≠",
+    "named": false
+  },
+  {
+    "type": "≡",
+    "named": false
+  },
+  {
+    "type": "≤",
+    "named": false
+  },
+  {
+    "type": "≥",
+    "named": false
+  },
+  {
+    "type": "⊂",
+    "named": false
+  },
+  {
+    "type": "⊃",
+    "named": false
+  },
+  {
+    "type": "⊏",
+    "named": false
+  },
+  {
+    "type": "⊓",
+    "named": false
+  },
+  {
+    "type": "⊔",
+    "named": false
+  },
+  {
+    "type": "⊕",
+    "named": false
+  },
+  {
+    "type": "⊗",
+    "named": false
+  },
+  {
+    "type": "⊙",
+    "named": false
+  },
+  {
+    "type": "⊛",
+    "named": false
+  },
+  {
+    "type": "⊜",
+    "named": false
+  },
+  {
+    "type": "⊝",
+    "named": false
+  },
+  {
+    "type": "⊞",
+    "named": false
+  },
+  {
+    "type": "⊟",
+    "named": false
+  },
+  {
+    "type": "⊠",
+    "named": false
+  },
+  {
+    "type": "⊡",
+    "named": false
+  },
+  {
+    "type": "⊢",
+    "named": false
+  },
+  {
+    "type": "⋅",
+    "named": false
+  },
+  {
+    "type": "⋯",
+    "named": false
+  },
+  {
+    "type": "⌈",
+    "named": false
+  },
+  {
+    "type": "⌊",
+    "named": false
+  },
+  {
+    "type": "⌕",
+    "named": false
+  },
+  {
+    "type": "⌵",
+    "named": false
+  },
+  {
+    "type": "⍉",
+    "named": false
+  },
+  {
+    "type": "⍏",
+    "named": false
+  },
+  {
+    "type": "⍖",
+    "named": false
+  },
+  {
+    "type": "⍘",
+    "named": false
+  },
+  {
+    "type": "⍚",
+    "named": false
+  },
+  {
+    "type": "⍜",
+    "named": false
+  },
+  {
+    "type": "⍣",
+    "named": false
+  },
+  {
+    "type": "⍤",
+    "named": false
+  },
+  {
+    "type": "⍥",
+    "named": false
+  },
+  {
+    "type": "⎋",
+    "named": false
+  },
+  {
+    "type": "□",
+    "named": false
+  },
+  {
+    "type": "△",
+    "named": false
+  },
+  {
+    "type": "▽",
+    "named": false
+  },
+  {
+    "type": "○",
+    "named": false
+  },
+  {
+    "type": "◫",
+    "named": false
+  },
+  {
+    "type": "◿",
+    "named": false
+  },
+  {
+    "type": "♭",
+    "named": false
+  },
+  {
+    "type": "⚂",
+    "named": false
+  },
+  {
+    "type": "⧻",
+    "named": false
+  },
+  {
+    "type": "⬚",
+    "named": false
   }
 ]
