@@ -5,6 +5,7 @@
 ;   "⍥"
 ;   "↰"
 ;   "↲"
+;   (leftArrow)
 ; ] @keyword.directive
 
 (comment) @comment
@@ -12,19 +13,14 @@
 (number) @numeric
 (string) @string
 
-; [
-;   (identifier)
-; ] @variable
+[ (identifier) ] @variable
+
+[ (function) ] @function
+[ (system) ] @function.builtin
+
+[ (modifier1) ] @special
 
 [
-  (function)
-] @function
-
-[
-  (modifier1)
   (modifier2)
-] @special
-
-[
   (leftArrow)
-] @special
+] @keyword.directive
