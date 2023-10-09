@@ -3,9 +3,9 @@
   "rules": {
     "source_file": {
       "type": "SYMBOL",
-      "name": "_PROGRAM"
+      "name": "PROGRAM"
     },
-    "_PROGRAM": {
+    "PROGRAM": {
       "type": "REPEAT1",
       "content": {
         "type": "CHOICE",
@@ -154,7 +154,7 @@
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "&\\\\.[A-Za-z]+"
+        "value": "&[a-z]+"
       }
     },
     "comment": {

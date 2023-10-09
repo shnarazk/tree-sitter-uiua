@@ -4,7 +4,7 @@ module.exports = grammar({
   conflicts: $ => [
   ],
   rules: {
-    source_file: $ => $._PROGRAM,
+    source_file: $ => $.PROGRAM,
     // I guess syntactic components are:
     // 1. _PROGRAM ::= (statement|module_definition)+
     // 2. module_definition ::= ("---" statement+ "---" | "~~~" statement+ "~~~")
@@ -12,7 +12,7 @@ module.exports = grammar({
     // 4. assignment ::= identifier leftArrow term?
     // 5. term ::= (literal|multiline_literal)+end_of_line
     // 6. multiline_literal :== '(' end_of_line? term+ ')' end_of_line
-    _PROGRAM:    $ => repeat1(
+    PROGRAM:    $ => repeat1(
       choice(
         $.function,
         $.modifier1,
@@ -30,7 +30,7 @@ module.exports = grammar({
     character:   $ => token(seq('@', choice(/'[^/]'/, /\\./))),
     string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
     identifier:  $ => token(/[A-Za-z]+/),
-    system:  $ => token(/&\\.[A-Za-z]+/),
+    system:  $ => token(/&[a-z]+/),
     comment:     $ => /#.*/,
     InitialScopeDelimiter:$ => choice($.tripleMinus, $.tripleTilde),
     tripleMinus:  $ => token("---"),

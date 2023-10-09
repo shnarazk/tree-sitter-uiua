@@ -1,7 +1,7 @@
 #!/usr/bin/env uiua run
 FirstColumn ← 16
 SecondColumn ← 6
-# Year ← ?(⊂∶"/"⊔⊡0)("./";)⧻.↘1&args
+Year ← ?(⊂∶"/"⊔⊡0)("./";)⧻.↘1&args
 # FileList ← ∵(□⊂∶".ua"⊂"day"↙¯2⊂"00"$"_")+1⇡25
 # IgnoreEscapedSharp ← (|1 ?(∵(□≡(?(@@;)∘)⊂0⌕"\\\"".⊔))(∘)dump∘<1⧻.⊔)
 # IgnoreSharpAsCharactor ← (|1 ?(∵(□≡(?(@@;)∘)⊂0⌕"@#".⊔))(∘)dump∘<1⧻.⊔)

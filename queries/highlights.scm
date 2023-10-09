@@ -1,29 +1,28 @@
-["·"] @constant.builtin
-["‿" "⟨" "⟩" "[" "]"] @operator
-["(" ")" "{" "}"] @punctuation.bracket
+; ["_" "[" "]" "{" "}"] @punctuation.bracket
 
-[
-  "?"
-  "⍥"
-  "↰"
-  "↲"
-] @keyword.directive
+; [
+;   "?"
+;   "⍥"
+;   "↰"
+;   "↲"
+; ] @keyword.directive
 
 (comment) @comment
 (character) @character
 (number) @numeric
 (string) @string
 
-[
-  (identifier)
-] @variable
+; [
+;   (identifier)
+; ] @variable
 
 [
   (function)
 ] @function
 
 [
-  (modifier)
+  (modifier1)
+  (modifier2)
 ] @special
 
 [
