@@ -3,44 +3,29 @@
 ["(" ")" "{" "}"] @punctuation.bracket
 
 [
-  ","
   "?"
-  ";"
-  ":"
-  "⋄"
-  "⇐"
-  (ASGN)
+  "⍥"
+  "↰"
+  "↲"
 ] @keyword.directive
 
 (comment) @comment
-["@" (character)] @character
+(character) @character
 (number) @numeric
 (string) @string
 
 [
-  (specialname_s)
-  (symbol_sl)
-  (symbol_s)
+  (identifier)
 ] @variable
 
 [
-  (specialname_F)
-  "𝕊"
-  (symbol_Fl)
-  (symbol_F)
-  (system_F)
+  (function)
 ] @function
 
 [
-  (specialname__m)
-  (symbol__ml)
-  (symbol__m)
-  (system__m)
+  (modifier)
 ] @special
 
 [
-  (specialname__c_)
-  (symbol__cl_)
-  (symbol__c_)
-  (system__c_)
+  (leftArrow)
 ] @special
