@@ -33,6 +33,10 @@
           {
             "type": "SYMBOL",
             "name": "leftArrow"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "system"
           }
         ]
       }
@@ -136,6 +140,13 @@
       "content": {
         "type": "PATTERN",
         "value": "[A-Za-z]+"
+      }
+    },
+    "system": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "&\\\\.[A-Za-z]+"
       }
     },
     "comment": {

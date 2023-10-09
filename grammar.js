@@ -20,6 +20,7 @@ module.exports = grammar({
         $.value,
         $.identifier,
         $.leftArrow,
+        $.system,
       )
     ),
     value:       $ => choice($.number, $.character, $.string),
@@ -27,6 +28,7 @@ module.exports = grammar({
     character:   $ => token(seq('@', choice(/'[^/]'/, /\\./))),
     string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
     identifier:  $ => token(/[A-Za-z]+/),
+    system:  $ => token(/&\\.[A-Za-z]+/),
     comment:     $ => /#.*/,
     InitialScopeDelimiter:$ => choice($.tripleMinus, $.tripleTilde),
     tripleMinus:  $ => token("---"),
