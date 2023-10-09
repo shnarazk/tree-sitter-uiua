@@ -13,39 +13,27 @@ Structual editing and highlighting [Uiua](https://www.uiua.or,) programs with ed
 
 Are you a [Helix](https://helix-editor.com/) user? Then try:
 
-1. Add the following to your $CONFIG/helix/languages.toml
+1. [Optional] Add [the basic configuration](https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers#uiua)
+
+2. Add the following to your $CONFIG/helix/languages.toml
 
 ```toml
 [[grammar]]
 name = "uiua"
 source.git = "https://github.com/shnarazk/tree-sitter-uiua"
 source.rev = the latest commit id
-
-[language.auto-pairs]
-'(' = ')'
-'{' = '}'
-'[' = ']'
-'"' = '"'
 ```
 
-2. Build up on shell:
+3. Build up on shell:
 
 ```
 $ hx -g fetch
 $ hx -g build
 ```
 
-3. Copy query files:
+4. Copy query files:
 
 ```
-$ mkdir -p $HELIX/runtime/queries/uiua
+$ mkdir -p $HELIX/runtime/queries/uiua # or make your query directory
 $ cp -r queries $HELIX/runtime/queries/uiua
 ```
-
-In future, you can:
-- expand/shrink selection by moving up/down on AST as we expect
-- indent after `:`, `?`, `{`, `⟨` and so on, and outdent at `}`, `⟩`, `;` and so on
-- traverse function blocks by `]f` and `[f`
-- traverse function headers by `]a` and `[a`
-- traverse namespaces by `]t` and `[t`
-- traverse comments by `]c` and `[c`
