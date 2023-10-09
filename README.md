@@ -1,10 +1,10 @@
 # tree-sitter-uiua
-Structual editing and highlighting [Uiua](https://www.uiua.or,) programs with editors powered by [tree-sitter](https://tree-sitter.github.io/)
 
-## Implementation memo
+We need colors to mitigate the excessive use of 'n' shapes.
 
 ## References
 
+- [Uiua](https://www.uiua.org)
 - [tree-sitter tutorial](https://tree-sitter.github.io/tree-sitter/creating-parsers)
 - [target color schema](https://github.com/helix-editor/helix/blob/53f47bc47771c94dab51626ca025be28e62eba0c/runtime/themes/solarized_light.toml#L1-L23)
 - [textobjects](https://docs.helix-editor.com/guides/textobject.html)
