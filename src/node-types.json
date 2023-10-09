@@ -90,6 +90,10 @@
           "named": true
         },
         {
+          "type": "multiLineString",
+          "named": true
+        },
+        {
           "type": "number",
           "named": true
         },
@@ -200,16 +204,15 @@
     }
   },
   {
-    "type": "string",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "!",
     "named": false
   },
   {
     "type": "!=",
+    "named": false
+  },
+  {
+    "type": "$",
     "named": false
   },
   {
@@ -509,6 +512,10 @@
     "named": false
   },
   {
+    "type": "multiLineString",
+    "named": true
+  },
+  {
     "type": "not",
     "named": false
   },
@@ -623,6 +630,10 @@
   {
     "type": "sqrt",
     "named": false
+  },
+  {
+    "type": "string",
+    "named": true
   },
   {
     "type": "system",

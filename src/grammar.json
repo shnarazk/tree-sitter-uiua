@@ -86,8 +86,21 @@
           "name": "character"
         },
         {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "$"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "string"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
-          "name": "string"
+          "name": "multiLineString"
         },
         {
           "type": "SYMBOL",
@@ -233,48 +246,43 @@
       }
     },
     "string": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "STRING",
-                "value": "\""
-              },
-              {
-                "type": "REPEAT",
-                "content": {
-                  "type": "CHOICE",
-                  "members": [
-                    {
-                      "type": "PATTERN",
-                      "value": "\\\\[\"nt]"
-                    },
-                    {
-                      "type": "PATTERN",
-                      "value": "[^\"]+"
-                    }
-                  ]
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "\""
+          },
+          {
+            "type": "REPEAT",
+            "content": {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "PATTERN",
+                  "value": "\\\\[\"nt]"
+                },
+                {
+                  "type": "PATTERN",
+                  "value": "[^\"]+"
                 }
-              },
-              {
-                "type": "STRING",
-                "value": "\""
-              }
-            ]
+              ]
+            }
+          },
+          {
+            "type": "STRING",
+            "value": "\""
           }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "PATTERN",
-            "value": "\\$.+"
-          }
-        }
-      ]
+        ]
+      }
+    },
+    "multiLineString": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "\\$[^\"].+"
+      }
     },
     "identifier": {
       "type": "TOKEN",

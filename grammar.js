@@ -28,7 +28,8 @@ module.exports = grammar({
       $.array,
       $.number,
       $.character,
-      $.string,
+      seq('$', $.string),
+      $.multiLineString,
       $.identifier,
     ),
     array:       $ => choice(
@@ -44,10 +45,8 @@ module.exports = grammar({
       )),
     ),
     character:   $ => prec(1,token(/@([^\\]|\.)/)),
-    string:      $ => choice(
-      token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
-      token(/\$.+/),
-    ),
+    string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
+    multiLineString:      $ =>  token(/\$[^"].+/),
     identifier:  $ => token(/[A-Za-z]+/),
     system:  $ => token(/&[a-z]+/),
     comment:     $ => /#.*/,
