@@ -11,6 +11,7 @@
 (comment) @comment
 (character) @character
 (number) @numeric
+(constant) @numeric.constant
 (string) @string
 
 [ (identifier) ] @variable
@@ -24,3 +25,6 @@
   (modifier2)
   (leftArrow)
 ] @keyword.directive
+
+[ (deprecated) ] @warning
+

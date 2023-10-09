@@ -74,6 +74,10 @@
           "named": true
         },
         {
+          "type": "bar",
+          "named": true
+        },
+        {
           "type": "character",
           "named": true
         },
@@ -109,6 +113,21 @@
     }
   },
   {
+    "type": "character",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "constant",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "deprecated",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "function",
     "named": true,
     "fields": {}
@@ -124,6 +143,21 @@
     "fields": {}
   },
   {
+    "type": "number",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "constant",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "primitive",
     "named": true,
     "fields": {},
@@ -131,6 +165,10 @@
       "multiple": false,
       "required": true,
       "types": [
+        {
+          "type": "deprecated",
+          "named": true
+        },
         {
           "type": "function",
           "named": true
@@ -160,6 +198,11 @@
         }
       ]
     }
+  },
+  {
+    "type": "string",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "!",
@@ -254,6 +297,10 @@
     "named": false
   },
   {
+    "type": "bar",
+    "named": true
+  },
+  {
     "type": "bind",
     "named": false
   },
@@ -280,10 +327,6 @@
   {
     "type": "ceiling",
     "named": false
-  },
-  {
-    "type": "character",
-    "named": true
   },
   {
     "type": "classify",
@@ -323,6 +366,10 @@
   },
   {
     "type": "deshape",
+    "named": false
+  },
+  {
+    "type": "di",
     "named": false
   },
   {
@@ -378,6 +425,10 @@
     "named": false
   },
   {
+    "type": "ga",
+    "named": false
+  },
+  {
     "type": "gap",
     "named": false
   },
@@ -387,6 +438,10 @@
   },
   {
     "type": "group",
+    "named": false
+  },
+  {
+    "type": "id",
     "named": false
   },
   {
@@ -456,10 +511,6 @@
   {
     "type": "not",
     "named": false
-  },
-  {
-    "type": "number",
-    "named": true
   },
   {
     "type": "openBracket",
@@ -574,10 +625,6 @@
     "named": false
   },
   {
-    "type": "string",
-    "named": true
-  },
-  {
     "type": "system",
     "named": true
   },
@@ -600,14 +647,6 @@
   {
     "type": "transpose",
     "named": false
-  },
-  {
-    "type": "tripleMinus",
-    "named": true
-  },
-  {
-    "type": "tripleTilde",
-    "named": true
   },
   {
     "type": "try",
@@ -662,6 +701,10 @@
     "named": false
   },
   {
+    "type": "·",
+    "named": false
+  },
+  {
     "type": "×",
     "named": false
   },
@@ -694,6 +737,10 @@
     "named": false
   },
   {
+    "type": "→",
+    "named": false
+  },
+  {
     "type": "↘",
     "named": false
   },
@@ -719,10 +766,6 @@
   },
   {
     "type": "↰",
-    "named": false
-  },
-  {
-    "type": "↲",
     "named": false
   },
   {
@@ -779,6 +822,10 @@
   },
   {
     "type": "∵",
+    "named": false
+  },
+  {
+    "type": "∷",
     "named": false
   },
   {
@@ -878,6 +925,10 @@
     "named": false
   },
   {
+    "type": "⌂",
+    "named": false
+  },
+  {
     "type": "⌈",
     "named": false
   },
@@ -911,6 +962,10 @@
   },
   {
     "type": "⍚",
+    "named": false
+  },
+  {
+    "type": "⍛",
     "named": false
   },
   {
@@ -963,6 +1018,10 @@
   },
   {
     "type": "⚂",
+    "named": false
+  },
+  {
+    "type": "❥",
     "named": false
   },
   {

@@ -53,6 +53,19 @@
           ]
         },
         {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "bar"
+            },
+            {
+              "type": "PATTERN",
+              "value": "[0-9]+(\\.[0-9]+)?"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
           "name": "primitive"
         },
@@ -175,81 +188,93 @@
       ]
     },
     "number": {
-      "type": "TOKEN",
-      "content": {
-        "type": "CHOICE",
-        "members": [
-          {
-            "type": "PATTERN",
-            "value": "¯?[∞]"
-          },
-          {
-            "type": "PATTERN",
-            "value": "¯[πητ]([eE]¯?\\d+)?"
-          },
-          {
-            "type": "PATTERN",
-            "value": "¯?\\d+(\\.\\d+)?([eE]¯?\\d+)?"
-          }
-        ]
-      }
-    },
-    "character": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "@"
-          },
-          {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "¯"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "constant"
+            }
+          ]
+        },
+        {
+          "type": "TOKEN",
+          "content": {
             "type": "CHOICE",
             "members": [
               {
                 "type": "PATTERN",
-                "value": "'[^\\\\]'"
+                "value": "¯?[πητ]([eE]¯?\\d+)?"
               },
               {
                 "type": "PATTERN",
-                "value": "\\\\."
+                "value": "¯?\\d+(\\.\\d+)?([eE]¯?\\d+)?"
               }
             ]
           }
-        ]
+        }
+      ]
+    },
+    "character": {
+      "type": "PREC",
+      "value": 1,
+      "content": {
+        "type": "TOKEN",
+        "content": {
+          "type": "PATTERN",
+          "value": "@([^\\\\]|\\.)"
+        }
       }
     },
     "string": {
-      "type": "TOKEN",
-      "content": {
-        "type": "SEQ",
-        "members": [
-          {
-            "type": "STRING",
-            "value": "\""
-          },
-          {
-            "type": "REPEAT",
-            "content": {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "PATTERN",
-                  "value": "\\\\[\"nt]"
-                },
-                {
-                  "type": "PATTERN",
-                  "value": "[^\"]+"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "\""
+              },
+              {
+                "type": "REPEAT",
+                "content": {
+                  "type": "CHOICE",
+                  "members": [
+                    {
+                      "type": "PATTERN",
+                      "value": "\\\\[\"nt]"
+                    },
+                    {
+                      "type": "PATTERN",
+                      "value": "[^\"]+"
+                    }
+                  ]
                 }
-              ]
-            }
-          },
-          {
-            "type": "STRING",
-            "value": "\""
+              },
+              {
+                "type": "STRING",
+                "value": "\""
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "PATTERN",
+            "value": "\\$.+"
+          }
+        }
+      ]
     },
     "identifier": {
       "type": "TOKEN",
@@ -268,19 +293,6 @@
     "comment": {
       "type": "PATTERN",
       "value": "#.*"
-    },
-    "InitialScopeDelimiter": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "tripleMinus"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "tripleTilde"
-        }
-      ]
     },
     "tripleMinus": {
       "type": "TOKEN",
@@ -373,6 +385,71 @@
         {
           "type": "SYMBOL",
           "name": "modifier2"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "deprecated"
+        }
+      ]
+    },
+    "constant": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "eta"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "η"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "pi"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "π"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "tau"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "τ"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "infinity"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "∞"
+          }
         }
       ]
     },
@@ -418,35 +495,14 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "id"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "∘"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "roll"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "↷"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "unroll"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "↶"
           }
         },
         {
@@ -1160,20 +1216,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "restack"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⇵"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "assert"
           }
         },
@@ -1188,21 +1230,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "↰"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "wait"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "↲"
           }
         },
         {
@@ -1294,62 +1322,6 @@
           "content": {
             "type": "STRING",
             "value": "sig"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "eta"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "η"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "pi"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "π"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "tau"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "τ"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "infinity"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "∞"
           }
         },
         {
@@ -1452,6 +1424,13 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "di"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "⊙"
           }
         },
@@ -1460,6 +1439,13 @@
           "content": {
             "type": "STRING",
             "value": "gap"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "ga"
           }
         },
         {
@@ -1696,6 +1682,102 @@
           "content": {
             "type": "STRING",
             "value": "⍣"
+          }
+        }
+      ]
+    },
+    "deprecated": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "❥"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "→"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "∷"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "·"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⍛"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⌂"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "roll"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "↷"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "unroll"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "↶"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "restack"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⇵"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "↰"
           }
         }
       ]
