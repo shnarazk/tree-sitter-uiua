@@ -14,12 +14,21 @@ module.exports = grammar({
     // 6. multiline_literal :== '(' end_of_line? term+ ')' end_of_line
     PROGRAM:    $ => repeat1(
       choice(
+        $.block,
+        $.module,
+        $.module_test,
+      ),
+    ),
+    module:       $ => (seq($.tripleMinus, $.block, $.tripleMinus)),
+    module_test:  $ => (seq($.tripleTilde, $.block, $.tripleTilde)),
+    block:    $ => prec.right(repeat1(
+      choice(
         $.atom,
         $.leftArrow,
         $.comment,
         $._end_of_line,
       )
-    ),
+    )),
     atom:        $ => choice(
       seq($.openParen, repeat1($.atom), $.closeParen),
       $.signature,

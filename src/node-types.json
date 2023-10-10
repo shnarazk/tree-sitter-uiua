@@ -5,18 +5,18 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "atom",
+          "type": "block",
           "named": true
         },
         {
-          "type": "comment",
+          "type": "module",
           "named": true
         },
         {
-          "type": "leftArrow",
+          "type": "module_test",
           "named": true
         }
       ]
@@ -121,6 +121,29 @@
     }
   },
   {
+    "type": "block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "atom",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "leftArrow",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "character",
     "named": true,
     "fields": {}
@@ -149,6 +172,44 @@
     "type": "modifier2",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "module",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "tripleMinus",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module_test",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "tripleTilde",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "number",
@@ -666,6 +727,14 @@
   {
     "type": "transpose",
     "named": false
+  },
+  {
+    "type": "tripleMinus",
+    "named": true
+  },
+  {
+    "type": "tripleTilde",
+    "named": true
   },
   {
     "type": "try",

@@ -7,14 +7,6 @@
   (closeBracket)
 ] @punctuation.bracket
 
-; [
-;   "?"
-;   "⍥"
-;   "↰"
-;   "↲"
-;   (leftArrow)
-; ] @keyword.directive
-
 (signature) @type
 (comment) @comment
 (character) @character
@@ -39,7 +31,7 @@
   (identifier_deprecated)
 ] @warning
 
-; [
-;   (tripleMinus)
-;   (tripleTilde)
-; ] @namespace
+[
+  (tripleMinus)
+  (tripleTilde)
+] @namespace
