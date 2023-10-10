@@ -1403,6 +1403,13 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "now"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "type"
           }
         },

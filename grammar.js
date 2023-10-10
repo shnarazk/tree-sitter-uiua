@@ -301,6 +301,8 @@ module.exports = grammar({
       token('use'),
       // (0, Tag, Misc, "tag"),
       token('tag'),
+      // (0, Now, Misc, "now"),
+      token('now'),
       // (1, Type, Misc, "type"),
       token('type'),
       // (1, Sig, Misc, "sig"),

@@ -585,6 +585,10 @@
     "named": false
   },
   {
+    "type": "now",
+    "named": false
+  },
+  {
     "type": "openBracket",
     "named": true
   },
