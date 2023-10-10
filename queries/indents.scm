@@ -1,5 +1,3 @@
 [
-  "}"
-  "]"
-] @outdent
-
+  (array)
+] @indent
