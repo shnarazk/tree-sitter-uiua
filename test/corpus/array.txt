@@ -1,0 +1,69 @@
+================
+array: [1 2 3]
+================
+[1 2 3]
+---
+
+(source_file
+  (PROGRAM
+    (block
+  	  (atom
+        (array
+          (openBracket)
+          (atom (number))
+          (atom (number))
+          (atom (number))
+          (closeBracket)
+    	  )
+      )
+    )
+  )
+)
+
+================
+array: {+ - :}
+================
+{+ - :}
+---
+
+(source_file
+  (PROGRAM
+    (block
+  	  (atom
+        (array
+          (openCurly)
+          (atom (primitive (function)))
+          (atom (primitive (function)))
+          (atom (primitive (function)))
+          (closeCurly)
+    	  )
+      )
+    )
+  )
+)
+================
+array: [\n 1 \n 2 \n 3\n]
+================
+[
+  1
+  2
+  3
+]
+---
+
+(source_file
+  (PROGRAM
+    (block
+  	  (atom
+        (array
+          (openBracket)
+          (atom (number))
+          (atom (number))
+          (atom (number))
+          (closeBracket)
+    	  )
+      )
+    )
+  )
+)
+

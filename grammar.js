@@ -30,7 +30,7 @@ module.exports = grammar({
       )
     )),
     atom:        $ => choice(
-      seq($.openParen, repeat1($.atom), $.closeParen),
+      seq($.openParen, repeat1(choice($.atom, $._end_of_line)), $.closeParen),
       $.signature,
       $.compound,
       $.primitive,
@@ -45,8 +45,8 @@ module.exports = grammar({
     ),
     array:       $ => choice(
       prec(1, seq(repeat1(seq($.atom, $.underscore)),$.atom)),
-      seq($.openBracket, repeat(seq($.atom, $._whitespace)), $.closeBracket),
-      seq($.openCurly, repeat(seq($.atom, $._whitespace)), $.closeCurly),
+      seq($.openBracket, repeat(choice($.atom, $._end_of_line)), $.closeBracket),
+      seq($.openCurly, repeat(choice($.atom, $._end_of_line)), $.closeCurly),
     ),
     number:      $ => choice(
       seq(('¯'), $.constant),
