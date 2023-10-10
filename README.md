@@ -4,7 +4,7 @@ We need colors to mitigate the excessive use of 'n' shapes.
 
 ## References
 
-- [Uiua](https://www.uiua.org)
+- [Uiua](https://www.uiua.org), [github](https://github.com/uiua-lang/uiua)
 - [tree-sitter tutorial](https://tree-sitter.github.io/tree-sitter/creating-parsers)
 - [target color schema](https://github.com/helix-editor/helix/blob/53f47bc47771c94dab51626ca025be28e62eba0c/runtime/themes/solarized_light.toml#L1-L23)
 - [textobjects](https://docs.helix-editor.com/guides/textobject.html)
@@ -37,3 +37,7 @@ $ hx -g build
 $ mkdir -p $HELIX/runtime/queries/uiua # or make your query directory
 $ cp -r queries $HELIX/runtime/queries/uiua
 ```
+
+Now you can:
+- traverse modules by `]t` and `[t`
+- traverse comments by `]c` and `[c`
