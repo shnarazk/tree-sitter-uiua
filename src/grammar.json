@@ -96,6 +96,10 @@
         {
           "type": "SYMBOL",
           "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "identifier_deprecated"
         }
       ]
     },
@@ -286,7 +290,14 @@
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "[A-Za-z]+"
+        "value": "[A-Z][A-Za-z]*|[a-z][A-Za-z]?"
+      }
+    },
+    "identifier_deprecated": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "[a-z][A-Za-z]{2,}"
       }
     },
     "system": {

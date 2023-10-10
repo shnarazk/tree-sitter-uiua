@@ -31,6 +31,7 @@ module.exports = grammar({
       seq('$', $.string),
       $.multiLineString,
       $.identifier,
+      $.identifier_deprecated,
     ),
     array:       $ => choice(
       prec(1, seq(repeat1(seq($.atom, $.underscore)),$.atom)),
@@ -48,7 +49,8 @@ module.exports = grammar({
     string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
     multiLineString:      $ =>  token(/\$[^"].+/),
     signature:   $ => token(/\|[0-9]+(\.[0-9]+)?/),
-    identifier:  $ => token(/[A-Za-z]+/),
+    identifier:  $ => token(/[A-Z][A-Za-z]*|[a-z][A-Za-z]?/),
+    identifier_deprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
     system:  $ => token(/&[a-z]+/),
     comment:     $ => /#.*/,
     // InitialScopeDelimiter:$ => choice($.tripleMinus, $.tripleTilde),

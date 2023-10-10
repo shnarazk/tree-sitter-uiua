@@ -86,6 +86,10 @@
           "named": true
         },
         {
+          "type": "identifier_deprecated",
+          "named": true
+        },
+        {
           "type": "multiLineString",
           "named": true
         },
@@ -445,6 +449,10 @@
   },
   {
     "type": "identifier",
+    "named": true
+  },
+  {
+    "type": "identifier_deprecated",
     "named": true
   },
   {

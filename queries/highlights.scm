@@ -34,7 +34,10 @@
   (leftArrow)
 ] @keyword.directive
 
-[ (deprecated) ] @warning
+[
+  (deprecated)
+  (identifier_deprecated)
+] @warning
 
 ; [
 ;   (tripleMinus)
