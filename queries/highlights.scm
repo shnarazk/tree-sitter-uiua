@@ -1,4 +1,11 @@
-; ["_" "[" "]" "{" "}"] @punctuation.bracket
+[
+  (openParen)
+  (closeParen)
+  (openCurly)
+  (closeCurly)
+  (openBracket)
+  (closeBracket)
+] @punctuation.bracket
 
 ; [
 ;   "?"
@@ -8,6 +15,7 @@
 ;   (leftArrow)
 ; ] @keyword.directive
 
+(signature) @type
 (comment) @comment
 (character) @character
 (number) @numeric
@@ -28,3 +36,7 @@
 
 [ (deprecated) ] @warning
 
+; [
+;   (tripleMinus)
+;   (tripleTilde)
+; ] @namespace

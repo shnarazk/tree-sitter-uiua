@@ -74,10 +74,6 @@
           "named": true
         },
         {
-          "type": "bar",
-          "named": true
-        },
-        {
           "type": "character",
           "named": true
         },
@@ -103,6 +99,10 @@
         },
         {
           "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "signature",
           "named": true
         },
         {
@@ -298,10 +298,6 @@
   {
     "type": "atangent",
     "named": false
-  },
-  {
-    "type": "bar",
-    "named": true
   },
   {
     "type": "bind",
@@ -618,6 +614,10 @@
   {
     "type": "sign",
     "named": false
+  },
+  {
+    "type": "signature",
+    "named": true
   },
   {
     "type": "sine",

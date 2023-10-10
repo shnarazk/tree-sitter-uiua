@@ -22,7 +22,7 @@ module.exports = grammar({
     ),
     atom:        $ => choice(
       seq($.openParen, repeat1($.atom), $.closeParen),
-      seq($.bar, /[0-9]+(\.[0-9]+)?/),
+      $.signature,
       $.primitive,
       $.system,
       $.array,
@@ -47,6 +47,7 @@ module.exports = grammar({
     character:   $ => prec(1,token(/@([^\\]|\.)/)),
     string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
     multiLineString:      $ =>  token(/\$[^"].+/),
+    signature:   $ => token(/\|[0-9]+(\.[0-9]+)?/),
     identifier:  $ => token(/[A-Za-z]+/),
     system:  $ => token(/&[a-z]+/),
     comment:     $ => /#.*/,
