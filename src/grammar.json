@@ -294,7 +294,7 @@
         "type": "TOKEN",
         "content": {
           "type": "PATTERN",
-          "value": "@([^\\\\]|\\[0tnr\"'_])"
+          "value": "@([^\\\\]|\\\\[nrt0\\\\\"'_]|\\\\x[0-9A-Fa-f]{2,2}|\\\\u[0-9A-Fa-f]{4,4})"
         }
       }
     },
@@ -1033,6 +1033,20 @@
           "content": {
             "type": "STRING",
             "value": "⍖"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "where"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⊚"
           }
         },
         {

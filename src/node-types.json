@@ -769,6 +769,10 @@
     "named": false
   },
   {
+    "type": "where",
+    "named": false
+  },
+  {
     "type": "windows",
     "named": false
   },
@@ -970,6 +974,10 @@
   },
   {
     "type": "⊙",
+    "named": false
+  },
+  {
+    "type": "⊚",
     "named": false
   },
   {

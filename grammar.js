@@ -54,7 +54,7 @@ module.exports = grammar({
         /¯?\d+(\.\d+)?([eE]¯?\d+)?/
       )),
     ),
-    character:   $ => prec(1,token(/@([^\\]|\[0tnr"'_])/)),
+    character:   $ => prec(1,token(/@([^\\]|\\[nrt0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)),
     string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
     multiLineString:      $ =>  token(/\$[^"].+/),
     signature:   $ => token(/\|[0-9]+(\.[0-9]+)?/),
@@ -213,6 +213,9 @@ module.exports = grammar({
       // (1, Fall, MonadicArray, ("fall", '⍖')),
       token('fall'),
       token('⍖'),
+      // (1, Where, MonadicArray, ("where", '⊚')),
+      token('where'),
+      token('⊚'),
       // (1, Classify, MonadicArray, ("classify", '⊛')),
       token('classify'),
       token('⊛'),
