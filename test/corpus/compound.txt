@@ -1,0 +1,18 @@
+================
+modifier1 + function: /+
+================
+/+
+---
+
+(source_file
+  (PROGRAM
+    (block
+	  (atom
+	    (compound
+		  (modifier1)
+		  (function)
+		)
+	  )
+    )
+  )
+)

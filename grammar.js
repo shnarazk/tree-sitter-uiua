@@ -32,6 +32,7 @@ module.exports = grammar({
     atom:        $ => choice(
       seq($.openParen, repeat1($.atom), $.closeParen),
       $.signature,
+      $.compound,
       $.primitive,
       $.system,
       $.array,
@@ -74,6 +75,17 @@ module.exports = grammar({
     underscore:   $ => token('_'),
     bar:          $ => token('|'),
     leftArrow:    $ => token('←'),
+    compound:     $ => prec(1, choice(
+      seq(
+        $.modifier1,
+        choice($.function,$.system,$.identifier),
+      ),
+      seq(
+        $.modifier2,
+        choice($.function,$.system,$.identifier),
+        choice($.function,$.system,$.identifier),
+      ),
+    )),
     primitive:    $ => choice(
       $.function,
       $.modifier1,

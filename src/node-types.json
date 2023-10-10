@@ -82,6 +82,10 @@
           "named": true
         },
         {
+          "type": "compound",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -147,6 +151,37 @@
     "type": "character",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "compound",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "function",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "modifier1",
+          "named": true
+        },
+        {
+          "type": "modifier2",
+          "named": true
+        },
+        {
+          "type": "system",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "constant",
