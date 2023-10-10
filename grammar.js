@@ -45,7 +45,7 @@ module.exports = grammar({
         /¯?\d+(\.\d+)?([eE]¯?\d+)?/
       )),
     ),
-    character:   $ => prec(1,token(/@([^\\]|\.)/)),
+    character:   $ => prec(1,token(/@([^\\]|\[0tnr"'_])/)),
     string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
     multiLineString:      $ =>  token(/\$[^"].+/),
     signature:   $ => token(/\|[0-9]+(\.[0-9]+)?/),

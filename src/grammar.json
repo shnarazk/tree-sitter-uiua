@@ -236,7 +236,7 @@
         "type": "TOKEN",
         "content": {
           "type": "PATTERN",
-          "value": "@([^\\\\]|\\.)"
+          "value": "@([^\\\\]|\\[0tnr\"'_])"
         }
       }
     },
