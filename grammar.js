@@ -112,7 +112,7 @@ module.exports = grammar({
       // (2(3), Over, Stack, ("over", ',')),
       token(','),
       // (2(2), Flip, Stack, ("flip", AsciiToken::Colon, '∶')),
-      token(':'),
+      token('∶'),
       // (1(0), Pop, Stack, ("pop", ';')),
       token(';'),
       // (1, Identity, Stack, ("identity", '∘')),
