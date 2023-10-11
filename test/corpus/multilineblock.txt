@@ -1,0 +1,24 @@
+================
+modifier1 + function: /+
+================
+/(
+  +
+)
+---
+
+(source_file
+  (PROGRAM
+    (block
+      (term
+        (primitive
+          (modifier1)))
+      (term
+        (openParen)
+        (term
+          (primitive
+            (function)))
+        (closeParen)
+      )
+    )
+  )
+)

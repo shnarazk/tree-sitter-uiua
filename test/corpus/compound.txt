@@ -7,7 +7,7 @@ modifier1 + function: /+
 (source_file
   (PROGRAM
     (block
-	  (atom
+	  (term
 	    (compound
 		  (modifier1)
 		  (function)

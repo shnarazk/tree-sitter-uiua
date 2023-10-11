@@ -7,36 +7,36 @@ array: [1 2 3]
 (source_file
   (PROGRAM
     (block
-  	  (atom
+      (term
         (array
           (openBracket)
-          (atom (number))
-          (atom (number))
-          (atom (number))
+          (term (number))
+          (term (number))
+          (term (number))
           (closeBracket)
-    	  )
+        )
       )
     )
   )
 )
 
 ================
-array: {+ - :}
+array: {+ - ∶}
 ================
-{+ - :}
+{+ - ∶}
 ---
 
 (source_file
   (PROGRAM
     (block
-  	  (atom
+  	  (term
         (array
           (openCurly)
-          (atom (primitive (function)))
-          (atom (primitive (function)))
-          (atom (primitive (function)))
+          (term (primitive (function)))
+          (term (primitive (function)))
+          (term (primitive (function)))
           (closeCurly)
-    	  )
+        )
       )
     )
   )
@@ -54,12 +54,12 @@ array: [\n 1 \n 2 \n 3\n]
 (source_file
   (PROGRAM
     (block
-  	  (atom
+  	  (term
         (array
           (openBracket)
-          (atom (number))
-          (atom (number))
-          (atom (number))
+          (term (number))
+          (term (number))
+          (term (number))
           (closeBracket)
     	  )
       )

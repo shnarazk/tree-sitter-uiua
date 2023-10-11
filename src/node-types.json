@@ -31,10 +31,6 @@
       "required": true,
       "types": [
         {
-          "type": "atom",
-          "named": true
-        },
-        {
           "type": "closeBracket",
           "named": true
         },
@@ -51,74 +47,11 @@
           "named": true
         },
         {
+          "type": "term",
+          "named": true
+        },
+        {
           "type": "underscore",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "atom",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "atom",
-          "named": true
-        },
-        {
-          "type": "character",
-          "named": true
-        },
-        {
-          "type": "closeParen",
-          "named": true
-        },
-        {
-          "type": "compound",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "identifier_deprecated",
-          "named": true
-        },
-        {
-          "type": "multiLineString",
-          "named": true
-        },
-        {
-          "type": "number",
-          "named": true
-        },
-        {
-          "type": "openParen",
-          "named": true
-        },
-        {
-          "type": "primitive",
-          "named": true
-        },
-        {
-          "type": "signature",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "system",
           "named": true
         }
       ]
@@ -133,15 +66,15 @@
       "required": false,
       "types": [
         {
-          "type": "atom",
-          "named": true
-        },
-        {
           "type": "comment",
           "named": true
         },
         {
           "type": "leftArrow",
+          "named": true
+        },
+        {
+          "type": "term",
           "named": true
         }
       ]
@@ -304,6 +237,73 @@
     }
   },
   {
+    "type": "term",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "character",
+          "named": true
+        },
+        {
+          "type": "closeParen",
+          "named": true
+        },
+        {
+          "type": "compound",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "identifier_deprecated",
+          "named": true
+        },
+        {
+          "type": "multiLineString",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "openParen",
+          "named": true
+        },
+        {
+          "type": "primitive",
+          "named": true
+        },
+        {
+          "type": "signature",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "system",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "!",
     "named": false
   },
@@ -345,10 +345,6 @@
   },
   {
     "type": "/",
-    "named": false
-  },
-  {
-    "type": ":",
     "named": false
   },
   {
@@ -953,6 +949,10 @@
   },
   {
     "type": "∵",
+    "named": false
+  },
+  {
+    "type": "∶",
     "named": false
   },
   {

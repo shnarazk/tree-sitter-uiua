@@ -1,17 +1,9 @@
 module.exports = grammar({
   name: 'uiua',
   extras: $ => [/[ \t]+/, $.comment, $._end_of_line],
-  conflicts: $ => [
-  ],
+  conflicts: $ => [],     // Yay! It's empty!
   rules: {
     source_file: $ => $.PROGRAM,
-    // I guess syntactic components are:
-    // 1. _PROGRAM ::= (statement|module_definition)+
-    // 2. module_definition ::= ("---" statement+ "---" | "~~~" statement+ "~~~")
-    // 3. statement :== assignment|term
-    // 4. assignment ::= identifier leftArrow term?
-    // 5. term ::= '(' term ')' | (literal|multiline_literal)+end_of_line
-    // 6. multiline_literal :== '(' end_of_line? term+ ')' end_of_line
     PROGRAM:    $ => repeat1(
       choice(
         $.block,
@@ -23,14 +15,14 @@ module.exports = grammar({
     module_test:  $ => (seq($.tripleTilde, $.block, $.tripleTilde)),
     block:    $ => prec.right(repeat1(
       choice(
-        $.atom,
+        $.term,
         $.leftArrow,
         $.comment,
         $._end_of_line,
       )
     )),
-    atom:        $ => choice(
-      seq($.openParen, repeat1(choice($.atom, $._end_of_line)), $.closeParen),
+    term:        $ => choice(
+      seq($.openParen, repeat1(choice($.term, $._end_of_line)), $.closeParen),
       $.signature,
       $.compound,
       $.primitive,
@@ -44,9 +36,9 @@ module.exports = grammar({
       $.identifier_deprecated,
     ),
     array:       $ => choice(
-      prec(1, seq(repeat1(seq($.atom, $.underscore)),$.atom)),
-      seq($.openBracket, repeat(choice($.atom, $._end_of_line)), $.closeBracket),
-      seq($.openCurly, repeat(choice($.atom, $._end_of_line)), $.closeCurly),
+      prec(5, seq(repeat1(seq($.term, $.underscore)),$.term)),
+      seq($.openBracket, repeat(choice($.term, $._end_of_line)), $.closeBracket),
+      seq($.openCurly, repeat(choice($.term, $._end_of_line)), $.closeCurly),
     ),
     number:      $ => choice(
       seq(('¯'), $.constant),
@@ -55,7 +47,7 @@ module.exports = grammar({
         /¯?\d+(\.\d+)?([eE]¯?\d+)?/
       )),
     ),
-    character:   $ => prec(1,token(/@([^\\]|\\[nrt0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)),
+    character:   $ => prec(5,token(/@([^\\]|\\[nrt0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)),
     string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
     multiLineString:      $ =>  token(/\$[^"].+/),
     signature:   $ => token(/\|[0-9]+(\.[0-9]+)?/),
@@ -63,7 +55,6 @@ module.exports = grammar({
     identifier_deprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
     system:  $ => token(/&[a-z]+/),
     comment:     $ => /#.*/,
-    // InitialScopeDelimiter:$ => choice($.tripleMinus, $.tripleTilde),
     tripleMinus:  $ => token("---"),
     tripleTilde:  $ => token("~~~"),
     openParen:    $ => token('('),
@@ -75,17 +66,21 @@ module.exports = grammar({
     underscore:   $ => token('_'),
     bar:          $ => token('|'),
     leftArrow:    $ => token('←'),
-    compound:     $ => prec(1, choice(
-      seq(
+    compound:     $ => choice(
+      prec(1, seq(
         $.modifier1,
         choice($.function,$.system,$.identifier),
-      ),
-      seq(
+      )),
+      prec(1, seq(
+        $.modifier2,
+        choice($.function,$.system,$.identifier),
+      )),
+      prec(2, seq(
         $.modifier2,
         choice($.function,$.system,$.identifier),
         choice($.function,$.system,$.identifier),
-      ),
-    )),
+      )),
+    ),
     primitive:    $ => choice(
       $.function,
       $.modifier1,
