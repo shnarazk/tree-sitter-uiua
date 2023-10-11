@@ -31,6 +31,7 @@ module.exports = grammar({
       $.number,
       $.character,
       seq('$', $.string),
+      $.string,
       $.multiLineString,
       $.identifier,
       $.identifier_deprecated,
