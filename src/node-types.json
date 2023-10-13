@@ -632,6 +632,10 @@
     "named": true
   },
   {
+    "type": "parse",
+    "named": false
+  },
+  {
     "type": "partition",
     "named": false
   },
@@ -672,19 +676,11 @@
     "named": false
   },
   {
-    "type": "restack",
-    "named": false
-  },
-  {
     "type": "reverse",
     "named": false
   },
   {
     "type": "rise",
-    "named": false
-  },
-  {
-    "type": "roll",
     "named": false
   },
   {
@@ -792,10 +788,6 @@
     "named": true
   },
   {
-    "type": "unroll",
-    "named": false
-  },
-  {
     "type": "use",
     "named": false
   },
@@ -896,14 +888,6 @@
     "named": false
   },
   {
-    "type": "↶",
-    "named": false
-  },
-  {
-    "type": "↷",
-    "named": false
-  },
-  {
     "type": "↻",
     "named": false
   },
@@ -913,10 +897,6 @@
   },
   {
     "type": "⇡",
-    "named": false
-  },
-  {
-    "type": "⇵",
     "named": false
   },
   {

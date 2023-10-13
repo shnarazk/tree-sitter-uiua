@@ -298,6 +298,7 @@ module.exports = grammar({
       token('recur'),
       token('↬'),
       // (1, Parse, Misc, "parse"),
+      token('parse'),
       // (0, Rand, Misc, ("random", '⚂')),
       token('random'),
       token('⚂'),

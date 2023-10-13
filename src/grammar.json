@@ -1490,6 +1490,13 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "parse"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "random"
           }
         },
@@ -1954,48 +1961,6 @@
           "content": {
             "type": "STRING",
             "value": "⌂"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "roll"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "↷"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "unroll"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "↶"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "restack"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⇵"
           }
         },
         {
