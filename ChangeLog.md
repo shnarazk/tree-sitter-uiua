@@ -1,9 +1,11 @@
 # Changelog
 
-### 0.1.0: 2023-10-XX
+### 0.1.0: 2023-10-14
 
-- adapt to uiua-0.0.19
+adapt to uiua-0.0.19
 - add `parse`
+- add `@\s`
+- reject `$ "..."`
 
 ### 0.0.1: 2023-10-11
 
