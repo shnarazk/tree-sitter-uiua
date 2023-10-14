@@ -12,12 +12,14 @@ modifier1 + function: /+
       (term
         (primitive
           (modifier1)))
-      (term
-        (openParen)
+      (block
         (term
-          (primitive
-            (function)))
-        (closeParen)
+          (openParen)
+          (term
+            (primitive
+              (function)))
+          (closeParen)
+        )
       )
     )
   )

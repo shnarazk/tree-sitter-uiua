@@ -4,23 +4,32 @@ module.exports = grammar({
   conflicts: $ => [],     // Yay! It's empty!
   rules: {
     source_file: $ => $.PROGRAM,
-    PROGRAM:    $ => repeat1(
+    PROGRAM:     $ => repeat1(
       choice(
         $.block,
         $.module,
         $.module_test,
       ),
     ),
-    module:       $ => (seq($.tripleMinus, $.block, $.tripleMinus)),
-    module_test:  $ => (seq($.tripleTilde, $.block, $.tripleTilde)),
-    block:    $ => prec.right(repeat1(
+    module:      $ => (seq($.tripleMinus, $.block, $.tripleMinus)),
+    module_test: $ => (seq($.tripleTilde, $.block, $.tripleTilde)),
+    block:    $ => prec.right(seq(
       choice(
         $.term,
         $.leftArrow,
         $.comment,
         $._end_of_line,
-      )
+      ),
+      optional($.block),
     )),
+    // block:    $ => prec.right(repeat1(
+    //   choice(
+    //     $.term,
+    //     $.leftArrow,
+    //     $.comment,
+    //     $._end_of_line,
+    //   )
+    // )),
     term:        $ => choice(
       seq($.openParen, repeat1(choice($.term, $._end_of_line)), $.closeParen),
       $.signature,

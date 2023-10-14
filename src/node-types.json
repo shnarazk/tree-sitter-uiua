@@ -66,6 +66,10 @@
       "required": false,
       "types": [
         {
+          "type": "block",
+          "named": true
+        },
+        {
           "type": "comment",
           "named": true
         },
