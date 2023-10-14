@@ -30,7 +30,6 @@ module.exports = grammar({
       $.array,
       $.number,
       $.character,
-      seq('$', $.string),
       $.string,
       $.multiLineString,
       $.identifier,
@@ -49,7 +48,9 @@ module.exports = grammar({
       )),
     ),
     character:   $ => prec(5,token(/@([^\\]|\\[nrt0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)),
-    string:      $ => token(seq('"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')),
+    string:      $ => token(
+      seq(optional('$'),'"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')
+    ),
     multiLineString:      $ =>  token(/\$[^"].+/),
     signature:   $ => token(/\|[0-9]+(\.[0-9]+)?/),
     identifier:  $ => token(/[A-Z][A-Za-z]*|[a-z][A-Za-z]?|\p{P}/u),
