@@ -2,7 +2,9 @@
 
 ### 0.2.0: 2023-10-XX
 
+- break a block into line segments
 - render `multiLineString` as @string
+- render numbers as @constant.numeric
 
 ### 0.1.0: 2023-10-14
 
