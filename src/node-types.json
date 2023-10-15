@@ -70,10 +70,6 @@
       "required": true,
       "types": [
         {
-          "type": "block",
-          "named": true
-        },
-        {
           "type": "segment",
           "named": true
         }

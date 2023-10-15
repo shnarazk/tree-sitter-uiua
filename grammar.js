@@ -24,8 +24,8 @@ module.exports = grammar({
     module:      $ => (seq($.tripleMinus, $._end_of_line, $.block, $._end_of_line, $.tripleMinus)),
     module_test: $ => (seq($.tripleTilde, $._end_of_line, $.block, $._end_of_line, $.tripleTilde)),
     block:       $ => prec.left(seq(
+      repeat(seq($.segment, $._end_of_line)),
       $.segment,
-      optional(seq($._end_of_line, $.block))
     )),
     segment:    $ => prec.right(seq(
       choice(
