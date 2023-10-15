@@ -1,5 +1,5 @@
 ================
-modifier1 + function: /+
+multiline function1
 ================
 /(
   +
@@ -9,16 +9,21 @@ modifier1 + function: /+
 (source_file
   (PROGRAM
     (block
-      (term
-        (primitive
-          (modifier1)))
-      (block
+      (segment
         (term
-          (openParen)
+          (primitive
+            (modifier1)
+          ))
+        (segment
           (term
-            (primitive
-              (function)))
-          (closeParen)
+            (openParen)
+            (block
+              (segment
+                (term (primitive (function)))
+              )
+            )
+            (closeParen)
+          )
         )
       )
     )

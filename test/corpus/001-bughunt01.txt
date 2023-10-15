@@ -6,9 +6,11 @@ bug hunt 01
 (source_file
   (PROGRAM
     (block
-  	  (term
-        (primitive
-          (function)
+      (segment
+        (term
+          (primitive
+            (function)
+          )
         )
       )
     )

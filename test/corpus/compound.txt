@@ -7,12 +7,14 @@ modifier1 + function: /+
 (source_file
   (PROGRAM
     (block
-	  (term
-	    (compound
-		  (modifier1)
-		  (function)
-		)
-	  )
+      (segment
+        (term
+          (compound
+            (modifier1)
+            (function)
+          )
+        )
+      )
     )
   )
 )

@@ -10,8 +10,8 @@
 (signature) @type
 (comment) @comment
 (character) @character
-(number) @numeric
-(constant) @numeric.constant
+(number) @constant.numeric.integer
+(constant) @constant.numeric
 
 [
   (string)

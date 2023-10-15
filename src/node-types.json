@@ -47,6 +47,10 @@
           "named": true
         },
         {
+          "type": "segment",
+          "named": true
+        },
+        {
           "type": "term",
           "named": true
         },
@@ -63,22 +67,10 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
-          "type": "block",
-          "named": true
-        },
-        {
-          "type": "comment",
-          "named": true
-        },
-        {
-          "type": "leftArrow",
-          "named": true
-        },
-        {
-          "type": "term",
+          "type": "segment",
           "named": true
         }
       ]
@@ -226,6 +218,33 @@
     }
   },
   {
+    "type": "segment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "leftArrow",
+          "named": true
+        },
+        {
+          "type": "segment",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -250,6 +269,10 @@
       "types": [
         {
           "type": "array",
+          "named": true
+        },
+        {
+          "type": "block",
           "named": true
         },
         {
@@ -298,10 +321,6 @@
         },
         {
           "type": "system",
-          "named": true
-        },
-        {
-          "type": "term",
           "named": true
         }
       ]
