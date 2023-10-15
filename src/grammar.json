@@ -1697,6 +1697,20 @@
             "type": "STRING",
             "value": "dump"
           }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "regex"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "utf"
+          }
         }
       ]
     },

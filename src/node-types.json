@@ -687,6 +687,10 @@
     "named": false
   },
   {
+    "type": "regex",
+    "named": false
+  },
+  {
     "type": "repeat",
     "named": false
   },
@@ -808,6 +812,10 @@
   },
   {
     "type": "use",
+    "named": false
+  },
+  {
+    "type": "utf",
     "named": false
   },
   {

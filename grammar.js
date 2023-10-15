@@ -339,6 +339,7 @@ module.exports = grammar({
       // (0(0)[1], Dump, Stack, "dump"),
       token('dump'),
       token('regex'),
+      token('utf'),
     ),
     modifier1:     $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
