@@ -22,14 +22,6 @@ module.exports = grammar({
       ),
       optional($.block),
     )),
-    // block:    $ => prec.right(repeat1(
-    //   choice(
-    //     $.term,
-    //     $.leftArrow,
-    //     $.comment,
-    //     $._end_of_line,
-    //   )
-    // )),
     term:        $ => choice(
       seq($.openParen, repeat1(choice($.term, $._end_of_line)), $.closeParen),
       $.signature,
