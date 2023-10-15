@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.2.0: 2023-10-XX
+
+- render `multiLineString` as @string
+
 ### 0.1.0: 2023-10-14
 
 adapt to uiua-0.0.19
