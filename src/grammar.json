@@ -493,7 +493,7 @@
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "[A-Z][A-Za-z]*|[a-z][A-Za-z]?|\\p{P}"
+        "value": "[A-Z][A-Za-z]*|[a-z][A-Za-z]?|\\p{P}|\\p{Emoji}"
       }
     },
     "identifier_deprecated": {

@@ -69,7 +69,7 @@ module.exports = grammar({
     ),
     multiLineString:      $ =>  token(/\$[^"].+/),
     signature:   $ => token(/\|[0-9]+(\.[0-9]+)?/),
-    identifier:  $ => token(/[A-Z][A-Za-z]*|[a-z][A-Za-z]?|\p{P}/u),
+    identifier:  $ => token(/[A-Z][A-Za-z]*|[a-z][A-Za-z]?|\p{P}|\p{Emoji}/u),
     identifier_deprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
     system:  $ => token(/&[a-z]+/),
     comment:     $ => /#.*/,

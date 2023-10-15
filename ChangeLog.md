@@ -5,6 +5,7 @@
 - break a block into line segments
 - render `multiLineString` as @string
 - render numbers as @constant.numeric
+- handle emojis as identifiers correctly
 
 ### 0.1.0: 2023-10-14
 
