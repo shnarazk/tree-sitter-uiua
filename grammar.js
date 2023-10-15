@@ -338,6 +338,7 @@ module.exports = grammar({
       // (1, InvTrace, Stack),
       // (0(0)[1], Dump, Stack, "dump"),
       token('dump'),
+      token('regex'),
     ),
     modifier1:     $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
