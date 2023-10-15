@@ -11,9 +11,13 @@ array: [1 2 3]
         (term
           (array
             (openBracket)
-            (term (number))
-            (term (number))
-            (term (number))
+            (segment
+              (term (number))
+              (segment
+                (term (number))
+                (segment
+                  (term (number))
+            )))
             (closeBracket)
           )
         )
@@ -35,9 +39,10 @@ array: {+ - ∶}
         (term
           (array
             (openCurly)
-            (term (primitive (function)))
-            (term (primitive (function)))
-            (term (primitive (function)))
+            (segment (term (primitive (function)))
+              (segment (term (primitive (function)))
+                (segment (term (primitive (function))))
+            ))
             (closeCurly)
           )
         )
@@ -62,9 +67,9 @@ array: [\n 1 \n 2 \n 3\n]
         (term
           (array
             (openBracket)
-            (term (number))
-            (term (number))
-            (term (number))
+            (segment (term (number)))
+            (segment (term (number)))
+            (segment (term (number)))
             (closeBracket)
           )
         )

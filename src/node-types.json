@@ -47,6 +47,10 @@
           "named": true
         },
         {
+          "type": "segment",
+          "named": true
+        },
+        {
           "type": "term",
           "named": true
         },
@@ -272,6 +276,10 @@
           "named": true
         },
         {
+          "type": "block",
+          "named": true
+        },
+        {
           "type": "character",
           "named": true
         },
@@ -317,10 +325,6 @@
         },
         {
           "type": "system",
-          "named": true
-        },
-        {
-          "type": "term",
           "named": true
         }
       ]

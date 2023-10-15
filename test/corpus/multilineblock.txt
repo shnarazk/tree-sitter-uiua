@@ -17,7 +17,11 @@ multiline function1
         (segment
           (term
             (openParen)
-            (term (primitive (function)))
+            (block
+              (segment
+                (term (primitive (function)))
+              )
+            )
             (closeParen)
           )
         )

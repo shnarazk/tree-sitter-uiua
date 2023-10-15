@@ -4,23 +4,28 @@ module.exports = grammar({
   conflicts: $ => [],     // Yay! It's empty!
   rules: {
     source_file: $ => $.PROGRAM,
-    PROGRAM:     $ => repeat1(
+    PROGRAM:     $ => seq(
+      repeat(
+        seq(
+          choice(
+            $.block,
+            $.module,
+            $.module_test,
+          ),
+          $._end_of_line
+        )
+      ),
       choice(
         $.block,
         $.module,
         $.module_test,
       ),
     ),
-    module:      $ => (seq($.tripleMinus, $.block, $.tripleMinus)),
-    module_test: $ => (seq($.tripleTilde, $.block, $.tripleTilde)),
+    module:      $ => (seq($.tripleMinus, $._end_of_line, $.block, $._end_of_line, $.tripleMinus)),
+    module_test: $ => (seq($.tripleTilde, $._end_of_line, $.block, $._end_of_line, $.tripleTilde)),
     block:       $ => prec.left(seq(
       $.segment,
-      optional(
-        seq(
-          $._end_of_line,
-          optional($.block)
-        )
-      )
+      optional(seq($._end_of_line, $.block))
     )),
     segment:    $ => prec.right(seq(
       choice(
@@ -31,7 +36,7 @@ module.exports = grammar({
       optional($.segment),
     )),
     term:        $ => choice(
-      seq($.openParen, repeat1(choice($.term, $._end_of_line)), $.closeParen),
+      seq($.openParen, optional($._end_of_line), $.block, optional($._end_of_line), $.closeParen),
       $.signature,
       $.compound,
       $.primitive,
@@ -46,14 +51,14 @@ module.exports = grammar({
     ),
     array:       $ => choice(
       prec(5, seq(repeat1(seq($.term, $.underscore)),$.term)),
-      seq($.openBracket, repeat(choice($.term, $._end_of_line)), $.closeBracket),
-      seq($.openCurly, repeat(choice($.term, $._end_of_line)), $.closeCurly),
+      seq($.openBracket, optional($._end_of_line), repeat(seq($.segment, optional($._end_of_line))), $.closeBracket),
+      seq($.openCurly, optional($._end_of_line), repeat(seq($.segment, optional($._end_of_line))), $.closeCurly),
     ),
     number:      $ => choice(
-      seq(('¯'), $.constant),
+      $.constant,
       token(choice(
-        /¯?[πητ]([eE]¯?\d+)?/,
-        /¯?\d+(\.\d+)?([eE]¯?\d+)?/
+        /[πητ]([eE]¯?\d+)?/,
+        /\d+(\.\d+)?([eE]¯?\d+)?/
       )),
     ),
     character:   $ => prec(5,
