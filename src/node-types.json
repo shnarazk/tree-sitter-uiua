@@ -63,22 +63,14 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "block",
           "named": true
         },
         {
-          "type": "comment",
-          "named": true
-        },
-        {
-          "type": "leftArrow",
-          "named": true
-        },
-        {
-          "type": "term",
+          "type": "segment",
           "named": true
         }
       ]
@@ -220,6 +212,33 @@
         },
         {
           "type": "modifier2",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "segment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "leftArrow",
+          "named": true
+        },
+        {
+          "type": "segment",
+          "named": true
+        },
+        {
+          "type": "term",
           "named": true
         }
       ]

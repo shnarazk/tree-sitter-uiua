@@ -13,14 +13,22 @@ module.exports = grammar({
     ),
     module:      $ => (seq($.tripleMinus, $.block, $.tripleMinus)),
     module_test: $ => (seq($.tripleTilde, $.block, $.tripleTilde)),
-    block:    $ => prec.right(seq(
+    block:       $ => prec.left(seq(
+      $.segment,
+      optional(
+        seq(
+          $._end_of_line,
+          optional($.block)
+        )
+      )
+    )),
+    segment:    $ => prec.right(seq(
       choice(
         $.term,
         $.leftArrow,
         $.comment,
-        $._end_of_line,
       ),
-      optional($.block),
+      optional($.segment),
     )),
     term:        $ => choice(
       seq($.openParen, repeat1(choice($.term, $._end_of_line)), $.closeParen),
