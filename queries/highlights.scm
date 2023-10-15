@@ -12,7 +12,11 @@
 (character) @character
 (number) @numeric
 (constant) @numeric.constant
-(string) @string
+
+[
+  (string)
+  (multiLineString)
+] @string
 
 [ (identifier) ] @variable
 
