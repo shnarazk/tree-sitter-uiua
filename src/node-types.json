@@ -191,6 +191,11 @@
     }
   },
   {
+    "type": "other_constant",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "primitive",
     "named": true,
     "fields": {},
@@ -308,6 +313,10 @@
           "named": true
         },
         {
+          "type": "other_constant",
+          "named": true
+        },
+        {
           "type": "primitive",
           "named": true
         },
@@ -392,6 +401,34 @@
   },
   {
     "type": "?",
+    "named": false
+  },
+  {
+    "type": "Arch",
+    "named": false
+  },
+  {
+    "type": "ExeExt",
+    "named": false
+  },
+  {
+    "type": "Family",
+    "named": false
+  },
+  {
+    "type": "NaN",
+    "named": false
+  },
+  {
+    "type": "NumProcs",
+    "named": false
+  },
+  {
+    "type": "PllExt",
+    "named": false
+  },
+  {
+    "type": "Sep",
     "named": false
   },
   {
@@ -500,6 +537,10 @@
   },
   {
     "type": "dump",
+    "named": false
+  },
+  {
+    "type": "e",
     "named": false
   },
   {
@@ -649,6 +690,10 @@
   {
     "type": "openParen",
     "named": true
+  },
+  {
+    "type": "os",
+    "named": false
   },
   {
     "type": "parse",

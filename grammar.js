@@ -46,6 +46,7 @@ module.exports = grammar({
       $.character,
       $.string,
       $.multiLineString,
+      $.other_constant,
       $.identifier,
       $.identifier_deprecated,
     ),
@@ -60,6 +61,14 @@ module.exports = grammar({
         /[πητ]([eE]¯?\d+)?/,
         /\d+(\.\d+)?([eE]¯?\d+)?/
       )),
+    ),
+    other_constant: $ => choice(
+      token('os'),
+      token('Family'),
+      token('Arch'),
+      token('ExeExt'),
+      token('PllExt'),
+      token('Sep'),
     ),
     character:   $ => prec(5,
       token(/@([^\\]|\\[nrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)
@@ -118,6 +127,9 @@ module.exports = grammar({
       // (0, Infinity, Constant, ("infinity", '∞')),
       token('infinity'),
       token('∞'),
+      token('e'),
+      token('NaN'),
+      token('NumProcs'),
     ),
     function:    $ => choice(
       // (1(2), Dup, Stack, ("duplicate", '.')),

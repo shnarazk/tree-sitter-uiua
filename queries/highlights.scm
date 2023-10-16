@@ -12,6 +12,7 @@
 (character) @character
 (number) @constant.numeric.integer
 (constant) @constant.numeric
+(other_constant) @constant.builtin
 
 [
   (string)

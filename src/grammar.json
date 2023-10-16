@@ -255,6 +255,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "other_constant"
+        },
+        {
+          "type": "SYMBOL",
           "name": "identifier"
         },
         {
@@ -416,6 +420,53 @@
                 "value": "\\d+(\\.\\d+)?([eE]¯?\\d+)?"
               }
             ]
+          }
+        }
+      ]
+    },
+    "other_constant": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "os"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Family"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Arch"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "ExeExt"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "PllExt"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Sep"
           }
         }
       ]
@@ -781,6 +832,27 @@
           "content": {
             "type": "STRING",
             "value": "∞"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "e"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "NaN"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "NumProcs"
           }
         }
       ]
