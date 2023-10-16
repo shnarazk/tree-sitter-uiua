@@ -7,12 +7,14 @@
   (closeBracket)
 ] @punctuation.bracket
 
+[ (underscore) ] @punctuation.delimiter
+
 (signature) @type
-(comment) @comment
+(comment) @injection.content
 (character) @character
 (number) @constant.numeric.integer
 (constant) @constant.numeric
-(other_constant) @constant.builtin
+(other_constant) @string.special
 
 [
   (string)
