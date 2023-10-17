@@ -10,7 +10,7 @@
 [ (underscore) ] @punctuation.delimiter
 
 (signature) @type
-(comment) @injection.content
+(comment) @comment
 (character) @character
 (number) @constant.numeric.integer
 (constant) @constant.numeric
