@@ -1,5 +1,10 @@
 # Changelog
 
+### 0.3.0: 2023-10-22
+
+- follows Uiua-0.0.22
+- remove `block`, multiline element
+
 ### 0.2.0: 2023-10-17
 
 - break a block into line segments
