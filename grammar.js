@@ -10,7 +10,6 @@ module.exports = grammar({
           choice(
             $.block,
             $.module,
-            $.module_test,
           ),
           $._end_of_line
         )
@@ -18,11 +17,9 @@ module.exports = grammar({
       choice(
         $.block,
         $.module,
-        $.module_test,
       ),
     ),
     module:      $ => (seq($.tripleMinus, $._end_of_line, $.block, $._end_of_line, $.tripleMinus)),
-    module_test: $ => (seq($.tripleTilde, $._end_of_line, $.block, $._end_of_line, $.tripleTilde)),
     block:       $ => prec.left(seq(
       repeat(seq($.segment, $._end_of_line)),
       $.segment,
