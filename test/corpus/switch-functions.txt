@@ -1,0 +1,68 @@
+================
+Switch Functions1: (+|-) 0 1
+================
+(+|-) 0 1
+---
+
+(source_file
+  (PROGRAM
+    (segment
+      (term
+        (switchFunctions
+          (openParen)
+          (term (primitive (function)))
+          (branchSeparator)
+          (term (primitive (function)))
+          (closeParen)))
+      (segment
+        (term (number))
+        (segment (term (number))))
+    )
+  )
+)
+
+================
+Switch Functions2: (3||0 5) 0
+================
+(3||0 5) 0
+---
+
+(source_file
+  (PROGRAM
+    (segment
+      (term
+        (switchFunctions
+          (openParen)
+          (term (number))
+          (branchSeparator)
+          (term
+            (signature)
+            (term (number)))
+          (closeParen))
+      )
+      (segment (term (number)))
+    )
+  )
+)
+
+================
+Switch Functions3: (3|5) 0
+================
+(3|5) 0
+---
+
+(source_file
+  (PROGRAM
+    (segment
+      (term
+        (switchFunctions
+          (openParen)
+          (term (number))
+          (branchSeparator)
+          (term (number))
+          (closeParen))
+        )
+      (segment (term (number)) )
+    )
+  )
+)

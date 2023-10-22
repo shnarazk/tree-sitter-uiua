@@ -1,27 +1,27 @@
 ================
-multiline function1
+multiline function1: /( + + )
 ================
 /(
+  +
   +
 )
 ---
 
 (source_file
   (PROGRAM
-    (block
+    (segment
+      (term
+        (primitive
+          (modifier1)
+        ))
       (segment
         (term
-          (primitive
-            (modifier1)
-          ))
-        (segment
-          (term
+          (multiLineFunction
             (openParen)
-            (block
-              (segment
-                (term (primitive (function)))
-              )
-            )
+            (segment
+              (term (primitive (function))))
+            (segment
+              (term (primitive (function))))
             (closeParen)
           )
         )
