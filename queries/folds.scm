@@ -1,5 +1,5 @@
 [
   (array)
-  (tripleTilde)
+  (module)
 ] @fold
 

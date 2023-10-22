@@ -5,12 +5,10 @@ bug hunt 01
 ---
 (source_file
   (PROGRAM
-    (block
-      (segment
-        (term
-          (primitive
-            (function)
-          )
+    (segment
+      (term
+        (primitive
+          (function)
         )
       )
     )

@@ -6,20 +6,18 @@ array: [1 2 3]
 
 (source_file
   (PROGRAM
-    (block
-      (segment
-        (term
-          (array
-            (openBracket)
+    (segment
+      (term
+        (array
+          (openBracket)
+          (segment
+            (term (number))
             (segment
               (term (number))
               (segment
                 (term (number))
-                (segment
-                  (term (number))
-            )))
-            (closeBracket)
-          )
+          )))
+          (closeBracket)
         )
       )
     )
@@ -34,17 +32,15 @@ array: {+ - ∶}
 
 (source_file
   (PROGRAM
-    (block
-      (segment
-        (term
-          (array
-            (openCurly)
+    (segment
+      (term
+        (array
+          (openCurly)
+          (segment (term (primitive (function)))
             (segment (term (primitive (function)))
-              (segment (term (primitive (function)))
-                (segment (term (primitive (function))))
-            ))
-            (closeCurly)
-          )
+              (segment (term (primitive (function))))
+          ))
+          (closeCurly)
         )
       )
     )
@@ -62,16 +58,14 @@ array: [\n 1 \n 2 \n 3\n]
 
 (source_file
   (PROGRAM
-    (block
-      (segment
-        (term
-          (array
-            (openBracket)
-            (segment (term (number)))
-            (segment (term (number)))
-            (segment (term (number)))
-            (closeBracket)
-          )
+    (segment
+      (term
+        (array
+          (openBracket)
+          (segment (term (number)))
+          (segment (term (number)))
+          (segment (term (number)))
+          (closeBracket)
         )
       )
     )

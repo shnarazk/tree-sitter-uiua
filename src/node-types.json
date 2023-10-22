@@ -8,11 +8,11 @@
       "required": true,
       "types": [
         {
-          "type": "block",
+          "type": "module",
           "named": true
         },
         {
-          "type": "module",
+          "type": "segment",
           "named": true
         }
       ]
@@ -58,19 +58,9 @@
     }
   },
   {
-    "type": "block",
+    "type": "branchSeparator",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "segment",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "character",
@@ -142,11 +132,34 @@
       "required": true,
       "types": [
         {
-          "type": "block",
+          "type": "segment",
           "named": true
         },
         {
           "type": "tripleMinus",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "multiLineFunction",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "closeParen",
+          "named": true
+        },
+        {
+          "type": "openParen",
+          "named": true
+        },
+        {
+          "type": "segment",
           "named": true
         }
       ]
@@ -227,6 +240,11 @@
     }
   },
   {
+    "type": "signature",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -236,6 +254,33 @@
       "types": [
         {
           "type": "PROGRAM",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "switchFunctions",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "branchSeparator",
+          "named": true
+        },
+        {
+          "type": "closeParen",
+          "named": true
+        },
+        {
+          "type": "openParen",
+          "named": true
+        },
+        {
+          "type": "term",
           "named": true
         }
       ]
@@ -254,15 +299,7 @@
           "named": true
         },
         {
-          "type": "block",
-          "named": true
-        },
-        {
           "type": "character",
-          "named": true
-        },
-        {
-          "type": "closeParen",
           "named": true
         },
         {
@@ -278,6 +315,10 @@
           "named": true
         },
         {
+          "type": "multiLineFunction",
+          "named": true
+        },
+        {
           "type": "multiLineString",
           "named": true
         },
@@ -286,11 +327,11 @@
           "named": true
         },
         {
-          "type": "openParen",
+          "type": "other_constant",
           "named": true
         },
         {
-          "type": "other_constant",
+          "type": "placeHolder",
           "named": true
         },
         {
@@ -306,7 +347,15 @@
           "named": true
         },
         {
+          "type": "switchFunctions",
+          "named": true
+        },
+        {
           "type": "system",
+          "named": true
+        },
+        {
+          "type": "term",
           "named": true
         }
       ]
@@ -701,6 +750,10 @@
     "named": false
   },
   {
+    "type": "placeHolder",
+    "named": true
+  },
+  {
     "type": "power",
     "named": false
   },
@@ -775,10 +828,6 @@
   {
     "type": "sign",
     "named": false
-  },
-  {
-    "type": "signature",
-    "named": true
   },
   {
     "type": "sine",
@@ -866,6 +915,10 @@
   },
   {
     "type": "windows",
+    "named": false
+  },
+  {
+    "type": "|",
     "named": false
   },
   {
