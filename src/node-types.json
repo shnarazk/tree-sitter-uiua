@@ -186,6 +186,11 @@
     "fields": {}
   },
   {
+    "type": "placeHolder",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "primitive",
     "named": true,
     "fields": {},
@@ -455,6 +460,10 @@
   },
   {
     "type": "\\",
+    "named": false
+  },
+  {
+    "type": "^",
     "named": false
   },
   {
@@ -748,10 +757,6 @@
   {
     "type": "pick",
     "named": false
-  },
-  {
-    "type": "placeHolder",
-    "named": true
   },
   {
     "type": "power",

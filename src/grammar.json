@@ -647,11 +647,17 @@
       }
     },
     "placeHolder": {
-      "type": "TOKEN",
-      "content": {
-        "type": "STRING",
-        "value": "^"
-      }
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "^"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[0-9]+(\\.[0-9]+)?"
+        }
+      ]
     },
     "branchSeparator": {
       "type": "TOKEN",

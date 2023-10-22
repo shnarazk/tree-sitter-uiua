@@ -1,7 +1,7 @@
 ================
-ReduceRange: ReduceRange! ← |1 /^+1⇡
+ReduceRange: ReduceRange! ← /^2+1⇡
 ================
-ReduceRange! ← |1 /^+1⇡
+ReduceRange! ← /^2+1⇡
 ReduceRange!+5
 ---
 
@@ -12,9 +12,7 @@ ReduceRange!+5
       (segment
         (leftArrow)
         (segment
-          (term
-            (signature)
-            (term (primitive (modifier1))))
+          (term (primitive (modifier1)))
           (segment
             (term (placeHolder))
             (segment

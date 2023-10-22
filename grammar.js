@@ -77,7 +77,7 @@ module.exports = grammar({
     closeBracket:$ => token(']'),
     underscore:  $ => token('_'),
     leftArrow:   $ => token('←'),
-    placeHolder: $ => token('^'),
+    placeHolder: $ => seq('^', /[0-9]+(\.[0-9]+)?/),
     branchSeparator: $=> token('|'),
     compound:    $ => choice(
       prec(1, seq(
