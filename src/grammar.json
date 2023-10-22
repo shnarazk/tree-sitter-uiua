@@ -23,10 +23,6 @@
                   {
                     "type": "SYMBOL",
                     "name": "module"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "module_test"
                   }
                 ]
               },
@@ -47,10 +43,6 @@
             {
               "type": "SYMBOL",
               "name": "module"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "module_test"
             }
           ]
         }
@@ -78,31 +70,6 @@
         {
           "type": "SYMBOL",
           "name": "tripleMinus"
-        }
-      ]
-    },
-    "module_test": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "tripleTilde"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_end_of_line"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "block"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_end_of_line"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "tripleTilde"
         }
       ]
     },
@@ -570,13 +537,6 @@
       "content": {
         "type": "STRING",
         "value": "---"
-      }
-    },
-    "tripleTilde": {
-      "type": "TOKEN",
-      "content": {
-        "type": "STRING",
-        "value": "~~~"
       }
     },
     "openParen": {
@@ -1445,7 +1405,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "≅"
+            "value": "≍"
           }
         },
         {
@@ -1655,13 +1615,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "!"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "break"
           }
         },
@@ -1725,13 +1678,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "use"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "tag"
           }
         },
@@ -1753,14 +1699,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "sig"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "~"
+            "value": "⸮"
           }
         },
         {
@@ -1782,6 +1721,76 @@
           "content": {
             "type": "STRING",
             "value": "utf"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "rock"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⋄"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "surface"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "~"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "deep"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "≊"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "abyss"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "≃"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "seabed"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "∸"
           }
         }
       ]
@@ -1920,6 +1929,34 @@
           "content": {
             "type": "STRING",
             "value": "spawn"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "pack"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⊐"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "tribute"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "≐"
           }
         }
       ]
@@ -2078,7 +2115,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⍚"
+            "value": "≑"
           }
         },
         {
@@ -2128,6 +2165,20 @@
           "content": {
             "type": "STRING",
             "value": "⍣"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "combinate"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "◳"
           }
         }
       ]

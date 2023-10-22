@@ -14,10 +14,6 @@
         {
           "type": "module",
           "named": true
-        },
-        {
-          "type": "module_test",
-          "named": true
         }
       ]
     }
@@ -151,25 +147,6 @@
         },
         {
           "type": "tripleMinus",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "module_test",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "block",
-          "named": true
-        },
-        {
-          "type": "tripleTilde",
           "named": true
         }
       ]
@@ -336,10 +313,6 @@
     }
   },
   {
-    "type": "!",
-    "named": false
-  },
-  {
     "type": "!=",
     "named": false
   },
@@ -444,6 +417,10 @@
     "named": false
   },
   {
+    "type": "abyss",
+    "named": false
+  },
+  {
     "type": "assert",
     "named": false
   },
@@ -496,6 +473,10 @@
     "named": true
   },
   {
+    "type": "combinate",
+    "named": false
+  },
+  {
     "type": "comment",
     "named": true
   },
@@ -513,6 +494,10 @@
   },
   {
     "type": "deduplicate",
+    "named": false
+  },
+  {
+    "type": "deep",
     "named": false
   },
   {
@@ -696,6 +681,10 @@
     "named": false
   },
   {
+    "type": "pack",
+    "named": false
+  },
+  {
     "type": "parse",
     "named": false
   },
@@ -752,6 +741,10 @@
     "named": false
   },
   {
+    "type": "rock",
+    "named": false
+  },
+  {
     "type": "rotate",
     "named": false
   },
@@ -768,15 +761,15 @@
     "named": false
   },
   {
+    "type": "seabed",
+    "named": false
+  },
+  {
     "type": "select",
     "named": false
   },
   {
     "type": "shape",
-    "named": false
-  },
-  {
-    "type": "sig",
     "named": false
   },
   {
@@ -804,6 +797,10 @@
     "named": true
   },
   {
+    "type": "surface",
+    "named": false
+  },
+  {
     "type": "system",
     "named": true
   },
@@ -828,11 +825,11 @@
     "named": false
   },
   {
-    "type": "tripleMinus",
-    "named": true
+    "type": "tribute",
+    "named": false
   },
   {
-    "type": "tripleTilde",
+    "type": "tripleMinus",
     "named": true
   },
   {
@@ -854,10 +851,6 @@
   {
     "type": "underscore",
     "named": true
-  },
-  {
-    "type": "use",
-    "named": false
   },
   {
     "type": "utf",
@@ -1012,11 +1005,31 @@
     "named": false
   },
   {
+    "type": "∸",
+    "named": false
+  },
+  {
     "type": "∺",
     "named": false
   },
   {
-    "type": "≅",
+    "type": "≃",
+    "named": false
+  },
+  {
+    "type": "≊",
+    "named": false
+  },
+  {
+    "type": "≍",
+    "named": false
+  },
+  {
+    "type": "≐",
+    "named": false
+  },
+  {
+    "type": "≑",
     "named": false
   },
   {
@@ -1045,6 +1058,10 @@
   },
   {
     "type": "⊏",
+    "named": false
+  },
+  {
+    "type": "⊐",
     "named": false
   },
   {
@@ -1104,6 +1121,10 @@
     "named": false
   },
   {
+    "type": "⋄",
+    "named": false
+  },
+  {
     "type": "⋅",
     "named": false
   },
@@ -1145,10 +1166,6 @@
   },
   {
     "type": "⍘",
-    "named": false
-  },
-  {
-    "type": "⍚",
     "named": false
   },
   {
@@ -1196,6 +1213,10 @@
     "named": false
   },
   {
+    "type": "◳",
+    "named": false
+  },
+  {
     "type": "◿",
     "named": false
   },
@@ -1217,6 +1238,10 @@
   },
   {
     "type": "⬚",
+    "named": false
+  },
+  {
+    "type": "⸮",
     "named": false
   }
 ]
