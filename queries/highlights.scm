@@ -40,5 +40,4 @@
 
 [
   (tripleMinus)
-  (tripleTilde)
 ] @namespace
