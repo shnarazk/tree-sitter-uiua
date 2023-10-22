@@ -7,9 +7,16 @@
   (closeBracket)
 ] @punctuation.bracket
 
-[ (underscore) ] @punctuation.delimiter
+[
+  (underscore)
+  (branchSeparator)
+] @punctuation.delimiter
 
-(signature) @type
+[
+  (signature)
+  (placeHolder)
+] @type
+
 (comment) @comment
 (character) @character
 (number) @constant.numeric.integer
