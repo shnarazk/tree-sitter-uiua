@@ -771,7 +771,7 @@
     "named": false
   },
   {
-    "type": "recur",
+    "type": "recv",
     "named": false
   },
   {
@@ -824,6 +824,10 @@
   },
   {
     "type": "select",
+    "named": false
+  },
+  {
+    "type": "send",
     "named": false
   },
   {
@@ -888,6 +892,10 @@
   },
   {
     "type": "try",
+    "named": false
+  },
+  {
+    "type": "tryrecv",
     "named": false
   },
   {
@@ -996,10 +1004,6 @@
   },
   {
     "type": "↧",
-    "named": false
-  },
-  {
-    "type": "↬",
     "named": false
   },
   {

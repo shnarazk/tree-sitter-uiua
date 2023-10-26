@@ -57,7 +57,7 @@ module.exports = grammar({
       token('Sep'),
     ),
     character:   $ => prec(5,
-      token(/@([^\\]|\\[nrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)
+      token(/@([^\\]|\\[bnrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)
     ),
     string:      $ => token(
       seq(optional('$'),'"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')
@@ -308,8 +308,8 @@ module.exports = grammar({
       token('break'),
       token('⎋'),
       // (1(None), Recur, Control, ("recur", '↬')),
-      token('recur'),
-      token('↬'),
+      // token('recur'),
+      // token('↬'),
       // (1, Parse, Misc, "parse"),
       token('parse'),
       // (0, Rand, Misc, ("random", '⚂')),
@@ -333,7 +333,7 @@ module.exports = grammar({
       token('regex'),
       token('utf'),
 
-      // Since 0.21
+      // Since 0.0.21
       token('rock'),
       token('⋄'),
       token('surface'),
@@ -344,6 +344,11 @@ module.exports = grammar({
       token('≃'),
       token('seabed'),
       token('∸'),
+
+      // Since 0.0.23
+      token('send'),
+      token('recv'),
+      token('tryrecv'),
     ),
     modifier1:   $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),

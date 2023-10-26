@@ -490,7 +490,7 @@
         "type": "TOKEN",
         "content": {
           "type": "PATTERN",
-          "value": "@([^\\\\]|\\\\[nrst0\\\\\"'_]|\\\\x[0-9A-Fa-f]{2,2}|\\\\u[0-9A-Fa-f]{4,4})"
+          "value": "@([^\\\\]|\\\\[bnrst0\\\\\"'_]|\\\\x[0-9A-Fa-f]{2,2}|\\\\u[0-9A-Fa-f]{4,4})"
         }
       }
     },
@@ -1693,20 +1693,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "recur"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "↬"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "parse"
           }
         },
@@ -1855,6 +1841,27 @@
           "content": {
             "type": "STRING",
             "value": "∸"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "send"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "recv"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "tryrecv"
           }
         }
       ]
