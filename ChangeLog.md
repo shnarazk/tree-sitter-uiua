@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.3.1: 2023-10-26
+
+- follows Uiua-0.0.22
+
 ### 0.3.0: 2023-10-22
 
 - follows Uiua-0.0.22
