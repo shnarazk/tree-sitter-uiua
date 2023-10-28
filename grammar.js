@@ -339,10 +339,13 @@ module.exports = grammar({
       token('surface'),
       token('~'),
       token('deep'),
+      token('de'),
       token('≊'),
       token('abyss'),
+      token('ab'),
       token('≃'),
       token('seabed'),
+      token('se'),
       token('∸'),
 
       // Since 0.0.23
@@ -374,6 +377,9 @@ module.exports = grammar({
       token('gap'),
       token('ga'),
       token('⋅'),
+       // ([1], Oust, Planet, ("oust", '⟜')),
+      token('oust'),
+      token('⟜'),
       // ([1], Invert, OtherModifier, ("invert", '⍘')),
       token('invert'),
       token('⍘'),

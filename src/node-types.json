@@ -471,6 +471,10 @@
     "named": false
   },
   {
+    "type": "ab",
+    "named": false
+  },
+  {
     "type": "absolute value",
     "named": false
   },
@@ -544,6 +548,10 @@
   },
   {
     "type": "cross",
+    "named": false
+  },
+  {
+    "type": "de",
     "named": false
   },
   {
@@ -739,6 +747,10 @@
     "named": false
   },
   {
+    "type": "oust",
+    "named": false
+  },
+  {
     "type": "pack",
     "named": false
   },
@@ -816,6 +828,10 @@
   },
   {
     "type": "scan",
+    "named": false
+  },
+  {
+    "type": "se",
     "named": false
   },
   {
@@ -1292,6 +1308,10 @@
   },
   {
     "type": "❥",
+    "named": false
+  },
+  {
+    "type": "⟜",
     "named": false
   },
   {

@@ -1812,6 +1812,13 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "de"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "≊"
           }
         },
@@ -1826,6 +1833,13 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "ab"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "≃"
           }
         },
@@ -1834,6 +1848,13 @@
           "content": {
             "type": "STRING",
             "value": "seabed"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "se"
           }
         },
         {
@@ -1979,6 +2000,20 @@
           "content": {
             "type": "STRING",
             "value": "⋅"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "oust"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⟜"
           }
         },
         {
