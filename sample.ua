@@ -1,18 +1,15 @@
 #!/usr/bin/env uiua run
-FirstColumn ← 16
-SecondColumn ← 6
----
-⍤ ≥FirstColumn SecondColumn
----
-F!! ← (+|-|^2|^2)
+Column ← 16
+Fill ← ⊂∶⬚∘↙∘⊃(∘)(∶""↥0-∶Column ⧻⋅.)
 CommentChar ← @# # this is comment
-FileList ← ↘1&args
+FileList ← (∘|["sample.ua"];)=0⧻.↘1&args
 NotBlankLine ← ▽∵(≠0⧻).
-NotStartsWithComment ← ▽∵(/<⊂⊃(⊗CommentChar⊔)(⊗0=@ ⊔)).
-LoC ← |1 ⧻NotStartsWithComment NotBlankLine ⊜□¬=@\n.&fras
-≡(&fe⊔)..FileList
-≡(|2 ?(LoC)(□"N/A";))
-≡(|2 □$"| _ | _ |"⬚@\s(↙) FirstColumn $"_" ⊙(⬚@\s(↙) dump∘ SecondColumn $"_")∶∩⊔)
-⊂□$"|-_-|-_-:|" ⬚@-↙ FirstColumn "" ⬚@-↙ - 1 SecondColumn ""
-⊂□$"| File_ | LoC_ |" ⬚@\s↙ - 4 FirstColumn "" ⬚@\s↙ - 3 SecondColumn ""
-∵&p
+NotStartsWithComment ← ⊐▽∵(/<⊂⊃'⊗CommentChar(⊗0=@\s)).
+LoC ← |1 ⧻NotStartsWithComment NotBlankLine ⊜□≠@\n.&fras
+&p $"| _ | _ |" ∩Fill @\s "File" @\s "LoC"
+&p $"|-_-|-_:|" .Fill @- ""
+;⊐≡(0 &p $"| _ | _ |" ∩'Fill@\s ∶?'$"_"LoC'"N/A";&fe)..FileList
+---
+m ← ↯ 10_9_3_3 ⇡ 810
+⍜≡≡□⍉ m
+---
