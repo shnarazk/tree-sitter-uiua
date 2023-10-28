@@ -571,10 +571,6 @@
     "named": false
   },
   {
-    "type": "di",
-    "named": false
-  },
-  {
     "type": "dip",
     "named": false
   },
@@ -628,10 +624,6 @@
   },
   {
     "type": "fork",
-    "named": false
-  },
-  {
-    "type": "ga",
     "named": false
   },
   {
@@ -747,10 +739,6 @@
     "named": false
   },
   {
-    "type": "oust",
-    "named": false
-  },
-  {
     "type": "pack",
     "named": false
   },
@@ -780,6 +768,10 @@
   },
   {
     "type": "range",
+    "named": false
+  },
+  {
+    "type": "reach",
     "named": false
   },
   {

@@ -371,14 +371,10 @@ module.exports = grammar({
       token('⍥'),
       // ([1], Dip, Stack, ("dip", '⊙')),
       token('dip'),
-      token('di'),
       token('⊙'),
       // ([1], Gap, Stack, ("gap", '⋅')),
       token('gap'),
-      token('ga'),
       token('⋅'),
-       // ([1], Oust, Planet, ("oust", '⟜')),
-      token('oust'),
       token('⟜'),
       // ([1], Invert, OtherModifier, ("invert", '⍘')),
       token('invert'),
@@ -391,6 +387,9 @@ module.exports = grammar({
       token('⊐'),
       token('tribute'),
       token('≐'),
+
+      // Since 0.24
+      token('reach'),
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),

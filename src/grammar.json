@@ -1971,13 +1971,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "di"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "⊙"
           }
         },
@@ -1992,21 +1985,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "ga"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "⋅"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "oust"
           }
         },
         {
@@ -2063,6 +2042,13 @@
           "content": {
             "type": "STRING",
             "value": "≐"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "reach"
           }
         }
       ]
