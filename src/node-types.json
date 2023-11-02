@@ -375,10 +375,6 @@
     "named": false
   },
   {
-    "type": "'",
-    "named": false
-  },
-  {
     "type": "*",
     "named": false
   },
@@ -491,10 +487,6 @@
     "named": false
   },
   {
-    "type": "bind",
-    "named": false
-  },
-  {
     "type": "bits",
     "named": false
   },
@@ -508,10 +500,6 @@
   },
   {
     "type": "bracket",
-    "named": false
-  },
-  {
-    "type": "break",
     "named": false
   },
   {
@@ -576,6 +564,10 @@
   },
   {
     "type": "distribute",
+    "named": false
+  },
+  {
+    "type": "do",
     "named": false
   },
   {
@@ -800,6 +792,10 @@
   },
   {
     "type": "rise",
+    "named": false
+  },
+  {
+    "type": "ro",
     "named": false
   },
   {
@@ -1247,6 +1243,10 @@
     "named": false
   },
   {
+    "type": "⍢",
+    "named": false
+  },
+  {
     "type": "⍣",
     "named": false
   },
@@ -1256,10 +1256,6 @@
   },
   {
     "type": "⍥",
-    "named": false
-  },
-  {
-    "type": "⎋",
     "named": false
   },
   {

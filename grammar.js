@@ -304,9 +304,6 @@ module.exports = grammar({
       token('⍤'),
       // (1, Wait, Misc, ("wait", '↲')),
       token('wait'),
-      // (1(0), Break, Control, ("break", '⎋')),
-      token('break'),
-      token('⎋'),
       // (1(None), Recur, Control, ("recur", '↬')),
       // token('recur'),
       // token('↬'),
@@ -391,6 +388,10 @@ module.exports = grammar({
       // Since 0.24
       token('reach'),
       token('⟜'),
+
+      // Since 0.26
+      token('do'),
+      token('⍢'),
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
@@ -429,9 +430,6 @@ module.exports = grammar({
       // ([2], Fill, OtherModifier, ("fill", '⬚')),
       token('fill'),
       token('⬚'),
-      // ([2], Bind, OtherModifier, ("bind", '\'')),
-      token('bind'),
-      token('\''),
       // ([2], If, Control, ("if", '?')),
       token('?'),
       // ([2], Try, OtherModifier, ("try", '⍣')),

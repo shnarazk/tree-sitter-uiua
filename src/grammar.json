@@ -1679,20 +1679,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "break"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⎋"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "parse"
           }
         },
@@ -1778,6 +1764,13 @@
           "content": {
             "type": "STRING",
             "value": "rock"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "ro"
           }
         },
         {
@@ -1992,13 +1985,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⟜"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "invert"
           }
         },
@@ -2049,6 +2035,27 @@
           "content": {
             "type": "STRING",
             "value": "reach"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⟜"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "do"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⍢"
           }
         }
       ]
@@ -2222,20 +2229,6 @@
           "content": {
             "type": "STRING",
             "value": "⬚"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "bind"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "'"
           }
         },
         {
