@@ -9,7 +9,3 @@ LoC ← |1 ⧻NotStartsWithComment NotBlankLine ⊜□≠@\n.&fras
 &p $"| _ | _ |" ∩Fill @\s "File" @\s "LoC"
 &p $"|-_-|-_:|" .Fill @- ""
 ;⊐≡(0 &p $"| _ | _ |" ∩(Fill@\s) ∶?($"_"LoC)("N/A";)&fe)..FileList
----
-m ← ↯ 10_9_3_3 ⇡ 810
-⍜≡≡□⍉ m
----
