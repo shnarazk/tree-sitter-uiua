@@ -1,5 +1,13 @@
 # Changelog
 
+### 0.3.3: 2023-11-??
+
+Follows Uiua-0.0.26
+
+- add `complex`
+- remove `break`
+- add fraction
+
 ### 0.3.2: 2023-10-30
 
 - follows Uiua-0.0.25

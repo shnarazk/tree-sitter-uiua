@@ -1,0 +1,14 @@
+================
+fraction: 1/3
+================
+1/3
+---
+
+(source_file
+  (PROGRAM
+    (segment
+      (term (number (fraction)))
+    )
+  )
+)
+

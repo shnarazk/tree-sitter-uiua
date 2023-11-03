@@ -176,6 +176,10 @@
         {
           "type": "constant",
           "named": true
+        },
+        {
+          "type": "fraction",
+          "named": true
         }
       ]
     }
@@ -531,6 +535,10 @@
     "named": true
   },
   {
+    "type": "complex",
+    "named": false
+  },
+  {
     "type": "couple",
     "named": false
   },
@@ -617,6 +625,10 @@
   {
     "type": "fork",
     "named": false
+  },
+  {
+    "type": "fraction",
+    "named": true
   },
   {
     "type": "gap",
@@ -988,6 +1000,10 @@
   },
   {
     "type": "ₙ",
+    "named": false
+  },
+  {
+    "type": "ℂ",
     "named": false
   },
   {

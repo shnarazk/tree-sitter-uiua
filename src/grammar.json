@@ -419,6 +419,10 @@
           "name": "constant"
         },
         {
+          "type": "SYMBOL",
+          "name": "fraction"
+        },
+        {
           "type": "TOKEN",
           "content": {
             "type": "CHOICE",
@@ -435,6 +439,13 @@
           }
         }
       ]
+    },
+    "fraction": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PATTERN",
+        "value": "¯?\\d+\\/\\d+"
+      }
     },
     "other_constant": {
       "type": "CHOICE",
@@ -1876,6 +1887,20 @@
           "content": {
             "type": "STRING",
             "value": "tryrecv"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "complex"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "ℂ"
           }
         }
       ]

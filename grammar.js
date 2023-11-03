@@ -43,11 +43,13 @@ module.exports = grammar({
     ),
     number:      $ => choice(
       $.constant,
+      $.fraction,
       token(choice(
         /[πητ]([eE]¯?\d+)?/,
         /\d+(\.\d+)?([eE]¯?\d+)?/
       )),
     ),
+    fraction:    $ => token(/¯?\d+\/\d+/),
     other_constant: $ => choice(
       token('os'),
       token('Family'),
@@ -350,6 +352,10 @@ module.exports = grammar({
       token('send'),
       token('recv'),
       token('tryrecv'),
+
+      // Since 0.0.26
+      token('complex'),
+      token('ℂ'),
     ),
     modifier1:   $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
