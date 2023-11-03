@@ -1,12 +1,12 @@
 # Changelog
 
-### 0.3.3: 2023-11-??
+### 0.3.3: 2023-11-04
 
-Follows Uiua-0.0.26
+Follows Uiua-0.1.0
 
 - add `complex`
 - remove `break`
-- add fraction
+- add fraction leterals
 
 ### 0.3.2: 2023-10-30
 
