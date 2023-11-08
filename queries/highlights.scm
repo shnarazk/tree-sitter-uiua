@@ -15,7 +15,12 @@
 [
   (signature)
   (placeHolder)
+  (ocean)
 ] @type
+
+[
+  (planet)
+] @type.parameter
 
 (comment) @comment
 (character) @character
