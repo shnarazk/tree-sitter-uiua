@@ -1,5 +1,10 @@
 # Changelog
 
+### 0.4.0: 2023-11-??
+
+- add `ocean` node redered as 'type'
+- add `planet `node redered as 'type.parameter'
+
 ### 0.3.3: 2023-11-04
 
 Follows Uiua-0.1.0
