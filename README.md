@@ -38,8 +38,6 @@ $ mkdir -p $HELIX/runtime/queries/uiua # or make your query directory
 $ cp -r queries $HELIX/runtime/queries/uiua
 ```
 
-(I'll make a PR for Helix once the number of `path:*.ua NOT is:fork` reaches 2000.)
-
 Now you can:
 - traverse modules by `]t` and `[t`
 - traverse comments by `]c` and `[c`
