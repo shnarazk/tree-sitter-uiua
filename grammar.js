@@ -371,10 +371,6 @@ module.exports = grammar({
       token('tribute'),
       token('≐'),
 
-      // Since 0.24
-      token('reach'),
-      token('⟜'),
-
       // Since 0.26
       token('do'),
       token('⍢'),
@@ -433,6 +429,10 @@ module.exports = grammar({
       // ([1], Gap, Stack, ("gap", '⋅')),
       token('gap'),
       token('⋅'),
+
+      // Since 0.24
+      token('reach'),
+      token('⟜'),
     ),
     ocean:  $ => choice(
       // Since 0.0.21
