@@ -5,21 +5,33 @@ module.exports = grammar({
   rules: {
     source_file: $ => $.PROGRAM,
     PROGRAM:     $ => seq(
-      repeat(seq(choice($.segment, $.module), $._endOfLine)),
-      choice($.segment, $.module),
+      repeat(seq(choice($.binding, $.segment, $.module), $._endOfLine)),
+      choice($.binding, $.segment, $.module),
+      optional($._endOfLine)
     ),
-    module:      $ => (seq($.tripleMinus, repeat(seq($.segment, $._endOfLine)), $.segment, $._endOfLine, $.tripleMinus)),
+    binding: $ => seq(
+      $.identifier,
+      $.leftArrow,
+      optional($.signature),
+      choice($.inlineFunction, $.segment),
+    ),
+    module:      $ => (seq(
+      $.tripleMinus,
+      repeat(seq($.segment, $._endOfLine)),
+      $.segment,
+      $._endOfLine,
+      $.tripleMinus
+    )),
     segment:     $ => prec.right(seq(
       choice(
         $.term,
-        $.binding,
         $.comment,
       ),
       optional($.segment),
     )),
     term:        $ => choice(
       $.switchFunctions,
-      prec.right(seq($.signature, $.term)),
+      // prec.right(seq($.signature, $.term)),
       $.compound,
       $.primitive,
       $.system,
@@ -33,16 +45,11 @@ module.exports = grammar({
       $.identifierDeprecated,
       $.placeHolder,
     ),
-    binding: $ => seq(
-      $.identifier,
-      $.leftArrow,
-      choice($.inlineFunction, $.term),
-    ),
     inlineFunction: $ => seq(
       $.openParen,
       optional($.signature),
-      repeat(seq(choice($.term, $.comment), $._endOfLine)),
-      seq(choice($.term, $.comment)),
+      repeat(seq($.segment, $._endOfLine)),
+      $.segment,
       optional($._endOfLine),
       $.closeParen,
     ),

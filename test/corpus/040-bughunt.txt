@@ -1,0 +1,127 @@
+================
+X ← |2 (|2 +)
+================
+X ← |2 (|2 +)
+---
+
+(source_file
+  (PROGRAM
+    (binding
+      (identifier)
+      (leftArrow)
+      (signature)
+      (inlineFunction
+        (openParen)
+        (signature)
+        (segment (term (primitive (function))))
+        (closeParen)
+      )
+    )
+  )
+)
+
+================
+Add `inlineFunction`
+================
+Execute ← |3.3 ⊃( (∶|+) ⊃(⊃(⊡0)(⊡1)⊡⊙⋅∘) (⊙∘)) (⋅⋅∘)
+---
+
+(source_file
+(PROGRAM
+  (binding
+    (identifier)
+    (leftArrow)
+    (signature)
+    (segment
+      (term
+        (compound
+          (modifier2)
+          (inlineFunction
+            (openParen)
+            (segment
+              (term
+                (switchFunctions
+                  (openParen)
+                  (term
+                    (primitive
+                      (function)))
+                  (branchSeparator)
+                  (term
+                    (primitive
+                      (function)))
+                  (closeParen)))
+              (segment
+                (term
+                  (compound
+                    (modifier2)
+                    (inlineFunction
+                      (openParen)
+                      (segment
+                        (term
+                          (compound
+                            (modifier2)
+                            (inlineFunction
+                              (openParen)
+                              (segment
+                                (term
+                                  (primitive
+                                    (function)))
+                                (segment
+                                  (term
+                                    (number))))
+                              (closeParen))
+                            (inlineFunction
+                              (openParen)
+                              (segment
+                                (term
+                                  (primitive
+                                    (function)))
+                                (segment
+                                  (term
+                                    (number))))
+                              (closeParen))))
+                        (segment
+                          (term
+                            (primitive
+                              (function)))
+                          (segment
+                            (term
+                              (primitive
+                                (planet)))
+                            (segment
+                              (term
+                                (primitive
+                                  (planet)))
+                              (segment
+                                (term
+                                  (primitive
+                                    (planet))))))))
+                      (closeParen))
+                    (inlineFunction
+                      (openParen)
+                      (segment
+                        (term
+                          (primitive
+                            (planet)))
+                        (segment
+                          (term
+                            (primitive
+                              (planet)))))
+                      (closeParen))))))
+            (closeParen))
+          (inlineFunction
+            (openParen)
+            (segment
+              (term
+                (primitive
+                  (planet)))
+              (segment
+                (term
+                  (primitive
+                    (planet)))
+                (segment
+                  (term
+                    (primitive
+                      (planet))))))
+            (closeParen))))))))
+
