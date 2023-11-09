@@ -2000,20 +2000,6 @@
             "type": "STRING",
             "value": "≐"
           }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "do"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⍢"
-          }
         }
       ]
     },
@@ -2221,6 +2207,20 @@
           "content": {
             "type": "STRING",
             "value": "◳"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "do"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⍢"
           }
         }
       ]

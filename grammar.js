@@ -390,10 +390,6 @@ module.exports = grammar({
       token('⊐'),
       token('tribute'),
       token('≐'),
-
-      // Since 0.26
-      token('do'),
-      token('⍢'),
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
@@ -441,6 +437,10 @@ module.exports = grammar({
       // Since 0.21
       token('combinate'),
       token('◳'),
+
+      // Since 0.26
+      token('do'),
+      token('⍢'),
     ),
     planet:  $ => choice(
       // (1, Identity, Stack, ("identity", '∘')),
