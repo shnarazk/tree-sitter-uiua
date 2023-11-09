@@ -935,27 +935,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "identity"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "id"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "∘"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "not"
           }
         },
@@ -2164,6 +2143,27 @@
     "planet": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "identity"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "id"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "∘"
+          }
+        },
         {
           "type": "TOKEN",
           "content": {
