@@ -4,6 +4,7 @@
 
 - add `ocean` node redered as 'type'
 - add `planet `node redered as 'type.parameter'
+- parse '|' correctly
 
 ### 0.3.3: 2023-11-04
 
