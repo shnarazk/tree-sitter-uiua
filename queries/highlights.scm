@@ -12,44 +12,30 @@
   (branchSeparator)
 ] @punctuation.delimiter
 
-[
-  (signature)
-  (placeHolder)
-  (ocean)
-] @type
-
-[
-  (planet)
-] @type.parameter
-
-(comment) @comment
-(character) @character
-(number) @constant.numeric.integer
-(constant) @constant.numeric
-(other_constant) @string.special
+[ (character) ] @character
+[ (comment) ] @comment
+[ (constant) ] @constant.numeric
+[ (identifier) ] @variable
+[ (leftArrow) ] @operator
+[ (function) ] @function
+[ (modifier1) ] @function.special
+[ (modifier2) ] @keyword.directive
+[ (number) ] @constant.numeric
+[ (placeHolder) ] @label
+[ (ocean) ] @type.builtin
+[ (other_constant) ] @string.special
+[ (planet) ] @variable.parameter
+[ (signature) ] @type
+[ (system) ] @function.builtin
+[ (tripleMinus) ] @module
 
 [
   (string)
   (multiLineString)
 ] @string
 
-[ (identifier) ] @variable
-
-[ (function) ] @function
-[ (system) ] @function.builtin
-
-[ (modifier1) ] @special
-
-[
-  (modifier2)
-  (leftArrow)
-] @keyword.directive
-
 [
   (deprecated)
   (identifier_deprecated)
 ] @warning
 
-[
-  (tripleMinus)
-] @namespace
