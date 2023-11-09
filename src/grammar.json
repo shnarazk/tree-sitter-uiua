@@ -18,6 +18,10 @@
                 "members": [
                   {
                     "type": "SYMBOL",
+                    "name": "binding"
+                  },
+                  {
+                    "type": "SYMBOL",
                     "name": "segment"
                   },
                   {
@@ -38,11 +42,65 @@
           "members": [
             {
               "type": "SYMBOL",
+              "name": "binding"
+            },
+            {
+              "type": "SYMBOL",
               "name": "segment"
             },
             {
               "type": "SYMBOL",
               "name": "module"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_endOfLine"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "binding": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "identifier"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "leftArrow"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "signature"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "inlineFunction"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "segment"
             }
           ]
         }
@@ -100,10 +158,6 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "binding"
-              },
-              {
-                "type": "SYMBOL",
                 "name": "comment"
               }
             ]
@@ -129,23 +183,6 @@
         {
           "type": "SYMBOL",
           "name": "switchFunctions"
-        },
-        {
-          "type": "PREC_RIGHT",
-          "value": 0,
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "SYMBOL",
-                "name": "signature"
-              },
-              {
-                "type": "SYMBOL",
-                "name": "term"
-              }
-            ]
-          }
         },
         {
           "type": "SYMBOL",
@@ -197,32 +234,6 @@
         }
       ]
     },
-    "binding": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "identifier"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "leftArrow"
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "inlineFunction"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "term"
-            }
-          ]
-        }
-      ]
-    },
     "inlineFunction": {
       "type": "SEQ",
       "members": [
@@ -248,17 +259,8 @@
             "type": "SEQ",
             "members": [
               {
-                "type": "CHOICE",
-                "members": [
-                  {
-                    "type": "SYMBOL",
-                    "name": "term"
-                  },
-                  {
-                    "type": "SYMBOL",
-                    "name": "comment"
-                  }
-                ]
+                "type": "SYMBOL",
+                "name": "segment"
               },
               {
                 "type": "SYMBOL",
@@ -268,22 +270,8 @@
           }
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "term"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "comment"
-                }
-              ]
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "segment"
         },
         {
           "type": "CHOICE",

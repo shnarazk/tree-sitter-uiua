@@ -8,6 +8,10 @@
       "required": true,
       "types": [
         {
+          "type": "binding",
+          "named": true
+        },
+        {
           "type": "module",
           "named": true
         },
@@ -78,7 +82,11 @@
           "named": true
         },
         {
-          "type": "term",
+          "type": "segment",
+          "named": true
+        },
+        {
+          "type": "signature",
           "named": true
         }
       ]
@@ -157,19 +165,15 @@
           "named": true
         },
         {
-          "type": "comment",
-          "named": true
-        },
-        {
           "type": "openParen",
           "named": true
         },
         {
-          "type": "signature",
+          "type": "segment",
           "named": true
         },
         {
-          "type": "term",
+          "type": "signature",
           "named": true
         }
       ]
@@ -287,10 +291,6 @@
       "required": true,
       "types": [
         {
-          "type": "binding",
-          "named": true
-        },
-        {
           "type": "comment",
           "named": true
         },
@@ -361,7 +361,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -405,10 +405,6 @@
           "named": true
         },
         {
-          "type": "signature",
-          "named": true
-        },
-        {
           "type": "string",
           "named": true
         },
@@ -418,10 +414,6 @@
         },
         {
           "type": "system",
-          "named": true
-        },
-        {
-          "type": "term",
           "named": true
         }
       ]
