@@ -7,10 +7,10 @@ emoji: 💩
 (source_file
   (PROGRAM
     (segment
-      (term (identifier))
-      (segment
+      (binding
+        (identifier)
         (leftArrow)
-        (segment (term (number)))
+        (term (number))
       )
     )
   )

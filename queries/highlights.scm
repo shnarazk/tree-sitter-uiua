@@ -23,7 +23,7 @@
 [ (number) ] @constant.numeric
 [ (placeHolder) ] @special
 [ (ocean) ] @attribute
-[ (other_constant) ] @string.special
+[ (otherConstant) ] @string.special
 [ (planet) ] @tag
 [ (signature) ] @type
 [ (system) ] @function.builtin
@@ -36,6 +36,6 @@
 
 [
   (deprecated)
-  (identifier_deprecated)
+  (identifierDeprecated)
 ] @warning
 

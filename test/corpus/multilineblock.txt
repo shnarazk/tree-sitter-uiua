@@ -11,17 +11,12 @@ multiline function1: /( + + )
   (PROGRAM
     (segment
       (term
-        (primitive
+        (compound
           (modifier1)
-        ))
-      (segment
-        (term
-          (multiLineFunction
+          (inlineFunction
             (openParen)
-            (segment
-              (term (primitive (function))))
-            (segment
-              (term (primitive (function))))
+            (term (primitive (function)))
+            (term (primitive (function)))
             (closeParen)
           )
         )

@@ -58,6 +58,33 @@
     }
   },
   {
+    "type": "binding",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "inlineFunction",
+          "named": true
+        },
+        {
+          "type": "leftArrow",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "branchSeparator",
     "named": true,
     "fields": {}
@@ -81,6 +108,10 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "inlineFunction",
           "named": true
         },
         {
@@ -114,6 +145,37 @@
     "fields": {}
   },
   {
+    "type": "inlineFunction",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "closeParen",
+          "named": true
+        },
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "openParen",
+          "named": true
+        },
+        {
+          "type": "signature",
+          "named": true
+        },
+        {
+          "type": "term",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "modifier1",
     "named": true,
     "fields": {}
@@ -137,29 +199,6 @@
         },
         {
           "type": "tripleMinus",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "multiLineFunction",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "closeParen",
-          "named": true
-        },
-        {
-          "type": "openParen",
-          "named": true
-        },
-        {
-          "type": "segment",
           "named": true
         }
       ]
@@ -190,7 +229,7 @@
     "fields": {}
   },
   {
-    "type": "other_constant",
+    "type": "otherConstant",
     "named": true,
     "fields": {}
   },
@@ -248,11 +287,11 @@
       "required": true,
       "types": [
         {
-          "type": "comment",
+          "type": "binding",
           "named": true
         },
         {
-          "type": "leftArrow",
+          "type": "comment",
           "named": true
         },
         {
@@ -307,6 +346,10 @@
           "named": true
         },
         {
+          "type": "signature",
+          "named": true
+        },
+        {
           "type": "term",
           "named": true
         }
@@ -338,11 +381,7 @@
           "named": true
         },
         {
-          "type": "identifier_deprecated",
-          "named": true
-        },
-        {
-          "type": "multiLineFunction",
+          "type": "identifierDeprecated",
           "named": true
         },
         {
@@ -354,7 +393,7 @@
           "named": true
         },
         {
-          "type": "other_constant",
+          "type": "otherConstant",
           "named": true
         },
         {
@@ -669,7 +708,7 @@
     "named": true
   },
   {
-    "type": "identifier_deprecated",
+    "type": "identifierDeprecated",
     "named": true
   },
   {
