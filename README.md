@@ -1,6 +1,6 @@
 # tree-sitter-uiua
 
-We need colors to mitigate the excessive use of 'n' shapes.
+Finally, your editors support AST-based editting of [Uiua](https://github.com/uiua-lang/uiua) programs.
 
 ## References
 
@@ -41,3 +41,4 @@ $ cp -r queries $HELIX/runtime/queries/uiua
 Now you can:
 - traverse modules by `]t` and `[t`
 - traverse comments by `]c` and `[c`
+- and any AST-based editing as other languages
