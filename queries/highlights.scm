@@ -48,7 +48,7 @@
 ; planet
 [
   "id"
-  "identifier"
+  "identity"
   "∘"
   "dip"
   "⊙"
