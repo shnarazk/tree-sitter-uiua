@@ -2,9 +2,9 @@
 
 ### 0.4.0: 2023-11-??
 
-- add `ocean` node redered as 'attribute'
-- add `planet `node redered as 'tag'
 - parse '|' correctly
+- render ocean tokens as `attribute`
+- render planet tokens as `tag`
 
 ### 0.3.3: 2023-11-04
 
