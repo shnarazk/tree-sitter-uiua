@@ -85,43 +85,22 @@ Execute ← |3.3 ⊃( (∶|+) ⊃(⊃(⊡0)(⊡1)⊡⊙⋅∘) (⊙∘)) (⋅⋅
                             (primitive
                               (function)))
                           (segment
-                            (term
-                              (primitive
-                                (planet)))
-                            (segment
-                              (term
-                                (primitive
-                                  (planet)))
-                              (segment
-                                (term
-                                  (primitive
-                                    (planet))))))))
+                            (term (primitive (modifier1)))
+                            (segment (term (compound (modifier1) (function))))
+                          )))
                       (closeParen))
                     (inlineFunction
                       (openParen)
-                      (segment
-                        (term
-                          (primitive
-                            (planet)))
-                        (segment
-                          (term
-                            (primitive
-                              (planet)))))
+                      (segment (term (compound (modifier1) (function))))
                       (closeParen))))))
             (closeParen))
           (inlineFunction
             (openParen)
             (segment
               (term
-                (primitive
-                  (planet)))
+                (primitive (modifier1)))
               (segment
                 (term
-                  (primitive
-                    (planet)))
-                (segment
-                  (term
-                    (primitive
-                      (planet))))))
+                  (compound (modifier1) (function)))))
             (closeParen))))))))
 

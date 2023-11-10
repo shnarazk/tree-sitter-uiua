@@ -124,8 +124,6 @@ module.exports = grammar({
       $.function,
       $.modifier1,
       $.modifier2,
-      $.planet,
-      $.ocean,
       $.deprecated,
     ),
     constant:    $ => choice(
@@ -154,6 +152,10 @@ module.exports = grammar({
       token('∶'),
       // (1(0), Pop, Stack, ("pop", ';')),
       token(';'),
+      // (1, Identity, Stack, ("identity", '∘')),
+      token('identity'),
+      token('id'),
+      token('∘'),
       // (1, Not, MonadicPervasive, ("not", '¬')),
       token('not'),
       token('¬'),
@@ -354,6 +356,22 @@ module.exports = grammar({
       token('regex'),
       token('utf'),
 
+      // Since 0.0.21
+      token('rock'),
+      token('ro'),
+      token('⋄'),
+      token('surface'),
+      token('~'),
+      token('deep'),
+      token('de'),
+      token('≊'),
+      token('abyss'),
+      token('ab'),
+      token('≃'),
+      token('seabed'),
+      token('se'),
+      token('∸'),
+
       // Since 0.0.23
       token('send'),
       token('recv'),
@@ -379,6 +397,12 @@ module.exports = grammar({
       // (1[1], Repeat, IteratingModifier, ("repeat", '⍥')),
       token('repeat'),
       token('⍥'),
+      // ([1], Dip, Stack, ("dip", '⊙')),
+      token('dip'),
+      token('⊙'),
+      // ([1], Gap, Stack, ("gap", '⋅')),
+      token('gap'),
+      token('⋅'),
       // ([1], Invert, OtherModifier, ("invert", '⍘')),
       token('invert'),
       token('⍘'),
@@ -390,6 +414,10 @@ module.exports = grammar({
       token('⊐'),
       token('tribute'),
       token('≐'),
+
+      // Since 0.24
+      token('reach'),
+      token('⟜'),
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
@@ -441,39 +469,6 @@ module.exports = grammar({
       // Since 0.26
       token('do'),
       token('⍢'),
-    ),
-    planet:  $ => choice(
-      // (1, Identity, Stack, ("identity", '∘')),
-      token('identity'),
-      token('id'),
-      token('∘'),
-      // ([1], Dip, Stack, ("dip", '⊙')),
-      token('dip'),
-      token('⊙'),
-      // ([1], Gap, Stack, ("gap", '⋅')),
-      token('gap'),
-      token('⋅'),
-
-      // Since 0.24
-      token('reach'),
-      token('⟜'),
-    ),
-    ocean:  $ => choice(
-      // Since 0.0.21
-      token('rock'),
-      token('ro'),
-      token('⋄'),
-      token('surface'),
-      token('~'),
-      token('deep'),
-      token('de'),
-      token('≊'),
-      token('abyss'),
-      token('ab'),
-      token('≃'),
-      token('seabed'),
-      token('se'),
-      token('∸'),
     ),
     deprecated:  $ => choice(
       token('❥'),

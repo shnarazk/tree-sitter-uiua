@@ -22,12 +22,39 @@
 [ (modifier2) ] @operator
 [ (number) ] @constant.numeric
 [ (placeHolder) ] @special
-[ (ocean) ] @attribute
 [ (otherConstant) ] @string.special
-[ (planet) ] @tag
 [ (signature) ] @type
 [ (system) ] @function.builtin
 [ (tripleMinus) ] @module
+
+; ocean
+[
+    "rock"
+    "ro"
+    "⋄"
+    "surface"
+    "~"
+    "deep"
+    "de"
+    "≊"
+    "abyss"
+    "ab"
+    "≃"
+    "seabed"
+    "se"
+    "∸"
+] @attribute
+
+; planet
+[
+  "id"
+  "identifier"
+  "∘"
+  "dip"
+  "⊙"
+  "gap"
+  "⋅"
+] @tag
 
 [
   (string)

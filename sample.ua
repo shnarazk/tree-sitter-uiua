@@ -1,6 +1,6 @@
 #!/usr/bin/env uiua run
 Column ← 16
-Fill ← ⊂∶⬚∘↙∘⊃(∘)(∶""↥0-∶Column ⧻⋅.)
+Fill ← ⊂∶⬚∘↙∘⊃∘(∶""↥0-∶Column ⧻⋅.)
 CommentChar ← @# # this is comment
 FileList ← (∘|["sample.ua"];)=0⧻.↘1&args
 NotBlankLine ← ▽∵(≠0⧻).

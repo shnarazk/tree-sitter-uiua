@@ -228,22 +228,12 @@
     }
   },
   {
-    "type": "ocean",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "otherConstant",
     "named": true,
     "fields": {}
   },
   {
     "type": "placeHolder",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "planet",
     "named": true,
     "fields": {}
   },
@@ -269,14 +259,6 @@
         },
         {
           "type": "modifier2",
-          "named": true
-        },
-        {
-          "type": "ocean",
-          "named": true
-        },
-        {
-          "type": "planet",
           "named": true
         }
       ]
