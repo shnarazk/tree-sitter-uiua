@@ -8,7 +8,7 @@
 ] @punctuation.bracket
 
 [ (branchSeparator) ] @special
-[ (character) ] @character
+[ (character) ] @constant.character
 [ (comment) ] @comment
 [ (constant) ] @constant.numeric
 [ (identifier) ] @variable
