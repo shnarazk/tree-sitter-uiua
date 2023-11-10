@@ -7,11 +7,7 @@
   (closeBracket)
 ] @punctuation.bracket
 
-[
-  (underscore)
-  (branchSeparator)
-] @punctuation.delimiter
-
+[ (branchSeparator) ] @special
 [ (character) ] @character
 [ (comment) ] @comment
 [ (constant) ] @constant.numeric
@@ -26,6 +22,7 @@
 [ (signature) ] @type
 [ (system) ] @function.builtin
 [ (tripleMinus) ] @module
+[ (underscore) ] @punctuation.delimiter
 
 ; ocean
 [
