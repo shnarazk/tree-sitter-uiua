@@ -2,8 +2,8 @@
 
 ### 0.4.0: 2023-11-??
 
-- add `ocean` node redered as 'type'
-- add `planet `node redered as 'type.parameter'
+- add `ocean` node redered as 'attribute'
+- add `planet `node redered as 'tag'
 - parse '|' correctly
 
 ### 0.3.3: 2023-11-04
