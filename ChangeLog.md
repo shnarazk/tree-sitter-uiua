@@ -1,6 +1,6 @@
 # Changelog
 
-### 0.4.0: 2023-11-??
+### 0.4.0: 2023-11-11
 
 - parse '|' correctly
 - render ocean tokens as `attribute`
