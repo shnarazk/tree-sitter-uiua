@@ -8,6 +8,10 @@
       "required": true,
       "types": [
         {
+          "type": "binding",
+          "named": true
+        },
+        {
           "type": "module",
           "named": true
         },
@@ -58,6 +62,37 @@
     }
   },
   {
+    "type": "binding",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "inlineFunction",
+          "named": true
+        },
+        {
+          "type": "leftArrow",
+          "named": true
+        },
+        {
+          "type": "segment",
+          "named": true
+        },
+        {
+          "type": "signature",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "branchSeparator",
     "named": true,
     "fields": {}
@@ -81,6 +116,10 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "inlineFunction",
           "named": true
         },
         {
@@ -114,6 +153,33 @@
     "fields": {}
   },
   {
+    "type": "inlineFunction",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "closeParen",
+          "named": true
+        },
+        {
+          "type": "openParen",
+          "named": true
+        },
+        {
+          "type": "segment",
+          "named": true
+        },
+        {
+          "type": "signature",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "modifier1",
     "named": true,
     "fields": {}
@@ -143,29 +209,6 @@
     }
   },
   {
-    "type": "multiLineFunction",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "closeParen",
-          "named": true
-        },
-        {
-          "type": "openParen",
-          "named": true
-        },
-        {
-          "type": "segment",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "number",
     "named": true,
     "fields": {},
@@ -185,7 +228,7 @@
     }
   },
   {
-    "type": "other_constant",
+    "type": "otherConstant",
     "named": true,
     "fields": {}
   },
@@ -231,10 +274,6 @@
       "types": [
         {
           "type": "comment",
-          "named": true
-        },
-        {
-          "type": "leftArrow",
           "named": true
         },
         {
@@ -289,6 +328,10 @@
           "named": true
         },
         {
+          "type": "signature",
+          "named": true
+        },
+        {
           "type": "term",
           "named": true
         }
@@ -300,7 +343,7 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -320,11 +363,7 @@
           "named": true
         },
         {
-          "type": "identifier_deprecated",
-          "named": true
-        },
-        {
-          "type": "multiLineFunction",
+          "type": "identifierDeprecated",
           "named": true
         },
         {
@@ -336,7 +375,7 @@
           "named": true
         },
         {
-          "type": "other_constant",
+          "type": "otherConstant",
           "named": true
         },
         {
@@ -345,10 +384,6 @@
         },
         {
           "type": "primitive",
-          "named": true
-        },
-        {
-          "type": "signature",
           "named": true
         },
         {
@@ -361,10 +396,6 @@
         },
         {
           "type": "system",
-          "named": true
-        },
-        {
-          "type": "term",
           "named": true
         }
       ]
@@ -651,7 +682,7 @@
     "named": true
   },
   {
-    "type": "identifier_deprecated",
+    "type": "identifierDeprecated",
     "named": true
   },
   {

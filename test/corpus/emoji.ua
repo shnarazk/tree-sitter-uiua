@@ -6,12 +6,10 @@ emoji: 💩
 
 (source_file
   (PROGRAM
-    (segment
-      (term (identifier))
-      (segment
-        (leftArrow)
-        (segment (term (number)))
-      )
+    (binding
+      (identifier)
+      (leftArrow)
+      (segment (term (number)))
     )
   )
 )

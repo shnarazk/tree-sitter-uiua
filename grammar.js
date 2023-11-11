@@ -1,26 +1,37 @@
 module.exports = grammar({
   name: 'uiua',
-  extras:        $ => [/[ \t]+/, $.comment, $._end_of_line],
+  extras:        $ => [/[ \t]+/, $.comment, $._endOfLine],
   conflicts:     $ => [],     // Yay! It's empty!
   rules: {
     source_file: $ => $.PROGRAM,
     PROGRAM:     $ => seq(
-      repeat(seq(choice($.segment, $.module), $._end_of_line)),
-      choice($.segment, $.module),
+      repeat(seq(choice($.binding, $.segment, $.module), $._endOfLine)),
+      choice($.binding, $.segment, $.module),
+      optional($._endOfLine)
     ),
-    module:      $ => (seq($.tripleMinus, repeat(seq($.segment, $._end_of_line)), $.segment, $._end_of_line, $.tripleMinus)),
+    binding: $ => seq(
+      $.identifier,
+      $.leftArrow,
+      optional($.signature),
+      choice($.inlineFunction, $.segment),
+    ),
+    module:      $ => (seq(
+      $.tripleMinus,
+      repeat(seq($.segment, $._endOfLine)),
+      $.segment,
+      $._endOfLine,
+      $.tripleMinus
+    )),
     segment:     $ => prec.right(seq(
       choice(
         $.term,
-        $.leftArrow,
         $.comment,
       ),
       optional($.segment),
     )),
     term:        $ => choice(
-      $.multiLineFunction,
       $.switchFunctions,
-      prec.right(seq($.signature, $.term)),
+      // prec.right(seq($.signature, $.term)),
       $.compound,
       $.primitive,
       $.system,
@@ -29,17 +40,30 @@ module.exports = grammar({
       $.character,
       $.string,
       $.multiLineString,
-      $.other_constant,
+      $.otherConstant,
       $.identifier,
-      $.identifier_deprecated,
+      $.identifierDeprecated,
       $.placeHolder,
     ),
-    multiLineFunction: $ => seq($.openParen, repeat(seq($.segment, $._end_of_line)), $.segment, optional($._end_of_line), $.closeParen),
-    switchFunctions: $ => seq($.openParen, repeat1(seq($.term, $.branchSeparator)), $.term, $.closeParen),
+    inlineFunction: $ => seq(
+      $.openParen,
+      optional($.signature),
+      repeat(seq($.segment, $._endOfLine)),
+      $.segment,
+      optional($._endOfLine),
+      $.closeParen,
+    ),
+    switchFunctions: $ => seq(
+      $.openParen,
+      repeat1(seq(optional($.signature), $.term, $.branchSeparator)),
+      optional($.signature),
+      $.term,
+      $.closeParen
+    ),
     array:       $ => choice(
       prec(5, seq(repeat1(seq($.term, $.underscore)),$.term)),
-      seq($.openBracket, optional($._end_of_line), repeat(seq($.segment, optional($._end_of_line))), $.closeBracket),
-      seq($.openCurly, optional($._end_of_line), repeat(seq($.segment, optional($._end_of_line))), $.closeCurly),
+      seq($.openBracket, optional($._endOfLine), repeat(seq($.segment, optional($._endOfLine))), $.closeBracket),
+      seq($.openCurly, optional($._endOfLine), repeat(seq($.segment, optional($._endOfLine))), $.closeCurly),
     ),
     number:      $ => choice(
       $.constant,
@@ -50,7 +74,7 @@ module.exports = grammar({
       )),
     ),
     fraction:    $ => token(/¯?\d+\/\d+/),
-    other_constant: $ => choice(
+    otherConstant: $ => choice(
       token('os'),
       token('Family'),
       token('Arch'),
@@ -67,7 +91,7 @@ module.exports = grammar({
     multiLineString:      $ =>  token(/\$[^"].+/),
     signature:   $ => seq('|', /[0-9]+(\.[0-9]+)?/),
     identifier:  $ => token(/[A-Z][A-Za-z]*!*|[a-z][A-Za-z]?!*|\p{Emoji}/u),
-    identifier_deprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
+    identifierDeprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
     system:      $ => token(/&[a-z]+/),
     comment:     $ => /#.*/,
     tripleMinus: $ => token("---"),
@@ -84,16 +108,16 @@ module.exports = grammar({
     compound:    $ => choice(
       prec(1, seq(
         $.modifier1,
-        choice($.function,$.system,$.identifier),
+        choice($.inlineFunction, $.function, $.system, $.identifier),
       )),
       prec(1, seq(
         $.modifier2,
-        choice($.function,$.system,$.identifier),
+        choice($.inlineFunction, $.function, $.system, $.identifier),
       )),
       prec(2, seq(
         $.modifier2,
-        choice($.function,$.system,$.identifier),
-        choice($.function,$.system,$.identifier),
+        choice($.inlineFunction, $.function, $.system, $.identifier),
+        choice($.inlineFunction, $.function, $.system, $.identifier),
       )),
     ),
     primitive:   $ => choice(
@@ -394,10 +418,6 @@ module.exports = grammar({
       // Since 0.24
       token('reach'),
       token('⟜'),
-
-      // Since 0.26
-      token('do'),
-      token('⍢'),
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
@@ -445,6 +465,10 @@ module.exports = grammar({
       // Since 0.21
       token('combinate'),
       token('◳'),
+
+      // Since 0.26
+      token('do'),
+      token('⍢'),
     ),
     deprecated:  $ => choice(
       token('❥'),
@@ -455,7 +479,7 @@ module.exports = grammar({
       token('⌂'),
       token('↰'),
     ),
-    _whitespace: $ => /[ \t]+/,
-    _end_of_line:$ => token(/\r?\n/),
+    // _whitespace: $ => /[ \t]+/,
+    _endOfLine:$ => token(/\r?\n/),
   }
 });

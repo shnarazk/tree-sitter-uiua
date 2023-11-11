@@ -1,5 +1,6 @@
 [
   (array)
   (module)
+  (inlineFunction)
 ] @fold
 

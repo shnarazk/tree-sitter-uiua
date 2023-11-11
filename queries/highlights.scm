@@ -8,43 +8,62 @@
 ] @punctuation.bracket
 
 [
-  (underscore)
   (branchSeparator)
-] @punctuation.delimiter
+  (underscore)
+] @constructor
+; ] @punctuation.delimiter
 
+[ (character) ] @constant.character
+[ (comment) ] @comment
+[ (constant) ] @constant.numeric
+[ (identifier) ] @variable
+[ (leftArrow) ] @keyword.directive
+[ (function) ] @function
+[ (modifier1) ] @operator
+[ (modifier2) ] @operator
+[ (number) ] @constant.numeric
+[ (placeHolder) ] @special
+[ (otherConstant) ] @string.special
+[ (signature) ] @type
+[ (system) ] @function.builtin
+[ (tripleMinus) ] @module
+
+; ocean
 [
-  (signature)
-  (placeHolder)
-] @type
+    "rock"
+    "ro"
+    "⋄"
+    "surface"
+    "~"
+    "deep"
+    "de"
+    "≊"
+    "abyss"
+    "ab"
+    "≃"
+    "seabed"
+    "se"
+    "∸"
+] @attribute
 
-(comment) @comment
-(character) @character
-(number) @constant.numeric.integer
-(constant) @constant.numeric
-(other_constant) @string.special
+; planet
+[
+  "id"
+  "identity"
+  "∘"
+  "dip"
+  "⊙"
+  "gap"
+  "⋅"
+] @tag
 
 [
   (string)
   (multiLineString)
 ] @string
 
-[ (identifier) ] @variable
-
-[ (function) ] @function
-[ (system) ] @function.builtin
-
-[ (modifier1) ] @special
-
-[
-  (modifier2)
-  (leftArrow)
-] @keyword.directive
-
 [
   (deprecated)
-  (identifier_deprecated)
+  (identifierDeprecated)
 ] @warning
 
-[
-  (tripleMinus)
-] @namespace

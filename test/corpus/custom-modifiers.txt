@@ -7,20 +7,23 @@ ReduceRange!+5
 
 (source_file
   (PROGRAM
-    (segment
-      (term (identifier))
+    (binding
+     (identifier)
+      (leftArrow)
       (segment
-        (leftArrow)
+        (term (primitive (modifier1)))
         (segment
-          (term (primitive (modifier1)))
+          (term (placeHolder))
           (segment
-            (term (placeHolder))
+            (term (primitive (function)))
             (segment
-              (term (primitive (function)))
-              (segment
-                (term (number))
-                (segment
-                  (term (primitive (function))))))))))
+              (term (number))
+              (segment (term (primitive (function))))
+            )
+          )
+        )
+      )
+    )
     (segment
       (term (identifier))
       (segment

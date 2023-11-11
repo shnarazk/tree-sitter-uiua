@@ -1,5 +1,11 @@
 # Changelog
 
+### 0.4.0: 2023-11-??
+
+- parse '|' correctly
+- render ocean tokens as `attribute`
+- render planet tokens as `tag`
+
 ### 0.3.3: 2023-11-04
 
 Follows Uiua-0.1.0
