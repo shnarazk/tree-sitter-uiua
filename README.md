@@ -1,6 +1,6 @@
 # tree-sitter-uiua
 
-**Finally, [Uiua](https://github.com/uiua-lang/uiua) programmers get AST-based editting features.**
+**Finally, [Uiua](https://github.com/uiua-lang/uiua) programmers get AST-based editing features.**
 
 ## References
 
