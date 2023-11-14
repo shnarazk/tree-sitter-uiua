@@ -9,3 +9,15 @@ $ Hello
     (segment (dollarString))
   )
 )
+
+================
+'$\n?` should be acceptable
+================
+$
+---
+
+(source_file
+  (PROGRAM
+    (segment (dollarString))
+  )
+)
