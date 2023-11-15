@@ -359,15 +359,15 @@
           "named": true
         },
         {
-          "type": "dollarString",
-          "named": true
-        },
-        {
           "type": "identifier",
           "named": true
         },
         {
           "type": "identifierDeprecated",
+          "named": true
+        },
+        {
+          "type": "multiLineString",
           "named": true
         },
         {
@@ -610,10 +610,6 @@
     "named": false
   },
   {
-    "type": "dollarString",
-    "named": true
-  },
-  {
     "type": "drop",
     "named": false
   },
@@ -748,6 +744,10 @@
   {
     "type": "modulus",
     "named": false
+  },
+  {
+    "type": "multiLineString",
+    "named": true
   },
   {
     "type": "not",

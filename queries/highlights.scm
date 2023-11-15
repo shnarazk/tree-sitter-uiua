@@ -59,7 +59,7 @@
 
 [
   (string)
-  (dollarString)
+  (multiLineString)
 ] @string
 
 [

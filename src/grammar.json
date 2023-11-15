@@ -214,7 +214,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "dollarString"
+          "name": "multiLineString"
         },
         {
           "type": "SYMBOL",
@@ -618,7 +618,7 @@
         ]
       }
     },
-    "dollarString": {
+    "multiLineString": {
       "type": "PATTERN",
       "value": "\\$.*"
     },
