@@ -371,10 +371,6 @@
           "named": true
         },
         {
-          "type": "multiLineString",
-          "named": true
-        },
-        {
           "type": "number",
           "named": true
         },
@@ -752,10 +748,6 @@
   {
     "type": "modulus",
     "named": false
-  },
-  {
-    "type": "multiLineString",
-    "named": true
   },
   {
     "type": "not",

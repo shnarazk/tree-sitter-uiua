@@ -218,10 +218,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "multiLineString"
-        },
-        {
-          "type": "SYMBOL",
           "name": "otherConstant"
         },
         {
@@ -625,13 +621,6 @@
     "dollarString": {
       "type": "PATTERN",
       "value": "\\$.*"
-    },
-    "multiLineString": {
-      "type": "TOKEN",
-      "content": {
-        "type": "PATTERN",
-        "value": "\\$[^\"].+"
-      }
     },
     "signature": {
       "type": "SEQ",

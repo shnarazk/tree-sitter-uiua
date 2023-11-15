@@ -40,7 +40,6 @@ module.exports = grammar({
       $.character,
       $.string,
       $.dollarString,
-      $.multiLineString,
       $.otherConstant,
       $.identifier,
       $.identifierDeprecated,
@@ -90,7 +89,6 @@ module.exports = grammar({
       seq(optional('$'),'"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')
     ),
     dollarString: $ => /\$.*/,
-    multiLineString:      $ =>  token(/\$[^"].+/),
     signature:   $ => seq('|', /[0-9]+(\.[0-9]+)?/),
     identifier:  $ => token(/[A-Z][A-Za-z]*!*|[a-z][A-Za-z]?!*|\p{Emoji}/u),
     identifierDeprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
