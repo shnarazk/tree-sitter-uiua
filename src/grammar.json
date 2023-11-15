@@ -498,11 +498,11 @@
             "members": [
               {
                 "type": "PATTERN",
-                "value": "[πητ]([eE]¯?\\d+)?"
+                "value": "¯?[πητ]([eE]¯?\\d+)?"
               },
               {
                 "type": "PATTERN",
-                "value": "\\d+(\\.\\d+)?([eE]¯?\\d+)?"
+                "value": "¯?\\d+(\\.\\d+)?([eE]¯?\\d+)?"
               }
             ]
           }

@@ -69,8 +69,8 @@ module.exports = grammar({
       $.constant,
       $.fraction,
       token(choice(
-        /[πητ]([eE]¯?\d+)?/,
-        /\d+(\.\d+)?([eE]¯?\d+)?/
+        /¯?[πητ]([eE]¯?\d+)?/,
+        /¯?\d+(\.\d+)?([eE]¯?\d+)?/
       )),
     ),
     fraction:    $ => token(/¯?\d+\/\d+/),
