@@ -456,8 +456,6 @@ module.exports = grammar({
       // ([2], Fill, OtherModifier, ("fill", '⬚')),
       token('fill'),
       token('⬚'),
-      // ([2], If, Control, ("if", '?')),
-      token('?'),
       // ([2], Try, OtherModifier, ("try", '⍣')),
       token('try'),
       token('⍣'),

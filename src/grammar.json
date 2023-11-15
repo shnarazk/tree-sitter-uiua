@@ -2328,13 +2328,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "?"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "try"
           }
         },
