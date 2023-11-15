@@ -6,7 +6,7 @@ $ Hello
 
 (source_file
   (PROGRAM
-    (segment (dollarString))
+    (segment (term (dollarString)))
   )
 )
 
@@ -18,6 +18,6 @@ $
 
 (source_file
   (PROGRAM
-    (segment (dollarString))
+    (segment (term (dollarString)))
   )
 )

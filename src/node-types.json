@@ -359,6 +359,10 @@
           "named": true
         },
         {
+          "type": "dollarString",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -608,6 +612,10 @@
   {
     "type": "do",
     "named": false
+  },
+  {
+    "type": "dollarString",
+    "named": true
   },
   {
     "type": "drop",
