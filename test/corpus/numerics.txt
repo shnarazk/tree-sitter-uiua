@@ -30,3 +30,30 @@ complex: ℂ 1 2
   )
 )
 
+================
+high-minus prefix: ¯1
+================
+¯1
+---
+
+(source_file
+  (PROGRAM
+    (segment (term (number))
+    )
+  )
+)
+
+================
+high-minus as a monadic function: ¯ 1
+================
+¯ 1
+---
+
+(source_file
+  (PROGRAM
+    (segment
+      (term (primitive (function)))
+      (segment (term (number)))
+    )
+  )
+)

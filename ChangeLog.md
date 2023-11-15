@@ -1,5 +1,10 @@
 # Changelog
 
+### 0.5.0: 2023-11-??
+
+- parse '$-string' correctly (#15)
+- parse '¯' as a part of `number` if they make a token (#15)
+
 ### 0.4.0: 2023-11-11
 
 - parse '|' correctly

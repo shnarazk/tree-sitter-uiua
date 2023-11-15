@@ -69,8 +69,8 @@ module.exports = grammar({
       $.constant,
       $.fraction,
       token(choice(
-        /[πητ]([eE]¯?\d+)?/,
-        /\d+(\.\d+)?([eE]¯?\d+)?/
+        /¯?[πητ]([eE]¯?\d+)?/,
+        /¯?\d+(\.\d+)?([eE]¯?\d+)?/
       )),
     ),
     fraction:    $ => token(/¯?\d+\/\d+/),
@@ -88,7 +88,7 @@ module.exports = grammar({
     string:      $ => token(
       seq(optional('$'),'"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')
     ),
-    multiLineString:      $ =>  token(/\$[^"].+/),
+    multiLineString: $ => /\$.*/,
     signature:   $ => seq('|', /[0-9]+(\.[0-9]+)?/),
     identifier:  $ => token(/[A-Z][A-Za-z]*!*|[a-z][A-Za-z]?!*|\p{Emoji}/u),
     identifierDeprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
