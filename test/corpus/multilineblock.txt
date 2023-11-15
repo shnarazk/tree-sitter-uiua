@@ -24,3 +24,27 @@ multiline function1: /( + + )
     )
   )
 )
+
+================
+'$-string` takes the rest of the line
+================
+$ Hello
+---
+
+(source_file
+  (PROGRAM
+    (segment (term (multiLineString)))
+  )
+)
+
+================
+'$\n?` should be acceptable
+================
+$
+---
+
+(source_file
+  (PROGRAM
+    (segment (term (multiLineString)))
+  )
+)
