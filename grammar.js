@@ -81,6 +81,8 @@ module.exports = grammar({
       token('ExeExt'),
       token('PllExt'),
       token('Sep'),
+      token('NUmProcs'),
+      token('⍼'),
     ),
     character:   $ => prec(5,
       token(/@([^\\]|\\[bnrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)
