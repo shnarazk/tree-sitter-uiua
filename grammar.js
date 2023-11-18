@@ -382,6 +382,12 @@ module.exports = grammar({
       // Since 0.0.26
       token('complex'),
       token('ℂ'),
+
+      // Since 0.3.0
+      token('rerank'),
+      token('⊥'),
+      token('fix'),
+      token('⌀'),
     ),
     modifier1:   $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
