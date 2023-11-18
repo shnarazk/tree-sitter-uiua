@@ -358,22 +358,6 @@ module.exports = grammar({
       token('regex'),
       token('utf'),
 
-      // Since 0.0.21
-      token('rock'),
-      token('ro'),
-      token('⋄'),
-      token('surface'),
-      token('~'),
-      token('deep'),
-      token('de'),
-      token('≊'),
-      token('abyss'),
-      token('ab'),
-      token('≃'),
-      token('seabed'),
-      token('se'),
-      token('∸'),
-
       // Since 0.0.23
       token('send'),
       token('recv'),
