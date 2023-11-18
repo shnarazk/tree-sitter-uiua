@@ -404,8 +404,6 @@ module.exports = grammar({
       // Since 0.21
       token('pack'),
       token('⊐'),
-      token('tribute'),
-      token('≐'),
 
       // Since 0.24
       token('reach'),
@@ -415,9 +413,6 @@ module.exports = grammar({
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
       token('fold'),
       token('∧'),
-      // (2[1], Distribute, IteratingModifier, ("distribute", '∺')),
-      token('distribute'),
-      token('∺'),
       // (2[1], Table, IteratingModifier, ("table", '⊞')),
       token('table'),
       token('⊞'),
@@ -442,19 +437,12 @@ module.exports = grammar({
       // ([2], Under, OtherModifier, ("under", '⍜')),
       token('under'),
       token('⍜'),
-      // ([2], Level, IteratingModifier, ("level", '⍚')),
-      token('level'),
-      token('≑'),
       // ([2], Fill, OtherModifier, ("fill", '⬚')),
       token('fill'),
       token('⬚'),
       // ([2], Try, OtherModifier, ("try", '⍣')),
       token('try'),
       token('⍣'),
-
-      // Since 0.21
-      token('combinate'),
-      token('◳'),
 
       // Since 0.26
       token('do'),
@@ -468,6 +456,12 @@ module.exports = grammar({
       token('⍛'),
       token('⌂'),
       token('↰'),
+
+      // Since 0.3.0
+      token('◳'),
+      token('≑'),
+      token('≐'),
+      token('∺'),
     ),
     // _whitespace: $ => /[ \t]+/,
     _endOfLine:$ => token(/\r?\n/),
