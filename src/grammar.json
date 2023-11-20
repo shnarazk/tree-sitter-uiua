@@ -1912,7 +1912,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⊥"
+            "value": "☇"
           }
         },
         {
@@ -1926,7 +1926,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⌀"
+            "value": "¤"
           }
         }
       ]
