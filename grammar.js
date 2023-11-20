@@ -81,6 +81,8 @@ module.exports = grammar({
       token('ExeExt'),
       token('PllExt'),
       token('Sep'),
+      token('NUmProcs'),
+      token('⍼'),
     ),
     character:   $ => prec(5,
       token(/@([^\\]|\\[bnrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)
@@ -149,7 +151,7 @@ module.exports = grammar({
       // (2(3), Over, Stack, ("over", ',')),
       token(','),
       // (2(2), Flip, Stack, ("flip", AsciiToken::Colon, '∶')),
-      token('∶'),
+      token(':'),
       // (1(0), Pop, Stack, ("pop", ';')),
       token(';'),
       // (1, Identity, Stack, ("identity", '∘')),
@@ -356,22 +358,6 @@ module.exports = grammar({
       token('regex'),
       token('utf'),
 
-      // Since 0.0.21
-      token('rock'),
-      token('ro'),
-      token('⋄'),
-      token('surface'),
-      token('~'),
-      token('deep'),
-      token('de'),
-      token('≊'),
-      token('abyss'),
-      token('ab'),
-      token('≃'),
-      token('seabed'),
-      token('se'),
-      token('∸'),
-
       // Since 0.0.23
       token('send'),
       token('recv'),
@@ -380,6 +366,12 @@ module.exports = grammar({
       // Since 0.0.26
       token('complex'),
       token('ℂ'),
+
+      // Since 0.3.0
+      token('rerank'),
+      token('⊥'),
+      token('fix'),
+      token('⌀'),
     ),
     modifier1:   $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
@@ -412,8 +404,6 @@ module.exports = grammar({
       // Since 0.21
       token('pack'),
       token('⊐'),
-      token('tribute'),
-      token('≐'),
 
       // Since 0.24
       token('reach'),
@@ -423,9 +413,6 @@ module.exports = grammar({
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
       token('fold'),
       token('∧'),
-      // (2[1], Distribute, IteratingModifier, ("distribute", '∺')),
-      token('distribute'),
-      token('∺'),
       // (2[1], Table, IteratingModifier, ("table", '⊞')),
       token('table'),
       token('⊞'),
@@ -450,19 +437,12 @@ module.exports = grammar({
       // ([2], Under, OtherModifier, ("under", '⍜')),
       token('under'),
       token('⍜'),
-      // ([2], Level, IteratingModifier, ("level", '⍚')),
-      token('level'),
-      token('≑'),
       // ([2], Fill, OtherModifier, ("fill", '⬚')),
       token('fill'),
       token('⬚'),
       // ([2], Try, OtherModifier, ("try", '⍣')),
       token('try'),
       token('⍣'),
-
-      // Since 0.21
-      token('combinate'),
-      token('◳'),
 
       // Since 0.26
       token('do'),
@@ -476,6 +456,12 @@ module.exports = grammar({
       token('⍛'),
       token('⌂'),
       token('↰'),
+
+      // Since 0.3.0
+      token('◳'),
+      token('≑'),
+      token('≐'),
+      token('∺'),
     ),
     // _whitespace: $ => /[ \t]+/,
     _endOfLine:$ => token(/\r?\n/),

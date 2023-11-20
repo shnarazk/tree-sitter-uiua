@@ -28,24 +28,6 @@
 [ (system) ] @function.builtin
 [ (tripleMinus) ] @module
 
-; ocean
-[
-    "rock"
-    "ro"
-    "⋄"
-    "surface"
-    "~"
-    "deep"
-    "de"
-    "≊"
-    "abyss"
-    "ab"
-    "≃"
-    "seabed"
-    "se"
-    "∸"
-] @attribute
-
 ; planet
 [
   "id"

@@ -434,6 +434,10 @@
     "named": false
   },
   {
+    "type": ":",
+    "named": false
+  },
+  {
     "type": ";",
     "named": false
   },
@@ -470,6 +474,10 @@
     "named": false
   },
   {
+    "type": "NUmProcs",
+    "named": false
+  },
+  {
     "type": "NaN",
     "named": false
   },
@@ -498,15 +506,7 @@
     "named": false
   },
   {
-    "type": "ab",
-    "named": false
-  },
-  {
     "type": "absolute value",
-    "named": false
-  },
-  {
-    "type": "abyss",
     "named": false
   },
   {
@@ -554,10 +554,6 @@
     "named": true
   },
   {
-    "type": "combinate",
-    "named": false
-  },
-  {
     "type": "comment",
     "named": true
   },
@@ -574,10 +570,6 @@
     "named": false
   },
   {
-    "type": "de",
-    "named": false
-  },
-  {
     "type": "deal",
     "named": false
   },
@@ -586,19 +578,11 @@
     "named": false
   },
   {
-    "type": "deep",
-    "named": false
-  },
-  {
     "type": "deshape",
     "named": false
   },
   {
     "type": "dip",
-    "named": false
-  },
-  {
-    "type": "distribute",
     "named": false
   },
   {
@@ -639,6 +623,10 @@
   },
   {
     "type": "first",
+    "named": false
+  },
+  {
+    "type": "fix",
     "named": false
   },
   {
@@ -711,10 +699,6 @@
   },
   {
     "type": "length",
-    "named": false
-  },
-  {
-    "type": "level",
     "named": false
   },
   {
@@ -822,6 +806,10 @@
     "named": false
   },
   {
+    "type": "rerank",
+    "named": false
+  },
+  {
     "type": "reshape",
     "named": false
   },
@@ -831,14 +819,6 @@
   },
   {
     "type": "rise",
-    "named": false
-  },
-  {
-    "type": "ro",
-    "named": false
-  },
-  {
-    "type": "rock",
     "named": false
   },
   {
@@ -855,14 +835,6 @@
   },
   {
     "type": "scan",
-    "named": false
-  },
-  {
-    "type": "se",
-    "named": false
-  },
-  {
-    "type": "seabed",
     "named": false
   },
   {
@@ -898,10 +870,6 @@
     "named": true
   },
   {
-    "type": "surface",
-    "named": false
-  },
-  {
     "type": "system",
     "named": true
   },
@@ -923,10 +891,6 @@
   },
   {
     "type": "transpose",
-    "named": false
-  },
-  {
-    "type": "tribute",
     "named": false
   },
   {
@@ -975,10 +939,6 @@
   },
   {
     "type": "|",
-    "named": false
-  },
-  {
-    "type": "~",
     "named": false
   },
   {
@@ -1106,27 +1066,11 @@
     "named": false
   },
   {
-    "type": "∶",
-    "named": false
-  },
-  {
     "type": "∷",
     "named": false
   },
   {
-    "type": "∸",
-    "named": false
-  },
-  {
     "type": "∺",
-    "named": false
-  },
-  {
-    "type": "≃",
-    "named": false
-  },
-  {
-    "type": "≊",
     "named": false
   },
   {
@@ -1230,7 +1174,7 @@
     "named": false
   },
   {
-    "type": "⋄",
+    "type": "⊥",
     "named": false
   },
   {
@@ -1239,6 +1183,10 @@
   },
   {
     "type": "⋯",
+    "named": false
+  },
+  {
+    "type": "⌀",
     "named": false
   },
   {
@@ -1299,6 +1247,10 @@
   },
   {
     "type": "⍥",
+    "named": false
+  },
+  {
+    "type": "⍼",
     "named": false
   },
   {
