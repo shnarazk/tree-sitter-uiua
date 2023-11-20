@@ -1,7 +1,12 @@
 # Changelog
 
-### 0.5.0: 2023-11-??
+### 0.5.0: 2023-11-20
 
+- follow Uiua-0.3.0
+    - deprecate `level`, `combinate`, `tribute`, and `distribute`
+    - add `rerank` and `fix`
+    - change the glyph for `flip`
+    - remove `if`
 - parse '$-string' correctly (#15)
 - parse '¯' as a part of `number` if they make a token (#15)
 
