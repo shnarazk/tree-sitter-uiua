@@ -2071,20 +2071,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "reach"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⟜"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "rectify"
           }
         },
@@ -2404,6 +2390,13 @@
           "content": {
             "type": "STRING",
             "value": "∺"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⟜"
           }
         }
       ]

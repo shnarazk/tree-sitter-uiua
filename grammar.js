@@ -405,10 +405,6 @@ module.exports = grammar({
       token('pack'),
       token('⊐'),
 
-      // Since 0.24
-      token('reach'),
-      token('⟜'),
-
       // Since 0.4.0
       token('rectify'),
       token('⌅'),
@@ -476,6 +472,9 @@ module.exports = grammar({
       token('≑'),
       token('≐'),
       token('∺'),
+
+      // Since 0.4.0
+      token('⟜'),
     ),
     // _whitespace: $ => /[ \t]+/,
     _endOfLine:$ => token(/\r?\n/),
