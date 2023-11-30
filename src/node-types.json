@@ -510,6 +510,10 @@
     "named": false
   },
   {
+    "type": "all",
+    "named": false
+  },
+  {
     "type": "assert",
     "named": false
   },
@@ -786,7 +790,11 @@
     "named": false
   },
   {
-    "type": "reach",
+    "type": "rectify",
+    "named": false
+  },
+  {
+    "type": "recur",
     "named": false
   },
   {
@@ -846,6 +854,14 @@
     "named": false
   },
   {
+    "type": "setinv",
+    "named": false
+  },
+  {
+    "type": "setunder",
+    "named": false
+  },
+  {
     "type": "shape",
     "named": false
   },
@@ -887,6 +903,10 @@
   },
   {
     "type": "tau",
+    "named": false
+  },
+  {
+    "type": "this",
     "named": false
   },
   {
@@ -1015,6 +1035,14 @@
   },
   {
     "type": "↧",
+    "named": false
+  },
+  {
+    "type": "↫",
+    "named": false
+  },
+  {
+    "type": "↬",
     "named": false
   },
   {
@@ -1182,11 +1210,19 @@
     "named": false
   },
   {
+    "type": "⋔",
+    "named": false
+  },
+  {
     "type": "⋯",
     "named": false
   },
   {
     "type": "⌂",
+    "named": false
+  },
+  {
+    "type": "⌅",
     "named": false
   },
   {

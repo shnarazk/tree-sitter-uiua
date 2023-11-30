@@ -405,9 +405,13 @@ module.exports = grammar({
       token('pack'),
       token('⊐'),
 
-      // Since 0.24
-      token('reach'),
-      token('⟜'),
+      // Since 0.4.0
+      token('rectify'),
+      token('⌅'),
+      token('this'),
+      token('↬'),
+      token('recur'),
+      token('↫'),
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
@@ -447,6 +451,12 @@ module.exports = grammar({
       // Since 0.26
       token('do'),
       token('⍢'),
+
+      // Since 0.4.0
+      token('all'),
+      token('⋔'),
+      token('setinv'),
+      token('setunder'),
     ),
     deprecated:  $ => choice(
       token('❥'),
@@ -462,6 +472,9 @@ module.exports = grammar({
       token('≑'),
       token('≐'),
       token('∺'),
+
+      // Since 0.4.0
+      token('⟜'),
     ),
     // _whitespace: $ => /[ \t]+/,
     _endOfLine:$ => token(/\r?\n/),

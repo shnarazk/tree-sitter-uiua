@@ -2071,14 +2071,42 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "reach"
+            "value": "rectify"
           }
         },
         {
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⟜"
+            "value": "⌅"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "this"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "↬"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "recur"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "↫"
           }
         }
       ]
@@ -2253,6 +2281,34 @@
             "type": "STRING",
             "value": "⍢"
           }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "all"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⋔"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "setinv"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "setunder"
+          }
         }
       ]
     },
@@ -2334,6 +2390,13 @@
           "content": {
             "type": "STRING",
             "value": "∺"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⟜"
           }
         }
       ]
