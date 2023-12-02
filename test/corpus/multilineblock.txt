@@ -26,7 +26,7 @@ multiline function1: /( + + )
 )
 
 ================
-'$-string` takes the rest of the line
+'$-string` takes the rest of the line (multiLineString)
 ================
 $ Hello
 ---
@@ -35,6 +35,21 @@ $ Hello
   (PROGRAM
     (segment
       (term (multiLineString))
+    )
+  )
+)
+
+================
+another form of '$-string` as a function call
+================
+$"Hello _!" "World"
+---
+
+(source_file
+  (PROGRAM
+    (segment
+      (term (string))
+      (segment (term (string)))
     )
   )
 )
