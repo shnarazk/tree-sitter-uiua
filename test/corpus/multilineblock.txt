@@ -33,7 +33,10 @@ $ Hello
 
 (source_file
   (PROGRAM
-    (segment (term (multiLineString)))
+    (segment
+      (term (multiLineString))
+      (segment (term (identifier)))
+    )
   )
 )
 

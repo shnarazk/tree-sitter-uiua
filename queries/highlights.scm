@@ -18,13 +18,14 @@
 [ (constant) ] @constant.numeric
 [ (identifier) ] @variable
 [ (leftArrow) ] @keyword.directive
-[ (function) ] @function
+[ (function) "$" ] @function
 [ (modifier1) ] @operator
 [ (modifier2) ] @operator
 [ (number) ] @constant.numeric
 [ (placeHolder) ] @special
 [ (otherConstant) ] @string.special
 [ (signature) ] @type
+[ (string) ] @string
 [ (system) ] @function.builtin
 [ (tripleMinus) ] @module
 
@@ -39,10 +40,6 @@
   "⋅"
 ] @tag
 
-[
-  (string)
-  (multiLineString)
-] @string
 
 [
   (deprecated)

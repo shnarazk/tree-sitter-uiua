@@ -633,8 +633,11 @@
       }
     },
     "multiLineString": {
-      "type": "PATTERN",
-      "value": "\\$.*"
+      "type": "TOKEN",
+      "content": {
+        "type": "STRING",
+        "value": "$"
+      }
     },
     "signature": {
       "type": "SEQ",
