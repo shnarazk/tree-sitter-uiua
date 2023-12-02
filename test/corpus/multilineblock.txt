@@ -40,7 +40,7 @@ $ Hello
 )
 
 ================
-another form of '$-string` as a function call
+another form of '$-string` as a function call1
 ================
 $"Hello _!" "World"
 ---
@@ -50,6 +50,24 @@ $"Hello _!" "World"
     (segment
       (term (string))
       (segment (term (string)))
+    )
+  )
+)
+
+================
+another form of '$-string` as a function call2
+================
+$"Hello _!" ⇡2
+---
+
+(source_file
+  (PROGRAM
+    (segment
+      (term (string))
+      (segment
+        (term (primitive (function)))
+        (segment (term (number)))
+      )
     )
   )
 )
