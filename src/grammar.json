@@ -633,10 +633,11 @@
       }
     },
     "multiLineString": {
-      "type": "TOKEN",
+      "type": "PREC",
+      "value": 2,
       "content": {
-        "type": "STRING",
-        "value": "$"
+        "type": "PATTERN",
+        "value": "\\$[^\"].*"
       }
     },
     "signature": {
@@ -994,6 +995,13 @@
     "function": {
       "type": "CHOICE",
       "members": [
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "$"
+          }
+        },
         {
           "type": "TOKEN",
           "content": {

@@ -90,7 +90,7 @@ module.exports = grammar({
     string:      $ => token(
       seq(optional('$'),'"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')
     ),
-    multiLineString: $ => token('$'),
+    multiLineString: $ => prec(2, /\$[^"].*/),
     signature:   $ => seq('|', /[0-9]+(\.[0-9]+)?/),
     identifier:  $ => token(/[A-Z][A-Za-z]*!*|[a-z][A-Za-z]?!*|\p{Emoji}/u),
     identifierDeprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
@@ -146,6 +146,7 @@ module.exports = grammar({
       token('NumProcs'),
     ),
     function:    $ => choice(
+      token('$'),
       // (1(2), Dup, Stack, ("duplicate", '.')),
       token('.'),
       // (2(3), Over, Stack, ("over", ',')),

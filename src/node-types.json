@@ -209,6 +209,11 @@
     }
   },
   {
+    "type": "multiLineString",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "number",
     "named": true,
     "fields": {},
@@ -403,6 +408,10 @@
   },
   {
     "type": "!=",
+    "named": false
+  },
+  {
+    "type": "$",
     "named": false
   },
   {
@@ -728,10 +737,6 @@
   {
     "type": "modulus",
     "named": false
-  },
-  {
-    "type": "multiLineString",
-    "named": true
   },
   {
     "type": "not",

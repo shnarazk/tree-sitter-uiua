@@ -35,7 +35,6 @@ $ Hello
   (PROGRAM
     (segment
       (term (multiLineString))
-      (segment (term (identifier)))
     )
   )
 )
@@ -48,6 +47,6 @@ $
 
 (source_file
   (PROGRAM
-    (segment (term (multiLineString)))
+    (segment (term (primitive (function))))
   )
 )
