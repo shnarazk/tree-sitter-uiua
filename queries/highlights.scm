@@ -44,7 +44,6 @@
   "⋅"
 ] @tag
 
-
 [
   (deprecated)
   (identifierDeprecated)
@@ -52,4 +51,4 @@
 
 [
   (formatter)
-] @warning
+] @keyword.directive
