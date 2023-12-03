@@ -29,6 +29,7 @@
 [ (tripleMinus) ] @module
 
 [ (string)
+  (emptyMultiLineString)
   (multiLineString)
 ] @string
 

@@ -48,11 +48,8 @@ $"Hello _!" "World"
 (source_file
   (PROGRAM
     (segment
-      (term (primitive (function)))
-      (segment
-        (term (string))
-        (segment (term (string)))
-      )
+      (term (string))
+      (segment (term (string)))
     )
   )
 )
@@ -66,13 +63,10 @@ $"Hello _!" ⇡2
 (source_file
   (PROGRAM
     (segment
-      (term (primitive (function)))
+      (term (string))
       (segment
-        (term (string))
-        (segment
-          (term (primitive (function)))
-          (segment (term (number)))
-        )
+        (term (primitive (function)))
+        (segment (term (number)))
       )
     )
   )
@@ -86,6 +80,6 @@ $
 
 (source_file
   (PROGRAM
-    (segment (term (primitive (function))))
+    (emptyMultiLineString)
   )
 )

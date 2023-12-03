@@ -5,8 +5,8 @@ module.exports = grammar({
   rules: {
     source_file: $ => $.PROGRAM,
     PROGRAM:     $ => seq(
-      repeat(seq(choice($.binding, $.segment, $.module), $._endOfLine)),
-      choice($.binding, $.segment, $.module),
+      repeat(seq(choice($.binding, $.segment, $.module, $.emptyMultiLineString), $._endOfLine)),
+      choice($.binding, $.segment, $.module, $.emptyMultiLineString),
       optional($._endOfLine)
     ),
     binding: $ => seq(
@@ -22,6 +22,7 @@ module.exports = grammar({
       $._endOfLine,
       $.tripleMinus
     )),
+    emptyMultiLineString: $ => token('$'),
     segment:     $ => prec.right(seq(
       choice(
         $.term,
@@ -87,7 +88,7 @@ module.exports = grammar({
     character:   $ => prec(5,
       token(/@([^\\]|\\[bnrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)
     ),
-    string: $ => token(/"(\\["bnrst0]||[^"])+"/),
+    string: $ => token(/\$?"(\\["bnrst0]||[^"])+"/),
     multiLineString: $ => /\$ .*/,
     signature:   $ => seq('|', /[0-9]+(\.[0-9]+)?/),
     identifier:  $ => token(/[A-Z][A-Za-z]*!*|[a-z][A-Za-z]?!*|\p{Emoji}/u),
@@ -144,7 +145,6 @@ module.exports = grammar({
       token('NumProcs'),
     ),
     function:    $ => choice(
-      token('$'),
       // (1(2), Dup, Stack, ("duplicate", '.')),
       token('.'),
       // (2(3), Over, Stack, ("over", ',')),

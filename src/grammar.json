@@ -27,6 +27,10 @@
                   {
                     "type": "SYMBOL",
                     "name": "module"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "emptyMultiLineString"
                   }
                 ]
               },
@@ -51,6 +55,10 @@
             {
               "type": "SYMBOL",
               "name": "module"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "emptyMultiLineString"
             }
           ]
         },
@@ -142,6 +150,13 @@
           "name": "tripleMinus"
         }
       ]
+    },
+    "emptyMultiLineString": {
+      "type": "TOKEN",
+      "content": {
+        "type": "STRING",
+        "value": "$"
+      }
     },
     "segment": {
       "type": "PREC_RIGHT",
@@ -592,7 +607,7 @@
       "type": "TOKEN",
       "content": {
         "type": "PATTERN",
-        "value": "\"(\\\\[\"bnrst0]||[^\"])+\""
+        "value": "\\$?\"(\\\\[\"bnrst0]||[^\"])+\""
       }
     },
     "multiLineString": {
@@ -954,13 +969,6 @@
     "function": {
       "type": "CHOICE",
       "members": [
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "$"
-          }
-        },
         {
           "type": "TOKEN",
           "content": {
