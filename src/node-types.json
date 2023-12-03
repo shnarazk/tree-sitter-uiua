@@ -152,6 +152,11 @@
     "fields": {}
   },
   {
+    "type": "formatter",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "function",
     "named": true,
     "fields": {}
@@ -363,6 +368,10 @@
           "named": true
         },
         {
+          "type": "formatter",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -411,6 +420,14 @@
   },
   {
     "type": "%",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "''",
     "named": false
   },
   {

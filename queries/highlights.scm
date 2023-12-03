@@ -49,3 +49,7 @@
   (deprecated)
   (identifierDeprecated)
 ] @warning
+
+[
+  (formatter)
+] @warning

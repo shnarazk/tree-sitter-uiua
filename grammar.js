@@ -49,6 +49,7 @@ module.exports = grammar({
       $.identifier,
       $.identifierDeprecated,
       $.placeHolder,
+      $.formatter,
     ),
     inlineFunction: $ => seq(
       $.openParen,
@@ -109,6 +110,7 @@ module.exports = grammar({
     underscore:  $ => token('_'),
     leftArrow:   $ => token('←'),
     placeHolder: $ => seq('^', /[0-9]+(\.[0-9]+)?/),
+    formatter:   $ => choice(token('\''), token('\'\'')),
     branchSeparator: $=> token('|'),
     compound:    $ => choice(
       prec(1, seq(
