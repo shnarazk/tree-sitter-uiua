@@ -1,5 +1,12 @@
 # Changelog
 
+### 0.8.0: 2023-12-03
+
+- follow Uiua-0.5.1
+    - add `stack`
+    - remove `reach`, `distribute`, `tribute`, `level`, `combinate`
+    - add `'` and `''`
+
 ### 0.7.0: 2023-12-03
 
 - handle $-string known as multi-line string correctly
