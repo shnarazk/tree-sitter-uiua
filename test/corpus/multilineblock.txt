@@ -73,7 +73,19 @@ $"Hello _!" ⇡2
 )
 
 ================
-`$\n` should be a string
+/\$ \n?/ at the end of input should be a multiLineString. But we can't handle /\$\n?/.
+================
+$ 
+---
+
+(source_file
+  (PROGRAM
+    (segment (term (multiLineString)))
+  )
+)
+
+================
+`$\n` should be an emptyMultiLineString
 ================
 $
 3
@@ -87,13 +99,14 @@ $
 )
 
 ================
-/\$\n?/ at the end of input should be a string
+`$\n\n` at the end of input should be an emptyMultiLineString
 ================
 $
+
 ---
 
 (source_file
   (PROGRAM
-    (emptyMultiLineStringAtEoF)
+    (emptyMultiLineString)
   )
 )

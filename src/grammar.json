@@ -9,11 +9,11 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "REPEAT",
-              "content": {
+          "type": "REPEAT",
+          "content": {
+            "type": "CHOICE",
+            "members": [
+              {
                 "type": "SEQ",
                 "members": [
                   {
@@ -38,7 +38,28 @@
                     "name": "_endOfLine"
                   }
                 ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "emptyMultiLineString"
               }
+            ]
+          }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "binding"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "segment"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "module"
             },
             {
               "type": "SYMBOL",
@@ -47,40 +68,14 @@
           ]
         },
         {
-          "type": "SEQ",
+          "type": "CHOICE",
           "members": [
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "binding"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "segment"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "module"
-                },
-                {
-                  "type": "SYMBOL",
-                  "name": "emptyMultiLineStringAtEoF"
-                }
-              ]
+              "type": "SYMBOL",
+              "name": "_endOfLine"
             },
             {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "SYMBOL",
-                  "name": "_endOfLine"
-                },
-                {
-                  "type": "BLANK"
-                }
-              ]
+              "type": "BLANK"
             }
           ]
         }
@@ -2387,13 +2382,6 @@
       "content": {
         "type": "PATTERN",
         "value": "\\$\\r?\\n"
-      }
-    },
-    "emptyMultiLineStringAtEoF": {
-      "type": "TOKEN",
-      "content": {
-        "type": "STRING",
-        "value": "$"
       }
     },
     "_endOfLine": {

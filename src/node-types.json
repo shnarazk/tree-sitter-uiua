@@ -16,10 +16,6 @@
           "named": true
         },
         {
-          "type": "emptyMultiLineStringAtEoF",
-          "named": true
-        },
-        {
           "type": "module",
           "named": true
         },
@@ -619,10 +615,6 @@
   },
   {
     "type": "emptyMultiLineString",
-    "named": true
-  },
-  {
-    "type": "emptyMultiLineStringAtEoF",
     "named": true
   },
   {

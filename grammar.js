@@ -5,14 +5,14 @@ module.exports = grammar({
   rules: {
     source_file: $ => $.PROGRAM,
     PROGRAM:     $ => seq(
-      choice(
-        repeat(seq(choice($.binding, $.segment, $.module), $._endOfLine)),
-        $.emptyMultiLineString,
+      repeat(
+        choice(
+          seq(choice($.binding, $.segment, $.module), $._endOfLine),
+          $.emptyMultiLineString,
+        ),
       ),
-      seq(
-        choice($.binding, $.segment, $.module, $.emptyMultiLineStringAtEoF),
-        optional($._endOfLine)
-      ),
+      choice($.binding, $.segment, $.module, $.emptyMultiLineString),
+      optional($._endOfLine)
     ),
     binding: $ => seq(
       $.identifier,
@@ -481,7 +481,6 @@ module.exports = grammar({
     ),
     // _whitespace: $ => /[ \t]+/,
     emptyMultiLineString: $ => token(/\$\r?\n/),
-    emptyMultiLineStringAtEoF: $ => token('$'),
     _endOfLine:$ => token(/\r?\n/),
   }
 });
