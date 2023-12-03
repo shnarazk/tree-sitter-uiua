@@ -26,21 +26,70 @@ multiline function1: /( + + )
 )
 
 ================
-'$-string` takes the rest of the line
+'$-string` takes the rest of the line (multiLineString)
 ================
 $ Hello
 ---
 
 (source_file
   (PROGRAM
-    (segment (term (multiLineString)))
+    (segment
+      (term (multiLineString))
+    )
   )
 )
 
 ================
-'$\n?` should be acceptable
+another form of '$-string` as a function call1
+================
+$"Hello _!" "World"
+---
+
+(source_file
+  (PROGRAM
+    (segment
+      (term (string))
+      (segment (term (string)))
+    )
+  )
+)
+
+================
+another form of '$-string` as a function call2
+================
+$"Hello _!" ⇡2
+---
+
+(source_file
+  (PROGRAM
+    (segment
+      (term (string))
+      (segment
+        (term (primitive (function)))
+        (segment (term (number)))
+      )
+    )
+  )
+)
+
+================
+`$\n` should be an emptyMultiLineString
 ================
 $
+3
+---
+
+(source_file
+  (PROGRAM
+    (emptyMultiLineString)
+    (segment (term (number)))
+  )
+)
+
+================
+/\$ \n?/ at the end of input should be a multiLineString. But we can't handle /\$\n?/.
+================
+$ 
 ---
 
 (source_file
@@ -48,3 +97,28 @@ $
     (segment (term (multiLineString)))
   )
 )
+
+================
+`$\n\n` at the end of input should be an emptyMultiLineString
+================
+$
+
+---
+
+(source_file
+  (PROGRAM
+    (emptyMultiLineString)
+  )
+)
+
+; ================
+; /\$\n?/ at the end of input
+; ================
+; $
+; ---
+; 
+; (source_file
+;   (PROGRAM
+;     (segment (term (multiLineString)))
+;   )
+; )

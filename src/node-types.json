@@ -12,6 +12,10 @@
           "named": true
         },
         {
+          "type": "emptyMultiLineString",
+          "named": true
+        },
+        {
           "type": "module",
           "named": true
         },
@@ -608,6 +612,10 @@
   {
     "type": "each",
     "named": false
+  },
+  {
+    "type": "emptyMultiLineString",
+    "named": true
   },
   {
     "type": "eta",

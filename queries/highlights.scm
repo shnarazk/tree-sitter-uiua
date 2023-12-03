@@ -28,6 +28,11 @@
 [ (system) ] @function.builtin
 [ (tripleMinus) ] @module
 
+[ (string)
+  (emptyMultiLineString)
+  (multiLineString)
+] @string
+
 ; planet
 [
   "id"
@@ -39,13 +44,8 @@
   "⋅"
 ] @tag
 
-[
-  (string)
-  (multiLineString)
-] @string
 
 [
   (deprecated)
   (identifierDeprecated)
 ] @warning
-
