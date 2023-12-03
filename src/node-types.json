@@ -466,6 +466,10 @@
     "named": false
   },
   {
+    "type": "?",
+    "named": false
+  },
+  {
     "type": "Arch",
     "named": false
   },
@@ -1110,19 +1114,7 @@
     "named": false
   },
   {
-    "type": "∺",
-    "named": false
-  },
-  {
     "type": "≍",
-    "named": false
-  },
-  {
-    "type": "≐",
-    "named": false
-  },
-  {
-    "type": "≑",
     "named": false
   },
   {
@@ -1311,10 +1303,6 @@
   },
   {
     "type": "◫",
-    "named": false
-  },
-  {
-    "type": "◳",
     "named": false
   },
   {

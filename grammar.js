@@ -375,6 +375,9 @@ module.exports = grammar({
       token('☇'),
       token('fix'),
       token('¤'),
+
+      // Since 0.5.0
+      token('?'),
     ),
     modifier1:   $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
@@ -469,12 +472,6 @@ module.exports = grammar({
       token('⍛'),
       token('⌂'),
       token('↰'),
-
-      // Since 0.3.0
-      token('◳'),
-      token('≑'),
-      token('≐'),
-      token('∺'),
 
       // Since 0.4.0
       token('⟜'),
