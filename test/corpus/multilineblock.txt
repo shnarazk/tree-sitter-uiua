@@ -48,8 +48,11 @@ $"Hello _!" "World"
 (source_file
   (PROGRAM
     (segment
-      (term (string))
-      (segment (term (string)))
+      (term (primitive (function)))
+      (segment
+        (term (string))
+        (segment (term (string)))
+      )
     )
   )
 )
@@ -63,17 +66,20 @@ $"Hello _!" ⇡2
 (source_file
   (PROGRAM
     (segment
-      (term (string))
+      (term (primitive (function)))
       (segment
-        (term (primitive (function)))
-        (segment (term (number)))
+        (term (string))
+        (segment
+          (term (primitive (function)))
+          (segment (term (number)))
+        )
       )
     )
   )
 )
 
 ================
-'$\n?` should be acceptable
+`$\n` should be a string
 ================
 $
 ---

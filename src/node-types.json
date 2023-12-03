@@ -209,11 +209,6 @@
     }
   },
   {
-    "type": "multiLineString",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "number",
     "named": true,
     "fields": {},
@@ -737,6 +732,10 @@
   {
     "type": "modulus",
     "named": false
+  },
+  {
+    "type": "multiLineString",
+    "named": true
   },
   {
     "type": "not",

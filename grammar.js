@@ -87,10 +87,8 @@ module.exports = grammar({
     character:   $ => prec(5,
       token(/@([^\\]|\\[bnrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)
     ),
-    string:      $ => token(
-      seq(optional('$'),'"', repeat(choice(/\\["nt]/, /[^"]+/)), '"')
-    ),
-    multiLineString: $ => prec(2, /\$[^"].*/),
+    string: $ => token(/"(\\["bnrst0]||[^"])+"/),
+    multiLineString: $ => /\$ .*/,
     signature:   $ => seq('|', /[0-9]+(\.[0-9]+)?/),
     identifier:  $ => token(/[A-Z][A-Za-z]*!*|[a-z][A-Za-z]?!*|\p{Emoji}/u),
     identifierDeprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
