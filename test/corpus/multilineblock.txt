@@ -76,10 +76,24 @@ $"Hello _!" ⇡2
 `$\n` should be a string
 ================
 $
+3
 ---
 
 (source_file
   (PROGRAM
     (emptyMultiLineString)
+    (segment (term (number)))
+  )
+)
+
+================
+/\$\n?/ at the end of input should be a string
+================
+$
+---
+
+(source_file
+  (PROGRAM
+    (emptyMultiLineStringAtEoF)
   )
 )

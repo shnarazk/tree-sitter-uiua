@@ -30,6 +30,7 @@
 
 [ (string)
   (emptyMultiLineString)
+  (emptyMultiLineStringAtEoF)
   (multiLineString)
 ] @string
 
