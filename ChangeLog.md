@@ -1,5 +1,23 @@
 # Changelog
 
+### 0.8.0: 2023-12-03
+
+- follow Uiua-0.5.1
+    - add `stack`
+    - remove `reach`, `distribute`, `tribute`, `level`, `combinate`
+    - add `'` and `''`
+
+### 0.7.0: 2023-12-03
+
+- handle $-string known as multi-line string correctly
+
+### 0.6.0: 2023-12-01
+
+- follow Uiua-0.4.0
+    - add `rectify`, `this`, `recur`, and `fix`
+    - add `all`, `this`, `setinv`, and `setunder`
+    - deprecate `⟜`
+
 ### 0.5.0: 2023-11-20
 
 - follow Uiua-0.3.0

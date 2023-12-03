@@ -44,8 +44,11 @@
   "⋅"
 ] @tag
 
-
 [
   (deprecated)
   (identifierDeprecated)
 ] @warning
+
+[
+  (formatter)
+] @keyword.directive
