@@ -715,10 +715,6 @@
     "named": false
   },
   {
-    "type": "invert",
-    "named": false
-  },
-  {
     "type": "join",
     "named": false
   },
@@ -784,10 +780,6 @@
   },
   {
     "type": "os",
-    "named": false
-  },
-  {
-    "type": "pack",
     "named": false
   },
   {
@@ -959,6 +951,10 @@
     "named": false
   },
   {
+    "type": "un",
+    "named": false
+  },
+  {
     "type": "unbox",
     "named": false
   },
@@ -969,6 +965,10 @@
   {
     "type": "underscore",
     "named": true
+  },
+  {
+    "type": "unpack",
+    "named": false
   },
   {
     "type": "utf",
@@ -1000,6 +1000,10 @@
   },
   {
     "type": "¯",
+    "named": false
+  },
+  {
+    "type": "°",
     "named": false
   },
   {
@@ -1231,6 +1235,10 @@
     "named": false
   },
   {
+    "type": "⋕",
+    "named": false
+  },
+  {
     "type": "⋯",
     "named": false
   },
@@ -1268,10 +1276,6 @@
   },
   {
     "type": "⍖",
-    "named": false
-  },
-  {
-    "type": "⍘",
     "named": false
   },
   {

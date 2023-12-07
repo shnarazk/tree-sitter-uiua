@@ -281,9 +281,6 @@ module.exports = grammar({
       // (1, Box, MonadicArray, ("box", '□')),
       token('box'),
       token('□'),
-      // (1, Unbox, MonadicArray, ("unbox", '⊔')),
-      token('unbox'),
-      token('⊔'),
       // (2, Match, DyadicArray, ("match", '≅')),
       token('match'),
       token('≍'),
@@ -342,6 +339,7 @@ module.exports = grammar({
       // token('↬'),
       // (1, Parse, Misc, "parse"),
       token('parse'),
+      token('⋕'),
       // (0, Rand, Misc, ("random", '⚂')),
       token('random'),
       token('⚂'),
@@ -404,14 +402,14 @@ module.exports = grammar({
       token('gap'),
       token('⋅'),
       // ([1], Invert, OtherModifier, ("invert", '⍘')),
-      token('invert'),
-      token('⍘'),
+      // token('invert'),
+      // token('⍘'),
       // ([1], Spawn, OtherModifier, ("spawn", '↰')),
       token('spawn'),
 
       // Since 0.21
-      token('pack'),
-      token('⊐'),
+      // token('pack'),
+      // token('⊐'),
 
       // Since 0.4.0
       token('rectify'),
@@ -420,6 +418,12 @@ module.exports = grammar({
       token('↬'),
       token('recur'),
       token('↫'),
+
+      // Since 0.6.0
+      token('un'),
+      token('°'),
+      token('unpack'),
+      token('⊐'),
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
@@ -477,6 +481,11 @@ module.exports = grammar({
 
       // Since 0.4.0
       token('⟜'),
+
+      // Since 0.6.0
+      // (1, Unbox, MonadicArray, ("unbox", '⊔')),
+      token('unbox'),
+      token('⊔'),
     ),
     // _whitespace: $ => /[ \t]+/,
     emptyMultiLineString: $ => token(/\$\r?\n/),
