@@ -1,5 +1,13 @@
 # Changelog
 
+### 0.9.0: 2023-12-07
+
+- follow Uiua-0.6.0
+    - add ``⋕``
+    - deprecate `unbox`
+    - change `invert ⍘` to `un °`
+    - change `pack` to `unpack`
+
 ### 0.8.0: 2023-12-03
 
 - follow Uiua-0.5.1
