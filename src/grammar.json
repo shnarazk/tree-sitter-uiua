@@ -1554,20 +1554,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "unbox"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⊔"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "match"
           }
         },
@@ -1786,6 +1772,13 @@
           "content": {
             "type": "STRING",
             "value": "parse"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⋕"
           }
         },
         {
@@ -2042,35 +2035,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "invert"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⍘"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "spawn"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "pack"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⊐"
           }
         },
         {
@@ -2113,6 +2078,34 @@
           "content": {
             "type": "STRING",
             "value": "↫"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "un"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "°"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "unpack"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⊐"
           }
         }
       ]
@@ -2375,6 +2368,20 @@
           "content": {
             "type": "STRING",
             "value": "⟜"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "unbox"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⊔"
           }
         }
       ]
