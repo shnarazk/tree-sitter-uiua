@@ -1,5 +1,25 @@
 # Changelog
 
+### 0.10.0: 2024-02-01
+
+- follow Uiua-0.8.0
+
+- Add the [`content ⊔`](https://uiua.org/docs/content) modifier
+- Deprecate [`unpack ⊐`](https://uiua.org/docs/unpack)
+- Add the [`unique ◰`](https://uiua.org/docs/unique) function
+- Change [`deduplicate ◴`](https://uiua.org/docs/deduplicate)'s glyph. Code using `⊖` will continue to work and will be formatted as `◴`.
+- Deprecate [`cross ⊠`](https://uiua.org/docs/cross)
+- Unicode escape sequences that are not 2 or 4 bytes long can now be specified with `\u{…}`
+- Change [`pop ◌`](https://uiua.org/docs/pop)'s glyph. Code using `;` will continue to work and will be formatted as `◌`.
+- Completely remove the deprecated `unbox ⊔`
+- Add experimental hashmap functions
+  - [`map`](https://uiua.org/docs/map)
+  - [`has`](https://uiua.org/docs/has)
+  - [`get`](https://uiua.org/docs/get)
+  - [`insert`](https://uiua.org/docs/insert)
+  - [`remove`](https://uiua.org/docs/remove)
+- Add experimental [`bind`](https://uiua.org/docs/bind) modifier
+
 ### 0.9.0: 2023-12-07
 
 - follow Uiua-0.6.0
