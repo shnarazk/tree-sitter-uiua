@@ -601,7 +601,7 @@
         "type": "TOKEN",
         "content": {
           "type": "PATTERN",
-          "value": "@([^\\\\]|\\\\[bnrst0\\\\\"'_]|\\\\x[0-9A-Fa-f]{2,2}|\\\\u[0-9A-Fa-f]{4,4})"
+          "value": "@([^\\\\]|\\\\[bnrst0\\\\\"'_]|\\\\x[0-9A-Fa-f]{2,2}|\\\\u[0-9A-Fa-f]{4,4}|\\\\u\\{[0-9A-Fa-f]+\\})"
         }
       }
     },
@@ -1015,7 +1015,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": ";"
+            "value": "◌"
           }
         },
         {
@@ -1533,7 +1533,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⊝"
+            "value": "◴"
           }
         },
         {
@@ -1927,6 +1927,55 @@
             "type": "STRING",
             "value": "?"
           }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "unique"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "◰"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "map"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "has"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "get"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "insert"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "remove"
+          }
         }
       ]
     },
@@ -2098,14 +2147,21 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "unpack"
+            "value": "content"
           }
         },
         {
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⊐"
+            "value": "⊔"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "bind"
           }
         }
       ]
@@ -2139,20 +2195,6 @@
           "content": {
             "type": "STRING",
             "value": "⊞"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "cross"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⊠"
           }
         },
         {
@@ -2374,14 +2416,42 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "unbox"
+            "value": "unpack"
           }
         },
         {
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⊔"
+            "value": "⊐"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⊝"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "cross"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⊠"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": ";"
           }
         }
       ]
