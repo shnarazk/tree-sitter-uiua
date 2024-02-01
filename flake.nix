@@ -13,7 +13,8 @@
           pkgs.bashInteractive
           pkgs.nodejs-18_x
           pkgs.iconv
-          uiua.packages.${system}.default
+          pkgs.uiua
+          # uiua.packages.${system}.default
         ];
       };
     });
