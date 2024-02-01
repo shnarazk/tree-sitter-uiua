@@ -91,7 +91,7 @@ module.exports = grammar({
       token('⍼'),
     ),
     character:   $ => prec(5,
-      token(/@([^\\]|\\[bnrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4})/)
+      token(/@([^\\]|\\[bnrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4}|\\u\{[0-9A-Fa-f]+\})/)
     ),
     string: $ => token(/\$?"(\\["bnrst0]||[^"])+"/),
     multiLineString: $ => /\$ .*/,
@@ -158,7 +158,7 @@ module.exports = grammar({
       // (2(2), Flip, Stack, ("flip", AsciiToken::Colon, '∶')),
       token(':'),
       // (1(0), Pop, Stack, ("pop", ';')),
-      token(';'),
+      token('◌'),
       // (1, Identity, Stack, ("identity", '∘')),
       token('identity'),
       token('id'),
@@ -277,7 +277,7 @@ module.exports = grammar({
       token('⊛'),
       // (1, Deduplicate, MonadicArray, ("deduplicate", '⊝')),
       token('deduplicate'),
-      token('⊝'),
+      token('◴'),
       // (1, Box, MonadicArray, ("box", '□')),
       token('box'),
       token('□'),
@@ -378,6 +378,16 @@ module.exports = grammar({
 
       // Since 0.5.0
       token('?'),
+
+      // Since 0.8.0
+      token('unique'),
+      token('◰'),
+      // hash functions
+      token('map'),
+      token('has'),
+      token('get'),
+      token('insert'),
+      token('remove'),
     ),
     modifier1:   $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
@@ -422,8 +432,11 @@ module.exports = grammar({
       // Since 0.6.0
       token('un'),
       token('°'),
-      token('unpack'),
-      token('⊐'),
+
+      // Since 0.8.0
+      token('content'),
+      token('⊔'),
+      token('bind'),
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
@@ -432,9 +445,6 @@ module.exports = grammar({
       // (2[1], Table, IteratingModifier, ("table", '⊞')),
       token('table'),
       token('⊞'),
-      // (2[1], Cross, IteratingModifier, ("cross", '⊠')),
-      token('cross'),
-      token('⊠'),
       // (2[1], Group, AggregatingModifier, ("group", '⊕')),
       token('group'),
       token('⊕'),
@@ -482,10 +492,14 @@ module.exports = grammar({
       // Since 0.4.0
       token('⟜'),
 
-      // Since 0.6.0
-      // (1, Unbox, MonadicArray, ("unbox", '⊔')),
-      token('unbox'),
-      token('⊔'),
+      // Since 0.8.0
+      token('unpack'),
+      token('⊐'),
+      token('⊝'),
+      // (2[1], Cross, IteratingModifier, ("cross", '⊠')),
+      token('cross'),
+      token('⊠'),
+      token(';'),
     ),
     // _whitespace: $ => /[ \t]+/,
     emptyMultiLineString: $ => token(/\$\r?\n/),

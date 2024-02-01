@@ -547,6 +547,10 @@
     "named": false
   },
   {
+    "type": "bind",
+    "named": false
+  },
+  {
     "type": "bits",
     "named": false
   },
@@ -588,6 +592,10 @@
   },
   {
     "type": "complex",
+    "named": false
+  },
+  {
+    "type": "content",
     "named": false
   },
   {
@@ -687,7 +695,15 @@
     "named": false
   },
   {
+    "type": "get",
+    "named": false
+  },
+  {
     "type": "group",
+    "named": false
+  },
+  {
+    "type": "has",
     "named": false
   },
   {
@@ -715,6 +731,10 @@
     "named": false
   },
   {
+    "type": "insert",
+    "named": false
+  },
+  {
     "type": "join",
     "named": false
   },
@@ -732,6 +752,10 @@
   },
   {
     "type": "logarithm",
+    "named": false
+  },
+  {
+    "type": "map",
     "named": false
   },
   {
@@ -828,6 +852,10 @@
   },
   {
     "type": "regex",
+    "named": false
+  },
+  {
+    "type": "remove",
     "named": false
   },
   {
@@ -955,16 +983,16 @@
     "named": false
   },
   {
-    "type": "unbox",
-    "named": false
-  },
-  {
     "type": "under",
     "named": false
   },
   {
     "type": "underscore",
     "named": true
+  },
+  {
+    "type": "unique",
+    "named": false
   },
   {
     "type": "unpack",
@@ -1323,7 +1351,19 @@
     "named": false
   },
   {
+    "type": "◌",
+    "named": false
+  },
+  {
     "type": "◫",
+    "named": false
+  },
+  {
+    "type": "◰",
+    "named": false
+  },
+  {
+    "type": "◴",
     "named": false
   },
   {
