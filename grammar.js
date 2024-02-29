@@ -96,7 +96,7 @@ module.exports = grammar({
     string: $ => token(/\$?"(\\["bnrst0]||[^"])+"/),
     multiLineString: $ => /\$ .*/,
     signature:   $ => seq('|', /[0-9]+(\.[0-9]+)?/),
-    identifier:  $ => token(/[A-Z][A-Za-z]*!*|[a-z][A-Za-z]?!*|\p{Emoji}/u),
+    identifier:  $ => token(/[A-Z][A-Za-z]*!*|[a-z][A-Za-z]?!*|\p{Emoji}/),
     identifierDeprecated:  $ => token(/[a-z][A-Za-z]{2,}/),
     system:      $ => token(/&[a-z]+/),
     comment:     $ => /#.*/,
@@ -134,6 +134,11 @@ module.exports = grammar({
       $.deprecated,
     ),
     constant:    $ => choice(
+      token('e'),
+      token('NaN'),
+      token('NumProcs'),
+
+      // Since 0.9.0
       // (0, Eta, Constant, ("eta", 'η')),
       token('eta'),
       token('η'),
@@ -146,9 +151,6 @@ module.exports = grammar({
       // (0, Infinity, Constant, ("infinity", '∞')),
       token('infinity'),
       token('∞'),
-      token('e'),
-      token('NaN'),
-      token('NumProcs'),
     ),
     function:    $ => choice(
       // (1(2), Dup, Stack, ("duplicate", '.')),
@@ -388,6 +390,9 @@ module.exports = grammar({
       token('get'),
       token('insert'),
       token('remove'),
+
+      // Since 0.9.0
+      token('repr'),
     ),
     modifier1:   $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
@@ -424,19 +429,26 @@ module.exports = grammar({
       // Since 0.4.0
       token('rectify'),
       token('⌅'),
-      token('this'),
-      token('↬'),
-      token('recur'),
-      token('↫'),
 
       // Since 0.6.0
       token('un'),
       token('°'),
 
       // Since 0.8.0
-      token('content'),
-      token('⊔'),
       token('bind'),
+
+      // Since 0.9.0
+      token('on'),
+      token('⟜'),
+      token('inventory'),
+      token('⍚'),
+      token('content'),
+      token('◇'),
+      token('pool'),
+      token('stringify'),
+      token('signature'),
+      token('shapes'),
+      token('types'),
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
@@ -475,10 +487,11 @@ module.exports = grammar({
       token('⍢'),
 
       // Since 0.4.0
-      token('all'),
-      token('⋔'),
       token('setinv'),
       token('setunder'),
+
+      // Since 0.9.0
+      token('f'),
     ),
     deprecated:  $ => choice(
       token('❥'),
@@ -489,8 +502,9 @@ module.exports = grammar({
       token('⌂'),
       token('↰'),
 
-      // Since 0.4.0
-      token('⟜'),
+      // removed at 0.9.0?
+      // // Since 0.4.0
+      // token('⟜'),
 
       // Since 0.8.0
       token('unpack'),
@@ -500,6 +514,12 @@ module.exports = grammar({
       token('cross'),
       token('⊠'),
       token(';'),
+
+      // Since 0.9.0
+      token('↬'),
+      token('↫'),
+      token('all'),
+      token('⋔'),
     ),
     // _whitespace: $ => /[ \t]+/,
     emptyMultiLineString: $ => token(/\$\r?\n/),

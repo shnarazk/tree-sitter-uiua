@@ -1,5 +1,10 @@
 # Changelog
 
+### 0.11.0: 2024-02-29
+
+- follow Uiua-0.9.0
+  - Note: function strands are treated as arrays, just as they were
+
 ### 0.10.0: 2024-02-01
 
 - follow Uiua-0.8.0

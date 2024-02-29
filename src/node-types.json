@@ -651,6 +651,10 @@
     "named": false
   },
   {
+    "type": "f",
+    "named": false
+  },
+  {
     "type": "fall",
     "named": false
   },
@@ -735,6 +739,10 @@
     "named": false
   },
   {
+    "type": "inventory",
+    "named": false
+  },
+  {
     "type": "join",
     "named": false
   },
@@ -791,6 +799,10 @@
     "named": false
   },
   {
+    "type": "on",
+    "named": false
+  },
+  {
     "type": "openBracket",
     "named": true
   },
@@ -823,6 +835,10 @@
     "named": false
   },
   {
+    "type": "pool",
+    "named": false
+  },
+  {
     "type": "power",
     "named": false
   },
@@ -836,10 +852,6 @@
   },
   {
     "type": "rectify",
-    "named": false
-  },
-  {
-    "type": "recur",
     "named": false
   },
   {
@@ -860,6 +872,10 @@
   },
   {
     "type": "repeat",
+    "named": false
+  },
+  {
+    "type": "repr",
     "named": false
   },
   {
@@ -915,7 +931,15 @@
     "named": false
   },
   {
+    "type": "shapes",
+    "named": false
+  },
+  {
     "type": "sign",
+    "named": false
+  },
+  {
+    "type": "signature",
     "named": false
   },
   {
@@ -933,6 +957,10 @@
   {
     "type": "string",
     "named": true
+  },
+  {
+    "type": "stringify",
+    "named": false
   },
   {
     "type": "system",
@@ -955,10 +983,6 @@
     "named": false
   },
   {
-    "type": "this",
-    "named": false
-  },
-  {
     "type": "transpose",
     "named": false
   },
@@ -976,6 +1000,10 @@
   },
   {
     "type": "type",
+    "named": false
+  },
+  {
+    "type": "types",
     "named": false
   },
   {
@@ -1203,10 +1231,6 @@
     "named": false
   },
   {
-    "type": "⊔",
-    "named": false
-  },
-  {
     "type": "⊕",
     "named": false
   },
@@ -1307,6 +1331,10 @@
     "named": false
   },
   {
+    "type": "⍚",
+    "named": false
+  },
+  {
     "type": "⍛",
     "named": false
   },
@@ -1344,6 +1372,10 @@
   },
   {
     "type": "▽",
+    "named": false
+  },
+  {
+    "type": "◇",
     "named": false
   },
   {
