@@ -912,6 +912,27 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "e"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "NaN"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "NumProcs"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "eta"
           }
         },
@@ -962,27 +983,6 @@
           "content": {
             "type": "STRING",
             "value": "∞"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "e"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "NaN"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "NumProcs"
           }
         }
       ]
@@ -1976,6 +1976,13 @@
             "type": "STRING",
             "value": "remove"
           }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "repr"
+          }
         }
       ]
     },
@@ -2105,34 +2112,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "this"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "↬"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "recur"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "↫"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "un"
           }
         },
@@ -2147,6 +2126,41 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "bind"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "on"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⟜"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "inventory"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⍚"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "content"
           }
         },
@@ -2154,14 +2168,42 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⊔"
+            "value": "◇"
           }
         },
         {
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "bind"
+            "value": "pool"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "stringify"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "signature"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "shapes"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "types"
           }
         }
       ]
@@ -2327,20 +2369,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "all"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⋔"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "setinv"
           }
         },
@@ -2349,6 +2377,13 @@
           "content": {
             "type": "STRING",
             "value": "setunder"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "f"
           }
         }
       ]
@@ -2409,13 +2444,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⟜"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "unpack"
           }
         },
@@ -2452,6 +2480,34 @@
           "content": {
             "type": "STRING",
             "value": ";"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "↬"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "↫"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "all"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⋔"
           }
         }
       ]
@@ -2491,4 +2547,3 @@
   "inline": [],
   "supertypes": []
 }
-
