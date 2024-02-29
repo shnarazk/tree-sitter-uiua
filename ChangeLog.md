@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.11.0: 2024-02-29
+
+- follow Uiua-0.9.0 except the experimental function strands rule, which conflicts with strands rule for arrays
+
 ### 0.10.0: 2024-02-01
 
 - follow Uiua-0.8.0
