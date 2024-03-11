@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/shnarazk/tree-sitter-uiua#readme",
   "devDependencies": {
-    "tree-sitter-cli": "^0.21.0"
+    "tree-sitter-cli": "^0.22.1"
   },
   "tree-sitter": [
     {
