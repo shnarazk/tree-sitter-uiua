@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "uiua",
   "rules": {
     "source_file": {
@@ -540,7 +541,126 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "os"
+            "value": "Days"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Months"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "MonthDays"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "LeanMonthDays"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "White"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Black"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Red"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Orange"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Yellow"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Green"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Cyan"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Blue"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Purple"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Magenta"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "True"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "False"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "NULL"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Os"
           }
         },
         {
@@ -568,7 +688,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "PllExt"
+            "value": "DllExt"
           }
         },
         {
@@ -582,14 +702,35 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "NUmProcs"
+            "value": "ThisFile"
           }
         },
         {
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "⍼"
+            "value": "ThisFileName"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "ThisFileDir"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "WorkingDIr"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "NumProcs"
           }
         }
       ]
@@ -601,7 +742,7 @@
         "type": "TOKEN",
         "content": {
           "type": "PATTERN",
-          "value": "@([^\\\\]|\\\\[bnrst0\\\\\"'_]|\\\\x[0-9A-Fa-f]{2,2}|\\\\u[0-9A-Fa-f]{4,4}|\\\\u\\{[0-9A-Fa-f]+\\})"
+          "value": "@([^\\\\]|\\\\[Wbnrst0\\\\\"'_]|\\\\x[0-9A-Fa-f]{2,2}|\\\\u[0-9A-Fa-f]{4,4}|\\\\u\\{[0-9A-Fa-f]+\\})"
         }
       }
     },
@@ -926,13 +1067,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "NumProcs"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "eta"
           }
         },
@@ -983,6 +1117,34 @@
           "content": {
             "type": "STRING",
             "value": "∞"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "W"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "i"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "MaxInt"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "HexDigits"
           }
         }
       ]
@@ -1121,6 +1283,13 @@
           "content": {
             "type": "STRING",
             "value": "○"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "∿"
           }
         },
         {
@@ -1806,13 +1975,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "deal"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "tag"
           }
         },
@@ -1983,6 +2145,55 @@
             "type": "STRING",
             "value": "repr"
           }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "mask"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⦷"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "csv"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "coordinate"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⟔"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "strands"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "‿"
+          }
         }
       ]
     },
@@ -2126,13 +2337,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "bind"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "on"
           }
         },
@@ -2190,20 +2394,6 @@
           "content": {
             "type": "STRING",
             "value": "signature"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "shapes"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "types"
           }
         }
       ]
@@ -2385,6 +2575,27 @@
             "type": "STRING",
             "value": "f"
           }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "by"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⊸"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "quote"
+          }
         }
       ]
     },
@@ -2508,6 +2719,34 @@
           "content": {
             "type": "STRING",
             "value": "⋔"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "bind"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "deal"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "shapes"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "types"
           }
         }
       ]

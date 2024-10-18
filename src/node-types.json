@@ -304,6 +304,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": false,
@@ -491,7 +492,31 @@
     "named": false
   },
   {
+    "type": "Black",
+    "named": false
+  },
+  {
+    "type": "Blue",
+    "named": false
+  },
+  {
+    "type": "Cyan",
+    "named": false
+  },
+  {
+    "type": "Days",
+    "named": false
+  },
+  {
+    "type": "DllExt",
+    "named": false
+  },
+  {
     "type": "ExeExt",
+    "named": false
+  },
+  {
+    "type": "False",
     "named": false
   },
   {
@@ -499,7 +524,35 @@
     "named": false
   },
   {
-    "type": "NUmProcs",
+    "type": "Green",
+    "named": false
+  },
+  {
+    "type": "HexDigits",
+    "named": false
+  },
+  {
+    "type": "LeanMonthDays",
+    "named": false
+  },
+  {
+    "type": "Magenta",
+    "named": false
+  },
+  {
+    "type": "MaxInt",
+    "named": false
+  },
+  {
+    "type": "MonthDays",
+    "named": false
+  },
+  {
+    "type": "Months",
+    "named": false
+  },
+  {
+    "type": "NULL",
     "named": false
   },
   {
@@ -511,11 +564,55 @@
     "named": false
   },
   {
-    "type": "PllExt",
+    "type": "Orange",
+    "named": false
+  },
+  {
+    "type": "Os",
+    "named": false
+  },
+  {
+    "type": "Purple",
+    "named": false
+  },
+  {
+    "type": "Red",
     "named": false
   },
   {
     "type": "Sep",
+    "named": false
+  },
+  {
+    "type": "ThisFile",
+    "named": false
+  },
+  {
+    "type": "ThisFileDir",
+    "named": false
+  },
+  {
+    "type": "ThisFileName",
+    "named": false
+  },
+  {
+    "type": "True",
+    "named": false
+  },
+  {
+    "type": "W",
+    "named": false
+  },
+  {
+    "type": "White",
+    "named": false
+  },
+  {
+    "type": "WorkingDIr",
+    "named": false
+  },
+  {
+    "type": "Yellow",
     "named": false
   },
   {
@@ -567,6 +664,10 @@
     "named": false
   },
   {
+    "type": "by",
+    "named": false
+  },
+  {
     "type": "ceiling",
     "named": false
   },
@@ -599,11 +700,19 @@
     "named": false
   },
   {
+    "type": "coordinate",
+    "named": false
+  },
+  {
     "type": "couple",
     "named": false
   },
   {
     "type": "cross",
+    "named": false
+  },
+  {
+    "type": "csv",
     "named": false
   },
   {
@@ -711,6 +820,10 @@
     "named": false
   },
   {
+    "type": "i",
+    "named": false
+  },
+  {
     "type": "id",
     "named": false
   },
@@ -767,6 +880,10 @@
     "named": false
   },
   {
+    "type": "mask",
+    "named": false
+  },
+  {
     "type": "match",
     "named": false
   },
@@ -815,10 +932,6 @@
     "named": true
   },
   {
-    "type": "os",
-    "named": false
-  },
-  {
     "type": "parse",
     "named": false
   },
@@ -840,6 +953,10 @@
   },
   {
     "type": "power",
+    "named": false
+  },
+  {
+    "type": "quote",
     "named": false
   },
   {
@@ -952,6 +1069,10 @@
   },
   {
     "type": "sqrt",
+    "named": false
+  },
+  {
+    "type": "strands",
     "named": false
   },
   {
@@ -1091,6 +1212,10 @@
     "named": false
   },
   {
+    "type": "‿",
+    "named": false
+  },
+  {
     "type": "⁅",
     "named": false
   },
@@ -1191,6 +1316,10 @@
     "named": false
   },
   {
+    "type": "∿",
+    "named": false
+  },
+  {
     "type": "≍",
     "named": false
   },
@@ -1279,6 +1408,10 @@
     "named": false
   },
   {
+    "type": "⊸",
+    "named": false
+  },
+  {
     "type": "⋅",
     "named": false
   },
@@ -1359,10 +1492,6 @@
     "named": false
   },
   {
-    "type": "⍼",
-    "named": false
-  },
-  {
     "type": "□",
     "named": false
   },
@@ -1419,7 +1548,15 @@
     "named": false
   },
   {
+    "type": "⟔",
+    "named": false
+  },
+  {
     "type": "⟜",
+    "named": false
+  },
+  {
+    "type": "⦷",
     "named": false
   },
   {

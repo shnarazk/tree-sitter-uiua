@@ -81,17 +81,41 @@ module.exports = grammar({
     ),
     fraction:    $ => token(/¯?\d+\/\d+/),
     otherConstant: $ => choice(
-      token('os'),
+      token('Days'),
+      token('Months'),
+      token('MonthDays'),
+      token('LeanMonthDays'),
+      token('White'),
+      token('Black'),
+      token('Red'),
+      token('Orange'),
+      token('Yellow'),
+      token('Green'),
+      token('Cyan'),
+      token('Blue'),
+      token('Purple'),
+      token('Magenta'),
+      // FIXME: add Flags
+      token('True'),
+      token('False'),
+      token('NULL'),
+      token('Os'),
       token('Family'),
       token('Arch'),
       token('ExeExt'),
-      token('PllExt'),
+      token('DllExt'),
       token('Sep'),
-      token('NUmProcs'),
-      token('⍼'),
+      token('ThisFile'),
+      token('ThisFileName'),
+      token('ThisFileDir'),
+      token('WorkingDIr'),
+      token('NumProcs'),
+      // FIXME: add Fun, Media
+
+      // End of other constants
     ),
     character:   $ => prec(5,
-      token(/@([^\\]|\\[bnrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4}|\\u\{[0-9A-Fa-f]+\})/)
+      token(/@([^\\]|\\[Wbnrst0\\"'_]|\\x[0-9A-Fa-f]{2,2}|\\u[0-9A-Fa-f]{4,4}|\\u\{[0-9A-Fa-f]+\})/)
     ),
     string: $ => token(/\$?"(\\["bnrst0]||[^"])+"/),
     multiLineString: $ => /\$ .*/,
@@ -136,7 +160,6 @@ module.exports = grammar({
     constant:    $ => choice(
       token('e'),
       token('NaN'),
-      token('NumProcs'),
 
       // Since 0.9.0
       // (0, Eta, Constant, ("eta", 'η')),
@@ -151,6 +174,14 @@ module.exports = grammar({
       // (0, Infinity, Constant, ("infinity", '∞')),
       token('infinity'),
       token('∞'),
+
+      // Since 0.10.0
+      token('W'),
+      token('i'),
+      token('MaxInt'),
+      token('HexDigits'),
+
+      // End of constant
     ),
     function:    $ => choice(
       // (1(2), Dup, Stack, ("duplicate", '.')),
@@ -183,6 +214,7 @@ module.exports = grammar({
       // (1, Sin, MonadicPervasive, ("sine", '○')),
       token('sine'),
       token('○'),
+      token('∿'),
       // (1, Cos, MonadicPervasive),
       // (1, Asin, MonadicPervasive),
       // (1, Acos, MonadicPervasive),
@@ -347,8 +379,6 @@ module.exports = grammar({
       token('⚂'),
       // (1(2), Gen, Misc, "gen"),
       token('gen'),
-      // (2, Deal, Misc, "deal"),
-      token('deal'),
       // (0, Tag, Misc, "tag"),
       token('tag'),
       // (0, Now, Misc, "now"),
@@ -393,6 +423,17 @@ module.exports = grammar({
 
       // Since 0.9.0
       token('repr'),
+
+      // Since 0.10.0
+      token('mask'),
+      token('⦷'),
+      token('csv'),
+      token('coordinate'),
+      token('⟔'),
+      token('strands'),
+      token('‿'),
+
+      // End of function
     ),
     modifier1:   $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
@@ -434,9 +475,6 @@ module.exports = grammar({
       token('un'),
       token('°'),
 
-      // Since 0.8.0
-      token('bind'),
-
       // Since 0.9.0
       token('on'),
       token('⟜'),
@@ -447,8 +485,8 @@ module.exports = grammar({
       token('pool'),
       token('stringify'),
       token('signature'),
-      token('shapes'),
-      token('types'),
+
+      // End of modifier1
     ),
     modifier2:   $ => choice(
       // (2[1], Fold, AggregatingModifier, ("fold", '∧')),
@@ -492,6 +530,13 @@ module.exports = grammar({
 
       // Since 0.9.0
       token('f'),
+
+      // Since 0.10.0
+      token('by'),
+      token('⊸'),
+      token('quote'),
+
+      // End of modifier2
     ),
     deprecated:  $ => choice(
       token('❥'),
@@ -520,6 +565,14 @@ module.exports = grammar({
       token('↫'),
       token('all'),
       token('⋔'),
+
+      // Since 0.10.0
+      token('bind'),
+      token('deal'),
+      token('shapes'),
+      token('types'),
+
+      // End of deprecated
     ),
     // _whitespace: $ => /[ \t]+/,
     emptyMultiLineString: $ => token(/\$\r?\n/),
