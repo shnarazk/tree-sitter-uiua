@@ -1,5 +1,21 @@
 # Changelog
 
+### 0.13.0: 2024-1X-XX
+
+- WIP conform to Uiua-0.13.0
+
+### 0.12.0: 2024-10-XX
+
+- WIP conform to Uiua-0.12.0
+
+### 0.11.2: 2024-10-1X
+
+- WIP conform to Uiua-0.11.0
+
+### 0.11.1: 2024-10-18
+
+- conform to Uiua-0.10.0
+
 ### 0.11.0: 2024-02-29
 
 - follow Uiua-0.9.0
