@@ -4,9 +4,10 @@
 
 - WIP conform to Uiua-0.13.0
 
-### 0.12.0: 2024-10-XX
+### 0.12.0: 2024-10-20
 
-- WIP conform to Uiua-0.12.0
+- conform to Uiua-0.12.0
+- add some missing constants
 
 ### 0.11.2: 2024-10-20
 

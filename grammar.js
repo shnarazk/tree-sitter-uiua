@@ -95,10 +95,31 @@ module.exports = grammar({
       token('Blue'),
       token('Purple'),
       token('Magenta'),
-      // FIXME: add Flags
+      // Flags
+      token('Gay'),
+      token('Lesbian'),
+      token('Bi'),
+      token('Trans'),
+      token('Pan'),
+      token('Ace'),
+      token('Aro'),
+      token('Aroace'),
+      token('Enby'),
+      token('Fluid'),
+      token('Queer'),
+      token('Agender'),
+      token('PrideFlags'),
+      token('PrideFlagNames'),
+      // External
       token('True'),
       token('False'),
       token('NULL'),
+      // Media
+      token('Logo'),
+      token('Lena'),
+      token('Music'),
+      token('Lorem'),
+      // System
       token('Os'),
       token('Family'),
       token('Arch'),
@@ -108,15 +129,18 @@ module.exports = grammar({
       token('ThisFile'),
       token('ThisFileName'),
       token('ThisFileDir'),
-      token('WorkingDIr'),
-      token('NumProcs'),
-      // FIXME: add Fun, Media
-
-      // Since 0.11.0
-      token('ThisFile'),
-      token('ThisFileName'),
-      token('ThisFileDir'),
       token('WorkingDir'),
+      token('NumProcs'),
+      // Fun
+      token('Planets'),
+      token('Zodiac'),
+      token('Suits'),
+      token('Cards'),
+      token('Chess'),
+      token('Moon'),
+      token('Skin'),
+      token('People'),
+      token('Hair'),
       
       // End of other constants
     ),
@@ -161,6 +185,7 @@ module.exports = grammar({
       $.function,
       $.modifier1,
       $.modifier2,
+      $.macro,
       $.deprecated,
     ),
     constant:    $ => choice(
@@ -363,9 +388,6 @@ module.exports = grammar({
       // (2, Find, DyadicArray, ("find", '⌕')),
       token('find'),
       token('⌕'),
-      // (2, Member, DyadicArray, ("member", '∊')),
-      token('member'),
-      token('∊'),
       // (2, IndexOf, DyadicArray, ("indexof", '⊗')),
       token('indexof'),
       token('⊗'),
@@ -397,7 +419,7 @@ module.exports = grammar({
       // (0(0)[1], Dump, Stack, "dump"),
       token('dump'),
       token('regex'),
-      token('utf'),
+      // token('utf'),
 
       // Since 0.0.23
       token('send'),
@@ -434,15 +456,27 @@ module.exports = grammar({
       token('mask'),
       token('⦷'),
       token('csv'),
-      token('coordinate'),
-      token('⟔'),
 
-      // Since 0.11
-      token('λ'),
-      token('⋊'),
+      // Since 0.11.0
       token('json'),
       token('xlsx'),
 
+      // Since 0.12.0
+      token('memberOf'),
+      token('∈'),
+
+      token('imen'),
+      token('gife'),
+      token('auden'),
+      token('utf₈'),
+      token('datetime'),
+      token('chunk'),
+      token('⑄'),
+      token('choose'),
+      token('permute'),
+      token('orient'),
+      token('fft'),
+      
       // End of function
     ),
     modifier1:   $ => choice(
@@ -496,6 +530,17 @@ module.exports = grammar({
       token('stringify'),
       token('signature'),
 
+      token('triangle'),
+      token('◹'),
+      token('astar'),
+      token('but'),
+      token('⤙'),
+      token('with'),
+      token('⤚'),
+      token('above'),
+      token('◠'),
+      token('below'),
+      token('◡'),
       // End of modifier1
     ),
     modifier2:   $ => choice(
@@ -548,6 +593,9 @@ module.exports = grammar({
 
       // End of modifier2
     ),
+    macro:       $ => choice(
+      token('struct'),
+    ),
     deprecated:  $ => choice(
       token('❥'),
       token('→'),
@@ -585,6 +633,15 @@ module.exports = grammar({
       // Since 0.11.0
       token('strands'),
       token('‿'),
+
+      // Since 0.12.0
+      // (2, Member, DyadicArray, ("member", '∊')),
+      token('member'),
+      token('∊'),
+      token('coordinate'),
+      token('⟔'),
+      token('λ'),
+      token('⋊'),
 
       // End of deprecated
     ),

@@ -189,6 +189,11 @@
     }
   },
   {
+    "type": "macro",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "modifier1",
     "named": true,
     "fields": {}
@@ -260,6 +265,10 @@
         },
         {
           "type": "function",
+          "named": true
+        },
+        {
+          "type": "macro",
           "named": true
         },
         {
@@ -488,7 +497,27 @@
     "named": false
   },
   {
+    "type": "Ace",
+    "named": false
+  },
+  {
+    "type": "Agender",
+    "named": false
+  },
+  {
     "type": "Arch",
+    "named": false
+  },
+  {
+    "type": "Aro",
+    "named": false
+  },
+  {
+    "type": "Aroace",
+    "named": false
+  },
+  {
+    "type": "Bi",
     "named": false
   },
   {
@@ -497,6 +526,14 @@
   },
   {
     "type": "Blue",
+    "named": false
+  },
+  {
+    "type": "Cards",
+    "named": false
+  },
+  {
+    "type": "Chess",
     "named": false
   },
   {
@@ -512,6 +549,10 @@
     "named": false
   },
   {
+    "type": "Enby",
+    "named": false
+  },
+  {
     "type": "ExeExt",
     "named": false
   },
@@ -524,7 +565,19 @@
     "named": false
   },
   {
+    "type": "Fluid",
+    "named": false
+  },
+  {
+    "type": "Gay",
+    "named": false
+  },
+  {
     "type": "Green",
+    "named": false
+  },
+  {
+    "type": "Hair",
     "named": false
   },
   {
@@ -533,6 +586,22 @@
   },
   {
     "type": "LeanMonthDays",
+    "named": false
+  },
+  {
+    "type": "Lena",
+    "named": false
+  },
+  {
+    "type": "Lesbian",
+    "named": false
+  },
+  {
+    "type": "Logo",
+    "named": false
+  },
+  {
+    "type": "Lorem",
     "named": false
   },
   {
@@ -549,6 +618,14 @@
   },
   {
     "type": "Months",
+    "named": false
+  },
+  {
+    "type": "Moon",
+    "named": false
+  },
+  {
+    "type": "Music",
     "named": false
   },
   {
@@ -572,7 +649,31 @@
     "named": false
   },
   {
+    "type": "Pan",
+    "named": false
+  },
+  {
+    "type": "People",
+    "named": false
+  },
+  {
+    "type": "Planets",
+    "named": false
+  },
+  {
+    "type": "PrideFlagNames",
+    "named": false
+  },
+  {
+    "type": "PrideFlags",
+    "named": false
+  },
+  {
     "type": "Purple",
+    "named": false
+  },
+  {
+    "type": "Queer",
     "named": false
   },
   {
@@ -581,6 +682,14 @@
   },
   {
     "type": "Sep",
+    "named": false
+  },
+  {
+    "type": "Skin",
+    "named": false
+  },
+  {
+    "type": "Suits",
     "named": false
   },
   {
@@ -596,6 +705,10 @@
     "named": false
   },
   {
+    "type": "Trans",
+    "named": false
+  },
+  {
     "type": "True",
     "named": false
   },
@@ -608,15 +721,15 @@
     "named": false
   },
   {
-    "type": "WorkingDIr",
-    "named": false
-  },
-  {
     "type": "WorkingDir",
     "named": false
   },
   {
     "type": "Yellow",
+    "named": false
+  },
+  {
+    "type": "Zodiac",
     "named": false
   },
   {
@@ -632,6 +745,10 @@
     "named": false
   },
   {
+    "type": "above",
+    "named": false
+  },
+  {
     "type": "absolute value",
     "named": false
   },
@@ -640,7 +757,19 @@
     "named": false
   },
   {
+    "type": "astar",
+    "named": false
+  },
+  {
     "type": "atangent",
+    "named": false
+  },
+  {
+    "type": "auden",
+    "named": false
+  },
+  {
+    "type": "below",
     "named": false
   },
   {
@@ -660,11 +789,23 @@
     "named": false
   },
   {
+    "type": "but",
+    "named": false
+  },
+  {
     "type": "by",
     "named": false
   },
   {
     "type": "ceiling",
+    "named": false
+  },
+  {
+    "type": "choose",
+    "named": false
+  },
+  {
+    "type": "chunk",
     "named": false
   },
   {
@@ -709,6 +850,10 @@
   },
   {
     "type": "csv",
+    "named": false
+  },
+  {
+    "type": "datetime",
     "named": false
   },
   {
@@ -764,6 +909,10 @@
     "named": false
   },
   {
+    "type": "fft",
+    "named": false
+  },
+  {
     "type": "fill",
     "named": false
   },
@@ -808,6 +957,10 @@
     "named": false
   },
   {
+    "type": "gife",
+    "named": false
+  },
+  {
     "type": "group",
     "named": false
   },
@@ -833,6 +986,10 @@
   },
   {
     "type": "identity",
+    "named": false
+  },
+  {
+    "type": "imen",
     "named": false
   },
   {
@@ -896,6 +1053,10 @@
     "named": false
   },
   {
+    "type": "memberOf",
+    "named": false
+  },
+  {
     "type": "minimum",
     "named": false
   },
@@ -932,11 +1093,19 @@
     "named": true
   },
   {
+    "type": "orient",
+    "named": false
+  },
+  {
     "type": "parse",
     "named": false
   },
   {
     "type": "partition",
+    "named": false
+  },
+  {
+    "type": "permute",
     "named": false
   },
   {
@@ -1080,6 +1249,10 @@
     "named": false
   },
   {
+    "type": "struct",
+    "named": false
+  },
+  {
     "type": "system",
     "named": true
   },
@@ -1101,6 +1274,10 @@
   },
   {
     "type": "transpose",
+    "named": false
+  },
+  {
+    "type": "triangle",
     "named": false
   },
   {
@@ -1140,7 +1317,7 @@
     "named": false
   },
   {
-    "type": "utf",
+    "type": "utf₈",
     "named": false
   },
   {
@@ -1153,6 +1330,10 @@
   },
   {
     "type": "windows",
+    "named": false
+  },
+  {
+    "type": "with",
     "named": false
   },
   {
@@ -1269,6 +1450,10 @@
   },
   {
     "type": "⇡",
+    "named": false
+  },
+  {
+    "type": "∈",
     "named": false
   },
   {
@@ -1484,6 +1669,10 @@
     "named": false
   },
   {
+    "type": "⑄",
+    "named": false
+  },
+  {
     "type": "□",
     "named": false
   },
@@ -1508,6 +1697,14 @@
     "named": false
   },
   {
+    "type": "◠",
+    "named": false
+  },
+  {
+    "type": "◡",
+    "named": false
+  },
+  {
     "type": "◫",
     "named": false
   },
@@ -1517,6 +1714,10 @@
   },
   {
     "type": "◴",
+    "named": false
+  },
+  {
+    "type": "◹",
     "named": false
   },
   {
@@ -1545,6 +1746,14 @@
   },
   {
     "type": "⟜",
+    "named": false
+  },
+  {
+    "type": "⤙",
+    "named": false
+  },
+  {
+    "type": "⤚",
     "named": false
   },
   {
