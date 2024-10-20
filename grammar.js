@@ -112,6 +112,12 @@ module.exports = grammar({
       token('NumProcs'),
       // FIXME: add Fun, Media
 
+      // Since 0.11.0
+      token('ThisFile'),
+      token('ThisFileName'),
+      token('ThisFileDir'),
+      token('WorkingDir'),
+      
       // End of other constants
     ),
     character:   $ => prec(5,
@@ -430,8 +436,12 @@ module.exports = grammar({
       token('csv'),
       token('coordinate'),
       token('⟔'),
-      token('strands'),
-      token('‿'),
+
+      // Since 0.11
+      token('λ'),
+      token('⋊'),
+      token('json'),
+      token('xlsx'),
 
       // End of function
     ),
@@ -561,16 +571,20 @@ module.exports = grammar({
       token(';'),
 
       // Since 0.9.0
-      token('↬'),
-      token('↫'),
-      token('all'),
-      token('⋔'),
+      // token('↬'), removed at 0.11.0
+      // token('↫'), removed at 0.11.0
+      // token('all'), removed at 0.11.0
+      // token('⋔'), removed at 0.11.0
 
       // Since 0.10.0
-      token('bind'),
+      // token('bind'), removed at 0.11.0
       token('deal'),
-      token('shapes'),
-      token('types'),
+      // token('shapes'), removed at 0.11.0
+      // token('types'), removed at 0.11.0
+
+      // Since 0.11.0
+      token('strands'),
+      token('‿'),
 
       // End of deprecated
     ),

@@ -8,9 +8,9 @@
 
 - WIP conform to Uiua-0.12.0
 
-### 0.11.2: 2024-10-1X
+### 0.11.2: 2024-10-20
 
-- WIP conform to Uiua-0.11.0
+- conform to Uiua-0.11.0
 
 ### 0.11.1: 2024-10-18
 

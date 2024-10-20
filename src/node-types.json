@@ -612,6 +612,10 @@
     "named": false
   },
   {
+    "type": "WorkingDir",
+    "named": false
+  },
+  {
     "type": "Yellow",
     "named": false
   },
@@ -632,19 +636,11 @@
     "named": false
   },
   {
-    "type": "all",
-    "named": false
-  },
-  {
     "type": "assert",
     "named": false
   },
   {
     "type": "atangent",
-    "named": false
-  },
-  {
-    "type": "bind",
     "named": false
   },
   {
@@ -860,6 +856,10 @@
     "named": false
   },
   {
+    "type": "json",
+    "named": false
+  },
+  {
     "type": "keep",
     "named": false
   },
@@ -1048,10 +1048,6 @@
     "named": false
   },
   {
-    "type": "shapes",
-    "named": false
-  },
-  {
     "type": "sign",
     "named": false
   },
@@ -1124,10 +1120,6 @@
     "named": false
   },
   {
-    "type": "types",
-    "named": false
-  },
-  {
     "type": "un",
     "named": false
   },
@@ -1161,6 +1153,10 @@
   },
   {
     "type": "windows",
+    "named": false
+  },
+  {
+    "type": "xlsx",
     "named": false
   },
   {
@@ -1201,6 +1197,10 @@
   },
   {
     "type": "η",
+    "named": false
+  },
+  {
+    "type": "λ",
     "named": false
   },
   {
@@ -1249,14 +1249,6 @@
   },
   {
     "type": "↧",
-    "named": false
-  },
-  {
-    "type": "↫",
-    "named": false
-  },
-  {
-    "type": "↬",
     "named": false
   },
   {
@@ -1416,7 +1408,7 @@
     "named": false
   },
   {
-    "type": "⋔",
+    "type": "⋊",
     "named": false
   },
   {

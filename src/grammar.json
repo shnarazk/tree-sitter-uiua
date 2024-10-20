@@ -732,6 +732,34 @@
             "type": "STRING",
             "value": "NumProcs"
           }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "ThisFile"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "ThisFileName"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "ThisFileDir"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "WorkingDir"
+          }
         }
       ]
     },
@@ -2185,14 +2213,28 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "strands"
+            "value": "λ"
           }
         },
         {
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "‿"
+            "value": "⋊"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "json"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "xlsx"
           }
         }
       ]
@@ -2697,41 +2739,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "↬"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "↫"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "all"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⋔"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "bind"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "deal"
           }
         },
@@ -2739,14 +2746,14 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "shapes"
+            "value": "strands"
           }
         },
         {
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "types"
+            "value": "‿"
           }
         }
       ]
