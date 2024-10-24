@@ -189,11 +189,6 @@
     }
   },
   {
-    "type": "macro",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "modifier1",
     "named": true,
     "fields": {}
@@ -265,10 +260,6 @@
         },
         {
           "type": "function",
-          "named": true
-        },
-        {
-          "type": "macro",
           "named": true
         },
         {
@@ -533,6 +524,10 @@
     "named": false
   },
   {
+    "type": "Cat",
+    "named": false
+  },
+  {
     "type": "Chess",
     "named": false
   },
@@ -733,6 +728,10 @@
     "named": false
   },
   {
+    "type": "[₁₂₃₄₅₆₇₈₉₀]",
+    "named": false
+  },
+  {
     "type": "\\",
     "named": false
   },
@@ -753,6 +752,14 @@
     "named": false
   },
   {
+    "type": "anti",
+    "named": false
+  },
+  {
+    "type": "around",
+    "named": false
+  },
+  {
     "type": "assert",
     "named": false
   },
@@ -766,6 +773,10 @@
   },
   {
     "type": "auden",
+    "named": false
+  },
+  {
+    "type": "base",
     "named": false
   },
   {
@@ -786,10 +797,6 @@
   },
   {
     "type": "bracket",
-    "named": false
-  },
-  {
-    "type": "but",
     "named": false
   },
   {
@@ -961,6 +968,10 @@
     "named": false
   },
   {
+    "type": "graphemes",
+    "named": false
+  },
+  {
     "type": "group",
     "named": false
   },
@@ -1021,6 +1032,10 @@
     "named": false
   },
   {
+    "type": "last",
+    "named": false
+  },
+  {
     "type": "leftArrow",
     "named": true
   },
@@ -1074,6 +1089,14 @@
   },
   {
     "type": "now",
+    "named": false
+  },
+  {
+    "type": "obverse",
+    "named": false
+  },
+  {
+    "type": "off",
     "named": false
   },
   {
@@ -1209,7 +1232,7 @@
     "named": false
   },
   {
-    "type": "setunder",
+    "type": "setund",
     "named": false
   },
   {
@@ -1229,15 +1252,15 @@
     "named": false
   },
   {
+    "type": "sort",
+    "named": false
+  },
+  {
     "type": "spawn",
     "named": false
   },
   {
     "type": "sqrt",
-    "named": false
-  },
-  {
-    "type": "strands",
     "named": false
   },
   {
@@ -1270,6 +1293,14 @@
   },
   {
     "type": "tau",
+    "named": false
+  },
+  {
+    "type": "timezone",
+    "named": false
+  },
+  {
+    "type": "toples",
     "named": false
   },
   {
@@ -1393,7 +1424,7 @@
     "named": false
   },
   {
-    "type": "‿",
+    "type": "’",
     "named": false
   },
   {
@@ -1585,6 +1616,10 @@
     "named": false
   },
   {
+    "type": "⊣",
+    "named": false
+  },
+  {
     "type": "⊸",
     "named": false
   },
@@ -1625,7 +1660,15 @@
     "named": false
   },
   {
+    "type": "⌝",
+    "named": false
+  },
+  {
     "type": "⌵",
+    "named": false
+  },
+  {
+    "type": "⍆",
     "named": false
   },
   {
@@ -1757,7 +1800,15 @@
     "named": false
   },
   {
+    "type": "⤸",
+    "named": false
+  },
+  {
     "type": "⦷",
+    "named": false
+  },
+  {
+    "type": "⧅",
     "named": false
   },
   {
