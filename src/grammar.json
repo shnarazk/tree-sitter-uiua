@@ -921,6 +921,20 @@
             "type": "STRING",
             "value": "Hair"
           }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Lorem"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "Cat"
+          }
         }
       ]
     },
@@ -1228,10 +1242,6 @@
         {
           "type": "SYMBOL",
           "name": "modifier2"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "macro"
         },
         {
           "type": "SYMBOL",
@@ -2406,20 +2416,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "chunk"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "⑄"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "choose"
           }
         },
@@ -2441,7 +2437,77 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "⤸"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "fft"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "graphemes"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "timezone"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "around"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "’"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "base"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "sort"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⍆"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "last"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⊣"
           }
         }
       ]
@@ -2670,7 +2736,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "but"
+            "value": "with"
           }
         },
         {
@@ -2684,7 +2750,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "with"
+            "value": "off"
           }
         },
         {
@@ -2720,6 +2786,55 @@
           "content": {
             "type": "STRING",
             "value": "◡"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "anti"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⌝"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "obverse"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⌅"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "toples"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⧅"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "[₁₂₃₄₅₆₇₈₉₀]"
           }
         }
       ]
@@ -2885,20 +3000,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "setinv"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "setunder"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "f"
           }
         },
@@ -2921,18 +3022,6 @@
           "content": {
             "type": "STRING",
             "value": "quote"
-          }
-        }
-      ]
-    },
-    "macro": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "struct"
           }
         }
       ]
@@ -3042,20 +3131,6 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "strands"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "‿"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
             "value": "member"
           }
         },
@@ -3092,6 +3167,41 @@
           "content": {
             "type": "STRING",
             "value": "⋊"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "chunk"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "⑄"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "setinv"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "setund"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
+            "value": "struct"
           }
         }
       ]

@@ -141,6 +141,9 @@ module.exports = grammar({
       token('Skin'),
       token('People'),
       token('Hair'),
+      token('Lorem'),
+      // Iamage
+      token('Cat'),
       
       // End of other constants
     ),
@@ -185,7 +188,7 @@ module.exports = grammar({
       $.function,
       $.modifier1,
       $.modifier2,
-      $.macro,
+      // $.macro,
       $.deprecated,
     ),
     constant:    $ => choice(
@@ -470,12 +473,20 @@ module.exports = grammar({
       token('auden'),
       token('utf₈'),
       token('datetime'),
-      token('chunk'),
-      token('⑄'),
       token('choose'),
       token('permute'),
       token('orient'),
+      token('⤸'),
       token('fft'),
+      token('graphemes'),
+      token('timezone'),
+      token('around'),
+      token('’'),
+      token('base'),
+      token('sort'),
+      token('⍆'),
+      token('last'),
+      token('⊣'),
       
       // End of function
     ),
@@ -533,14 +544,24 @@ module.exports = grammar({
       token('triangle'),
       token('◹'),
       token('astar'),
-      token('but'),
-      token('⤙'),
       token('with'),
+      token('⤙'),
+      token('off'),
       token('⤚'),
       token('above'),
       token('◠'),
       token('below'),
       token('◡'),
+
+      // Since 0.13.0
+      token('anti'),
+      token('⌝'),
+      token('obverse'),
+      token('⌅'),
+      token('toples'),
+      token('⧅'),
+      token('[₁₂₃₄₅₆₇₈₉₀]')
+      
       // End of modifier1
     ),
     modifier2:   $ => choice(
@@ -579,10 +600,6 @@ module.exports = grammar({
       token('do'),
       token('⍢'),
 
-      // Since 0.4.0
-      token('setinv'),
-      token('setunder'),
-
       // Since 0.9.0
       token('f'),
 
@@ -593,9 +610,9 @@ module.exports = grammar({
 
       // End of modifier2
     ),
-    macro:       $ => choice(
-      token('struct'),
-    ),
+    // macro:       $ => choice(
+    //   token('struct'),
+    // ),
     deprecated:  $ => choice(
       token('❥'),
       token('→'),
@@ -631,8 +648,8 @@ module.exports = grammar({
       // token('types'), removed at 0.11.0
 
       // Since 0.11.0
-      token('strands'),
-      token('‿'),
+      // token('strands'),
+      // token('‿'),
 
       // Since 0.12.0
       // (2, Member, DyadicArray, ("member", '∊')),
@@ -642,6 +659,13 @@ module.exports = grammar({
       token('⟔'),
       token('λ'),
       token('⋊'),
+
+      // Since 0.13.0
+      token('chunk'),
+      token('⑄'),
+      token('setinv'),
+      token('setund'),
+      token('struct'),
 
       // End of deprecated
     ),
