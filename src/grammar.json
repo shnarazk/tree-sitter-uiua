@@ -772,6 +772,13 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
+            "value": "Cats"
+          }
+        },
+        {
+          "type": "TOKEN",
+          "content": {
+            "type": "STRING",
             "value": "Music"
           }
         },
@@ -927,13 +934,6 @@
           "content": {
             "type": "STRING",
             "value": "Lorem"
-          }
-        },
-        {
-          "type": "TOKEN",
-          "content": {
-            "type": "STRING",
-            "value": "Cat"
           }
         }
       ]
