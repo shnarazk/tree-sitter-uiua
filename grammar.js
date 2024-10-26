@@ -117,6 +117,7 @@ module.exports = grammar({
       // Media
       token('Logo'),
       token('Lena'),
+      token('Cats'),
       token('Music'),
       token('Lorem'),
       // System
@@ -142,8 +143,6 @@ module.exports = grammar({
       token('People'),
       token('Hair'),
       token('Lorem'),
-      // Iamage
-      token('Cat'),
       
       // End of other constants
     ),
