@@ -557,7 +557,7 @@ module.exports = grammar({
       token('⌝'),
       token('obverse'),
       token('⌅'),
-      token('toples'),
+      token('tuples'),
       token('⧅'),
       token('[₁₂₃₄₅₆₇₈₉₀]')
       
