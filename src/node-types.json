@@ -456,6 +456,10 @@
     "named": false
   },
   {
+    "type": "/₁₂₃₄₅₆₇₈₉₀/",
+    "named": false
+  },
+  {
     "type": ":",
     "named": false
   },
@@ -725,10 +729,6 @@
   },
   {
     "type": "Zodiac",
-    "named": false
-  },
-  {
-    "type": "[₁₂₃₄₅₆₇₈₉₀]",
     "named": false
   },
   {
@@ -1300,10 +1300,6 @@
     "named": false
   },
   {
-    "type": "toples",
-    "named": false
-  },
-  {
     "type": "transpose",
     "named": false
   },
@@ -1321,6 +1317,10 @@
   },
   {
     "type": "tryrecv",
+    "named": false
+  },
+  {
+    "type": "tuples",
     "named": false
   },
   {

@@ -559,7 +559,7 @@ module.exports = grammar({
       token('⌅'),
       token('tuples'),
       token('⧅'),
-      token('[₁₂₃₄₅₆₇₈₉₀]')
+      token('/₁₂₃₄₅₆₇₈₉₀/')
       
       // End of modifier1
     ),

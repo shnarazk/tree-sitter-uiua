@@ -2820,7 +2820,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "toples"
+            "value": "tuples"
           }
         },
         {
@@ -2834,7 +2834,7 @@
           "type": "TOKEN",
           "content": {
             "type": "STRING",
-            "value": "[₁₂₃₄₅₆₇₈₉₀]"
+            "value": "/₁₂₃₄₅₆₇₈₉₀/"
           }
         }
       ]
