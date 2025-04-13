@@ -1,10 +1,10 @@
 module.exports = grammar({
   name: 'uiua',
-  extras:        $ => [/[ \t]+/, $.comment, $._endOfLine],
-  conflicts:     $ => [],     // Yay! It's empty!
+  extras: $ => [/[ \t]+/, $.comment, $._endOfLine],
+  conflicts: $ => [],     // Yay! It's empty!
   rules: {
     source_file: $ => $.PROGRAM,
-    PROGRAM:     $ => seq(
+    PROGRAM: $ => seq(
       repeat(
         choice(
           seq(choice($.binding, $.segment, $.module), $._endOfLine),
@@ -20,21 +20,21 @@ module.exports = grammar({
       optional($.signature),
       choice($.inlineFunction, $.segment),
     ),
-    module:      $ => (seq(
+    module: $ => (seq(
       $.tripleMinus,
       repeat(seq($.segment, $._endOfLine)),
       $.segment,
       $._endOfLine,
       $.tripleMinus
     )),
-    segment:     $ => prec.right(seq(
+    segment: $ => prec.right(seq(
       choice(
         $.term,
         $.comment,
       ),
       optional($.segment),
     )),
-    term:        $ => choice(
+    term: $ => choice(
       $.switchFunctions,
       // prec.right(seq($.signature, $.term)),
       $.compound,
@@ -66,7 +66,7 @@ module.exports = grammar({
       $.term,
       $.closeParen
     ),
-    array:       $ => choice(
+    array: $ => choice(
       prec(5, seq(repeat1(seq($.term, $.underscore)),$.term)),
       seq($.openBracket, optional($._endOfLine), repeat(seq($.segment, optional($._endOfLine))), $.closeBracket),
       seq($.openCurly, optional($._endOfLine), repeat(seq($.segment, optional($._endOfLine))), $.closeCurly),
