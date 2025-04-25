@@ -499,7 +499,7 @@ module.exports = grammar({
       
         // End of function
       ),
-      $subscript
+      optional($.subscript)
     ),
     modifier1:   $ => choice(
       // (1[1], Reduce, AggregatingModifier, ("reduce", '/')),
