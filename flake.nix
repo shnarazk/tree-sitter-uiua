@@ -13,6 +13,7 @@
           pkgs.bashInteractive
           pkgs.nodejs_latest
           pkgs.iconv
+          pkgs.python3
           pkgs.uiua
           # uiua.packages.${system}.default
         ];
